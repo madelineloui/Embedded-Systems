@@ -1,0 +1,462 @@
+
+*** Running vivado
+    with args -log base_mb_roic_interface_driver_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source base_mb_roic_interface_driver_0_0.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source base_mb_roic_interface_driver_0_0.tcl -notrace
+Command: synth_design -top base_mb_roic_interface_driver_0_0 -part xcku040-ffva1156-2-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku040'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 20552 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 409.293 ; gain = 47.711
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'base_mb_roic_interface_driver_0_0' [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_roic_interface_driver_0_0/synth/base_mb_roic_interface_driver_0_0.vhd:89]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_VER_DEV_FLAG bound to: Development - type: string 
+	Parameter C_VER_XIL_INFO bound to: 1.00.a - type: string 
+	Parameter C_VER_ITERATION_NUM bound to: 0 - type: integer 
+	Parameter C_CLK_FREQ_KHZ bound to: 6250 - type: integer 
+INFO: [Synth 8-3491] module 'roic_interface_driver' declared at 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ipshared/cb6b/hdl/roic_interface_driver_v1_0.vhd:11' bound to instance 'U0' of component 'roic_interface_driver' [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_roic_interface_driver_0_0/synth/base_mb_roic_interface_driver_0_0.vhd:162]
+INFO: [Synth 8-638] synthesizing module 'roic_interface_driver' [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ipshared/cb6b/hdl/roic_interface_driver_v1_0.vhd:53]
+	Parameter C_CLK_FREQ_KHZ bound to: 6250 - type: integer 
+	Parameter C_VER_DEV_FLAG bound to: Development - type: string 
+	Parameter C_VER_XIL_INFO bound to: 1.00.a - type: string 
+	Parameter C_VER_ITERATION_NUM bound to: 0 - type: integer 
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-226] default block is never used [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ipshared/cb6b/hdl/roic_interface_driver_v1_0.vhd:347]
+INFO: [Synth 8-638] synthesizing module 'roic_signal_gen' [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ipshared/cb6b/hdl/roic_signal_gen.vhd:47]
+	Parameter CLK_FREQ_KHZ bound to: 6250 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'roic_signal_gen' (1#1) [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ipshared/cb6b/hdl/roic_signal_gen.vhd:47]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ipshared/cb6b/hdl/roic_interface_driver_v1_0.vhd:222]
+INFO: [Synth 8-256] done synthesizing module 'roic_interface_driver' (2#1) [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ipshared/cb6b/hdl/roic_interface_driver_v1_0.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'base_mb_roic_interface_driver_0_0' (3#1) [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_roic_interface_driver_0_0/synth/base_mb_roic_interface_driver_0_0.vhd:89]
+WARNING: [Synth 8-3331] design roic_interface_driver has unconnected port s00_axi_awprot[2]
+WARNING: [Synth 8-3331] design roic_interface_driver has unconnected port s00_axi_awprot[1]
+WARNING: [Synth 8-3331] design roic_interface_driver has unconnected port s00_axi_awprot[0]
+WARNING: [Synth 8-3331] design roic_interface_driver has unconnected port s00_axi_arprot[2]
+WARNING: [Synth 8-3331] design roic_interface_driver has unconnected port s00_axi_arprot[1]
+WARNING: [Synth 8-3331] design roic_interface_driver has unconnected port s00_axi_arprot[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 461.500 ; gain = 99.918
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 461.500 ; gain = 99.918
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1017.992 ; gain = 0.004
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1017.992 ; gain = 656.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku040-ffva1156-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1017.992 ; gain = 656.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1017.992 ; gain = 656.410
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'f_state_reg' in module 'roic_signal_gen'
+INFO: [Synth 8-802] inferred FSM for state register 'l_state_reg' in module 'roic_signal_gen'
+INFO: [Synth 8-5545] ROM "d_state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "window_size_x" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "cnt" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "l_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "row" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lsync_i" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "l_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              s_int_smpl |                              000 |                              000
+               s_lsy_del |                              001 |                              011
+             s_start_lsy |                              010 |                              100
+                  s_read |                              011 |                              101
+               s_int_rst |                              100 |                              001
+                   s_int |                              101 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'f_state_reg' using encoding 'sequential' in module 'roic_signal_gen'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  s_idle |                              000 |                              000
+                 s_start |                              001 |                              001
+                  s_wait |                              010 |                              011
+                   s_row |                              011 |                              010
+                   s_end |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'l_state_reg' using encoding 'sequential' in module 'roic_signal_gen'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1017.992 ; gain = 656.410
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               72 Bit    Registers := 2     
+	               32 Bit    Registers := 8     
+	               13 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input     72 Bit        Muxes := 1     
+	   4 Input     72 Bit        Muxes := 6     
+	   2 Input     32 Bit        Muxes := 5     
+	   4 Input     32 Bit        Muxes := 5     
+	   6 Input     32 Bit        Muxes := 1     
+	   5 Input     32 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 2     
+	   7 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 16    
+	   4 Input      1 Bit        Muxes := 6     
+	   5 Input      1 Bit        Muxes := 5     
+	   6 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module roic_signal_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               72 Bit    Registers := 2     
+	               32 Bit    Registers := 4     
+	               13 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     72 Bit        Muxes := 1     
+	   4 Input     72 Bit        Muxes := 6     
+	   2 Input     32 Bit        Muxes := 2     
+	   4 Input     32 Bit        Muxes := 1     
+	   6 Input     32 Bit        Muxes := 1     
+	   5 Input     32 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 2     
+	   7 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 4     
+	   5 Input      1 Bit        Muxes := 5     
+	   6 Input      1 Bit        Muxes := 4     
+Module roic_interface_driver 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1920 (col length:120)
+BRAMs: 1200 (col length: RAMB18 120 RAMB36 60)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "outstanding_request" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "window_size_x" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design base_mb_roic_interface_driver_0_0 has unconnected port s00_axi_awprot[2]
+WARNING: [Synth 8-3331] design base_mb_roic_interface_driver_0_0 has unconnected port s00_axi_awprot[1]
+WARNING: [Synth 8-3331] design base_mb_roic_interface_driver_0_0 has unconnected port s00_axi_awprot[0]
+WARNING: [Synth 8-3331] design base_mb_roic_interface_driver_0_0 has unconnected port s00_axi_arprot[2]
+WARNING: [Synth 8-3331] design base_mb_roic_interface_driver_0_0 has unconnected port s00_axi_arprot[1]
+WARNING: [Synth 8-3331] design base_mb_roic_interface_driver_0_0 has unconnected port s00_axi_arprot[0]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\U0/aw_en_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\U0/sig/data_to_send_reg[71] )
+INFO: [Synth 8-3886] merging instance 'U0/axi_rresp_reg[0]' (FDRE) to 'U0/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'U0/axi_bresp_reg[0]' (FDRE) to 'U0/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_bresp_reg[1] )
+INFO: [Synth 8-3332] Sequential element (U0/sig/data_to_send_reg[71]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[71]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[70]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[69]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[68]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[67]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[66]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[65]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[64]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[63]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[62]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[61]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[60]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[59]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[58]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[44]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[43]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[42]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[41]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[40]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[39]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[38]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[37]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[36]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[35]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[34]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[33]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[32]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[31]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[30]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[29]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[28]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[27]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[26]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[25]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[24]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[23]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[22]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[21]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[20]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[19]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[18]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[17]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[16]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[15]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[14]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[13]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[12]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[10]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[9]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[5]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[4]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[3]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[2]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[1]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/sig/current_data_reg[0]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/aw_en_reg) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/axi_bresp_reg[1]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/axi_awaddr_reg[1]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/axi_awaddr_reg[0]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/axi_araddr_reg[1]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/axi_araddr_reg[0]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/axi_rresp_reg[1]) is unused and will be removed from module base_mb_roic_interface_driver_0_0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1017.992 ; gain = 656.410
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1281.309 ; gain = 919.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1282.203 ; gain = 920.621
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1304.273 ; gain = 942.691
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1304.273 ; gain = 942.691
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1304.273 ; gain = 942.691
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1304.273 ; gain = 942.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1304.273 ; gain = 942.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1304.273 ; gain = 942.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1304.273 ; gain = 942.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY8 |    39|
+|2     |LUT1   |    64|
+|3     |LUT2   |   167|
+|4     |LUT3   |   115|
+|5     |LUT4   |    39|
+|6     |LUT5   |    47|
+|7     |LUT6   |   118|
+|8     |MUXF7  |    41|
+|9     |MUXF8  |     4|
+|10    |FDRE   |   366|
+|11    |FDSE   |    31|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+----------------------+------+
+|      |Instance |Module                |Cells |
++------+---------+----------------------+------+
+|1     |top      |                      |  1031|
+|2     |  U0     |roic_interface_driver |  1031|
+|3     |    sig  |roic_signal_gen       |   840|
++------+---------+----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1304.273 ; gain = 942.691
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:43 . Memory (MB): peak = 1304.273 ; gain = 386.199
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 1304.273 ; gain = 942.691
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 84 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+104 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:00:57 . Memory (MB): peak = 1321.766 ; gain = 960.184
+INFO: [Common 17-1381] The checkpoint 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_roic_interface_driver_0_0_synth_1/base_mb_roic_interface_driver_0_0.dcp' has been generated.

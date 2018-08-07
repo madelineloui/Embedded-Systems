@@ -1,0 +1,11 @@
+Poster:
+
+1. Prototyping process - breadboarding, early development
+2. Spacecube?
+	-Kintex similar to development board on eventual flight hardware
+	-Eventually this will be part of SpaceCube 3 family
+3. Background/Application of ROIC
+	-Version will fly with RRM3
+	-Upgrade the system for onboard processing
+4. What I did
+	-Block diagram

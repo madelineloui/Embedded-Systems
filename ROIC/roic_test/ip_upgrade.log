@@ -1,0 +1,231 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Tue Jul 31 09:01:09 2018
+| Host         : GSSLW17031962 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_mb_roic_interface_driver_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of base_mb_roic_interface_driver_0_0 (nasa.gov:user:roic_interface_driver:1.0 (Rev. 16)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Thu Jul 26 15:33:21 2018
+| Host         : GSSLW17031962 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_mb_roic_interface_driver_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_mb_roic_interface_driver_0_0 (nasa.gov:user:roic_interface_driver:1.0) from (Rev. 15) to (Rev. 16)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Thu Jul 26 10:29:11 2018
+| Host         : GSSLW17031962 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_mb_pwmcore_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_mb_pwmcore_0_0 (nasa.gov:user:pwmcore:1.0) from (Rev. 8) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Thu Jul 26 10:21:19 2018
+| Host         : GSSLW17031962 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_mb_pwmcore_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_mb_pwmcore_0_0 (nasa.gov:user:pwmcore:1.0) from (Rev. 3) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Thu Jul 26 10:01:28 2018
+| Host         : GSSLW17031962 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_mb_pwmcore_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_mb_pwmcore_0_0 (nasa.gov:user:pwmcore:1.0) from (Rev. 8) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Tue Jul 24 15:25:29 2018
+| Host         : GSSLW17031962 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_mb_pwmcore_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_mb_pwmcore_0_0 (nasa.gov:user:pwmcore:1.0) from (Rev. 6) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Tue Jul 24 10:40:23 2018
+| Host         : GSSLW17031962 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_mb_pwmcore_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of base_mb_pwmcore_0_0 (nasa.gov:user:pwmcore:1.0) from (Rev. 5) to (Rev. 6)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'base_mb_pwmcore_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'DBG_COUNTER'
+
+-Upgrade has removed port 'DBG_DUTY_CYCLE'
+
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Mon Jul 23 15:04:08 2018
+| Host         : GSSLW17031962 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_mb_pwmcore_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of base_mb_pwmcore_0_0 (nasa.gov:user:pwmcore:1.0) from (Rev. 4) to (Rev. 5)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'base_mb_pwmcore_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'DBG_COUNTER'
+
+-Upgrade has added port 'DBG_DUTY_CYCLE'
+
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Mon Jul 23 12:47:44 2018
+| Host         : GSSLW17031962 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_mb_pwmcore_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_mb_pwmcore_0_0 (nasa.gov:user:pwmcore:1.0) from (Rev. 3) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Wed Jul 18 10:29:29 2018
+| Host         : GSSLW17031962 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_mb_pwmcore_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_mb_pwmcore_0_0 (nasa.gov:user:pwmcore:1.0) from (Rev. 2) to (Rev. 3)
+

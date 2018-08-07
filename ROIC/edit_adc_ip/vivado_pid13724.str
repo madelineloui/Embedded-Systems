@@ -1,0 +1,880 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 13724
+License: Customer
+
+Current time: 	Tue Aug 07 09:58:35 EDT 2018
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1536x864
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 16 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/XilinxV/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	C:/XilinxV/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	mloui
+User home directory: C:/Users/mloui
+User working directory: C:/Users/mloui/Documents/ROIC/ip_repo
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/XilinxV/Vivado
+HDI_APPROOT: C:/XilinxV/Vivado/2017.4
+RDI_DATADIR: C:/XilinxV/Vivado/2017.4/data
+RDI_BINDIR: C:/XilinxV/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/mloui/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/mloui/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/mloui/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	C:/XilinxV/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/mloui/Documents/ROIC/ip_repo/vivado.log
+Vivado journal file location: 	C:/Users/mloui/Documents/ROIC/ip_repo/vivado.jou
+Engine tmp dir: 	C:/Users/mloui/Documents/ROIC/ip_repo/.Xil/Vivado-13724-GSSLW17031962
+
+GUI allocated memory:	189 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 561 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 42 MB (+41751kb) [00:00:04]
+// [Engine Memory]: 457 MB (+327768kb) [00:00:04]
+// Opening Vivado Project: C:\Users\mloui\Documents\ROIC\ip_repo\edit_adc_core_v1_0.xpr. Version: Vivado v2017.4 
+// bs (cj):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/mloui/Documents/ROIC/ip_repo/edit_adc_core_v1_0.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// [GUI Memory]: 51 MB (+7267kb) [00:00:07]
+// [Engine Memory]: 548 MB (+70870kb) [00:00:07]
+// HMemoryUtils.trashcanNow. Engine heap size: 601 MB. GUI used memory: 33 MB. Current time: 8/7/18 9:58:37 AM EDT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 626 MB (+54069kb) [00:00:10]
+// Tcl Message: open_project C:/Users/mloui/Documents/ROIC/ip_repo/edit_adc_core_v1_0.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/mloui/Documents/ROIC/ip_repo/adc_core_1.0'. 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/mloui/Documents/ROIC/ip_repo/adc_core_1.0'. 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/mloui/Documents/ROIC/ip_repo/adc_core_1.0'. 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/mloui/Documents/ROIC/ip_repo/adc_core_1.0'. 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/mloui/Documents/ROIC/ip_repo/adc_core_1.0'. 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/XilinxV/Vivado/2017.4/data/ip'. 
+// [GUI Memory]: 64 MB (+10147kb) [00:00:13]
+// Project name: edit_adc_core_v1_0; location: C:/Users/mloui/Documents/ROIC/ip_repo; part: xcku040-ffva1156-2-e
+// Tcl Message: open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 854.406 ; gain = 155.996 
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, adc_core_v1_0(arch_imp) (adc_core_v1_0.vhd)]", 2, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, adc_core_v1_0(arch_imp) (adc_core_v1_0.vhd), adc_core_v1_0_S00_AXI_inst : adc_core_v1_0_S00_AXI(arch_imp) (adc_core_v1_0_S00_AXI.vhd)]", 3, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+// [GUI Memory]: 70 MB (+3316kb) [00:00:18]
+selectCodeEditor("adc_core_v1_0.vhd", 2, 138); // cd (w, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, adc_core_v1_0(arch_imp) (adc_core_v1_0.vhd), adc_core_v1_0_S00_AXI_inst : adc_core_v1_0_S00_AXI(arch_imp) (adc_core_v1_0_S00_AXI.vhd)]", 3, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, adc_core_v1_0(arch_imp) (adc_core_v1_0.vhd), adc_core_v1_0_S00_AXI_inst : adc_core_v1_0_S00_AXI(arch_imp) (adc_core_v1_0_S00_AXI.vhd)]", 3, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, adc_core_v1_0(arch_imp) (adc_core_v1_0.vhd), adc_core_v1_0_S00_AXI_inst : adc_core_v1_0_S00_AXI(arch_imp) (adc_core_v1_0_S00_AXI.vhd)]", 3); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, adc_core_v1_0(arch_imp) (adc_core_v1_0.vhd), adc_core_v1_0_S00_AXI_inst : adc_core_v1_0_S00_AXI(arch_imp) (adc_core_v1_0_S00_AXI.vhd), dc : Data_Collector(Behavioral) (Data_Collector.vhd)]", 4, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, adc_core_v1_0(arch_imp) (adc_core_v1_0.vhd), adc_core_v1_0_S00_AXI_inst : adc_core_v1_0_S00_AXI(arch_imp) (adc_core_v1_0_S00_AXI.vhd), dc : Data_Collector(Behavioral) (Data_Collector.vhd)]", 4, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+// [GUI Memory]: 74 MB (+326kb) [00:00:31]
+selectCodeEditor("Data_Collector.vhd", 251, 194); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 76, 248); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 184, 272); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 2); // i (N, cj)
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, adc_core, adc_interface.vhd]", 3, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, adc_core, adc_interface.vhd]", 3, false, false, false, false, false, true); // B (D, cj) - Double Click
+// [Engine Memory]: 661 MB (+3496kb) [00:01:02]
+selectCodeEditor("adc_interface.vhd", 140, 196); // cd (w, cj)
+typeControlKey((HResource) null, "adc_interface.vhd", 'c'); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Data_Collector.vhd", 3); // k (j, cj)
+selectCodeEditor("Data_Collector.vhd", 235, 252); // cd (w, cj)
+typeControlKey((HResource) null, "Data_Collector.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 240, 248); // cd (w, cj)
+typeControlKey((HResource) null, "Data_Collector.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 179, 111); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 183, 111); // cd (w, cj)
+typeControlKey((HResource) null, "Data_Collector.vhd", 'v'); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 81 MB (+4160kb) [00:01:37]
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i (N, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, adc_core_v1_0(arch_imp) (adc_core_v1_0.vhd)]", 2, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, adc_core_v1_0(arch_imp) (adc_core_v1_0.vhd)]", 2, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+// Elapsed time: 33 seconds
+selectCodeEditor("adc_core_v1_0.vhd", 198, 96); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_core_v1_0_S00_AXI.vhd", 2); // k (j, cj)
+// [GUI Memory]: 86 MB (+531kb) [00:02:22]
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 155, 252); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Data_Collector.vhd", 3); // k (j, cj)
+selectCodeEditor("Data_Collector.vhd", 76, 80); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 93 MB (+2957kb) [00:02:54]
+// Elapsed time: 10 seconds
+selectCodeEditor("Data_Collector.vhd", 119, 144); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_interface.vhd", 4); // k (j, cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Data_Collector.vhd", 3); // k (j, cj)
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_core_v1_0_S00_AXI.vhd", 2); // k (j, cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_core_v1_0.vhd", 1); // k (j, cj)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_core_v1_0_S00_AXI.vhd", 2); // k (j, cj)
+// [GUI Memory]: 99 MB (+1108kb) [00:03:25]
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 406, 157); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 327, 212); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_core_v1_0.vhd", 1); // k (j, cj)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("adc_core_v1_0.vhd", 259, 116); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Data_Collector.vhd", 3); // k (j, cj)
+selectCodeEditor("Data_Collector.vhd", 375, 68); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 172, 66); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 262, 124); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 15, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 2); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bs (cj):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: [Tue Aug  7 10:02:30 2018] Launched synth_1... Run output will be captured here: C:/Users/mloui/Documents/ROIC/ip_repo/edit_adc_core_v1_0.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bs (cj)
+// TclEventType: RUN_FAILED
+// ah (cj): Synthesis Failed: addNotify
+// Elapsed time: 58 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-3493] module 'axis_data_fifo_0' declared at 'C:/Users/mloui/Documents/ROIC/ip_repo/edit_adc_core_v1_0.runs/synth_1/.Xil/Vivado-6188-GSSLW17031962/realtime/axis_data_fifo_0_stub.vhdl:5' does not have matching formal port for component port 'm_axis_aresetn' [C:/Users/mloui/Documents/ROIC/ip_repo/adc_core_1.0/src/Data_Collector.vhd:101]. ]", 2, true); // ah (O, cj) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\mloui\Documents\ROIC\ip_repo\adc_core_1.0\src\Data_Collector.vhd;-;;-;16;-;line;-;101;-;;-;16;-;"); // ah (O, cj)
+selectCodeEditor("Data_Collector.vhd", 53, 184); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 128, 228); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 84, 180); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 88, 180); // cd (w, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, adc_core_v1_0(arch_imp) (adc_core_v1_0.vhd), adc_core_v1_0_S00_AXI_inst : adc_core_v1_0_S00_AXI(arch_imp) (adc_core_v1_0_S00_AXI.vhd)]", 3, true); // B (D, cj) - Node
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 2); // i (N, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, adc_core, Unreferenced]", 7); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, adc_core, Unreferenced, FIFO.vhd]", 8, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, adc_core, Unreferenced, FIFO.vhd]", 8, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectCodeEditor("FIFO.vhd", 81, 140); // cd (w, cj)
+// Elapsed time: 12 seconds
+selectCodeEditor("FIFO.vhd", 93, 185, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectCodeEditor("FIFO.vhd", 93, 185); // cd (w, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 674 MB. GUI used memory: 44 MB. Current time: 8/7/18 10:04:22 AM EDT
+// Elapsed time: 11 seconds
+selectCodeEditor("FIFO.vhd", 164, 216); // cd (w, cj)
+// Elapsed time: 14 seconds
+selectCodeEditor("FIFO.vhd", 185, 192); // cd (w, cj)
+selectCodeEditor("FIFO.vhd", 203, 193); // cd (w, cj)
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_interface.vhd", 4); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Data_Collector.vhd", 3); // k (j, cj)
+selectCodeEditor("Data_Collector.vhd", 187, 160); // cd (w, cj)
+// Elapsed time: 12 seconds
+selectCodeEditor("Data_Collector.vhd", 210, 74); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 211, 120); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FIFO.vhd", 5); // k (j, cj)
+typeControlKey((HResource) null, "FIFO.vhd", 'c'); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_interface.vhd", 4); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Data_Collector.vhd", 3); // k (j, cj)
+selectCodeEditor("Data_Collector.vhd", 86, 111); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 472, 110); // cd (w, cj)
+typeControlKey((HResource) null, "Data_Collector.vhd", 'v'); // cd (w, cj)
+// Elapsed time: 17 seconds
+selectCodeEditor("Data_Collector.vhd", 370, 144); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 386, 198); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 311, 250); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 174, 193); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 108, 238); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("Data_Collector.vhd", 347, 162); // cd (w, cj)
+typeControlKey((HResource) null, "Data_Collector.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 201, 120); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 201, 113); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 202, 110); // cd (w, cj)
+typeControlKey(null, null, 'z');
+selectCodeEditor("Data_Collector.vhd", 342, 269); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 117, 45); // cd (w, cj)
+typeControlKey((HResource) null, "Data_Collector.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 59, 93); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 46, 58); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 50, 60); // cd (w, cj)
+typeControlKey(null, null, 'z');
+selectCodeEditor("adc_interface.vhd", 310, 156); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Data_Collector.vhd", 3); // k (j, cj)
+selectCodeEditor("Data_Collector.vhd", 62, 64); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 53, 62); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 209, 63); // cd (w, cj)
+// Elapsed time: 29 seconds
+selectCodeEditor("Data_Collector.vhd", 75, 60); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 73, 79); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 75, 78); // cd (w, cj)
+// Elapsed time: 18 seconds
+selectCodeEditor("Data_Collector.vhd", 222, 194); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 156, 180); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 223, 176); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 248, 82); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 229, 70); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 236, 92); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 179, 69); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 182, 92); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 383, 118); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 250, 128); // cd (w, cj)
+// Elapsed time: 25 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FIFO.vhd", 5); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Data_Collector.vhd", 3); // k (j, cj)
+// Elapsed time: 30 seconds
+selectCodeEditor("Data_Collector.vhd", 247, 248); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 245, 250); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 171, 234); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 159, 239); // cd (w, cj)
+// Elapsed time: 61 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FIFO.vhd", 5); // k (j, cj)
+selectCodeEditor("FIFO.vhd", 412, 174); // cd (w, cj)
+// Elapsed time: 39 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_interface.vhd", 4); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Data_Collector.vhd", 3); // k (j, cj)
+selectCodeEditor("Data_Collector.vhd", 362, 68); // cd (w, cj)
+// Elapsed time: 37 seconds
+selectCodeEditor("Data_Collector.vhd", 153, 163); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 154, 180); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 183, 230); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 243, 232); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 207, 227); // cd (w, cj)
+// Elapsed time: 12 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FIFO.vhd", 5); // k (j, cj)
+selectCodeEditor("FIFO.vhd", 138, 161); // cd (w, cj)
+selectCodeEditor("FIFO.vhd", 202, 75); // cd (w, cj)
+typeControlKey((HResource) null, "FIFO.vhd", 'c'); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_interface.vhd", 4); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Data_Collector.vhd", 3); // k (j, cj)
+selectCodeEditor("Data_Collector.vhd", 247, 200); // cd (w, cj)
+typeControlKey((HResource) null, "Data_Collector.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 121, 94); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 125, 94); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FIFO.vhd", 5); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Data_Collector.vhd", 3); // k (j, cj)
+selectCodeEditor("Data_Collector.vhd", 121, 77); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 123, 97); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 93, 84); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 91, 79); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 223, 193); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 405, 126); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 418, 162); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 311, 192); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 246, 176); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 91, 52); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 111, 96); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 95, 63); // cd (w, cj)
+typeControlKey((HResource) null, "Data_Collector.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 219, 184); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 224, 180); // cd (w, cj)
+typeControlKey((HResource) null, "Data_Collector.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 137, 80); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 65, 64); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 194, 62); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 110, 56); // cd (w, cj)
+// Elapsed time: 21 seconds
+selectCodeEditor("Data_Collector.vhd", 75, 47); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 78, 63); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 62, 108); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 202, 128); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 84, 148); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 155, 162); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 157, 181); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 201, 196); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 147, 161); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 146, 180); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 183, 232); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 241, 236); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 246, 234); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 171, 248); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 175, 248); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 236, 248); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_interface.vhd", 4); // k (j, cj)
+selectCodeEditor("adc_interface.vhd", 310, 67); // cd (w, cj)
+selectCodeEditor("adc_interface.vhd", 154, 195); // cd (w, cj)
+selectCodeEditor("adc_interface.vhd", 201, 191); // cd (w, cj)
+selectCodeEditor("adc_interface.vhd", 188, 238); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("adc_interface.vhd", 354, 168); // cd (w, cj)
+selectCodeEditor("adc_interface.vhd", 354, 168, false, false, false, false, true); // cd (w, cj) - Double Click
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Data_Collector.vhd", 3); // k (j, cj)
+selectCodeEditor("Data_Collector.vhd", 333, 160); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 11, 96); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 47, 96); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 11, 109); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 168, 109); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 119, 96); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 143, 136); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 150, 70); // cd (w, cj)
+// Elapsed time: 20 seconds
+selectCodeEditor("Data_Collector.vhd", 115, 179); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 372, 209); // cd (w, cj)
+// Elapsed time: 16 seconds
+selectCodeEditor("Data_Collector.vhd", 181, 128); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 195, 176); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 89, 193); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 190, 194); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 187, 200); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 278, 214); // cd (w, cj)
+// Elapsed time: 47 seconds
+selectCodeEditor("Data_Collector.vhd", 367, 184); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 186, 194); // cd (w, cj)
+// Elapsed time: 10 seconds
+selectCodeEditor("Data_Collector.vhd", 372, 124); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 115, 132); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 203, 124); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 222, 108); // cd (w, cj)
+// Elapsed time: 41 seconds
+selectCodeEditor("Data_Collector.vhd", 221, 214); // cd (w, cj)
+// Elapsed time: 47 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_interface.vhd", 4); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Data_Collector.vhd", 3); // k (j, cj)
+// Elapsed time: 13 seconds
+selectCodeEditor("Data_Collector.vhd", 219, 162); // cd (w, cj)
+// Elapsed time: 12 seconds
+selectCodeEditor("Data_Collector.vhd", 215, 161); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 126, 28); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 121, 42); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 154, 74); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Data_Collector.vhd", 218, 110); // cd (w, cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Data_Collector.vhd", 221, 224); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 208, 246); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 219, 238); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FIFO.vhd", 5); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_interface.vhd", 4); // k (j, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("adc_interface.vhd", 293, 240); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Data_Collector.vhd", 3); // k (j, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Data_Collector.vhd", 368, 124); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 368, 124, false, false, false, false, true); // cd (w, cj) - Double Click
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Data_Collector.vhd", 44, 55); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 541, 199); // cd (w, cj)
+// Elapsed time: 22 seconds
+selectCodeEditor("Data_Collector.vhd", 207, 249); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 197, 246); // cd (w, cj)
+typeControlKey((HResource) null, "Data_Collector.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 271, 174); // cd (w, cj)
+typeControlKey((HResource) null, "Data_Collector.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 108, 196); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 197, 267); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 221, 196); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 267, 245); // cd (w, cj)
+// Elapsed time: 10 seconds
+selectCodeEditor("Data_Collector.vhd", 52, 56); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 55, 52); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 57, 60); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 163, 207); // cd (w, cj)
+// Elapsed time: 20 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_interface.vhd", 4); // k (j, cj)
+selectCodeEditor("adc_interface.vhd", 483, 84); // cd (w, cj)
+// Elapsed time: 54 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Data_Collector.vhd", 3); // k (j, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("Data_Collector.vhd", 360, 71); // cd (w, cj)
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 104 MB (+507kb) [00:25:56]
+// Elapsed time: 33 seconds
+selectCodeEditor("Data_Collector.vhd", 311, 103); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 172, 76); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 186, 113); // cd (w, cj)
+// Elapsed time: 22 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_interface.vhd", 4); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FIFO.vhd", 5); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Data_Collector.vhd", 3); // k (j, cj)
+selectCodeEditor("Data_Collector.vhd", 356, 144); // cd (w, cj)
+// Elapsed time: 10 seconds
+selectCodeEditor("Data_Collector.vhd", 391, 169); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 332, 199); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 135, 114); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 166, 170); // cd (w, cj)
+// Elapsed time: 16 seconds
+selectCodeEditor("Data_Collector.vhd", 208, 181); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 99, 174); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 177, 229); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 182, 85); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 187, 77); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 181, 77); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 174, 86); // cd (w, cj)
+// Elapsed time: 86 seconds
+selectCodeEditor("Data_Collector.vhd", 335, 191); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 168, 227); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 175, 228); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_interface.vhd", 4); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Data_Collector.vhd", 3); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_interface.vhd", 4); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Data_Collector.vhd", 3); // k (j, cj)
+// Elapsed time: 18 seconds
+selectCodeEditor("Data_Collector.vhd", 440, 131); // cd (w, cj)
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_interface.vhd", 4); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Data_Collector.vhd", 3); // k (j, cj)
+selectCodeEditor("Data_Collector.vhd", 293, 230); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 58 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_core_v1_0_S00_AXI.vhd", 2); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Data_Collector.vhd", 3); // k (j, cj)
+selectCodeEditor("Data_Collector.vhd", 209, 215); // cd (w, cj)
+typeControlKey((HResource) null, "Data_Collector.vhd", 'c'); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_core_v1_0_S00_AXI.vhd", 2); // k (j, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 357, 178); // cd (w, cj)
+typeControlKey((HResource) null, "adc_core_v1_0_S00_AXI.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 102, 148); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 65, 130); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 47, 125); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 195, 232); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 73, 164); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 74, 172); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 75, 167); // cd (w, cj)
+// Elapsed time: 16 seconds
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 75, 148); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 77, 162); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 76, 180); // cd (w, cj)
+// Elapsed time: 27 seconds
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 77, 200); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 79, 211); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 78, 233); // cd (w, cj)
+// Elapsed time: 67 seconds
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 224, 115); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 268, 166); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 268, 166); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 311, 176); // cd (w, cj)
+typeControlKey((HResource) null, "adc_core_v1_0_S00_AXI.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 90, 28); // cd (w, cj)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 140, 12); // cd (w, cj)
+typeControlKey((HResource) null, "adc_core_v1_0_S00_AXI.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 105, 60); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 65, 48); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 215, 42); // cd (w, cj)
+// Elapsed time: 10 seconds
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 220, 62); // cd (w, cj)
+// Elapsed time: 20 seconds
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 379, 78); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 189, 76); // cd (w, cj)
+// Elapsed time: 26 seconds
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 252, 224); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 167, 144); // cd (w, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 678 MB. GUI used memory: 44 MB. Current time: 8/7/18 10:34:22 AM EDT
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 235, 165); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 231, 184); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 367, 194); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 388, 195); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 248, 218); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 240, 235); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 144, 214); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 224, 244); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 79, 268); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 269, 220); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 272, 268); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 91, 262); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 104, 196); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 168, 177); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 74, 231); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_core_v1_0.vhd", 1); // k (j, cj)
+selectCodeEditor("adc_core_v1_0.vhd", 280, 96); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("adc_core_v1_0.vhd", 459, 113); // cd (w, cj)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("adc_core_v1_0.vhd", 219, 113); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_core_v1_0_S00_AXI.vhd", 2); // k (j, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 199, 169); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 199, 169, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 215, 224); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 56, 128); // cd (w, cj)
+typeControlKey((HResource) null, "adc_core_v1_0_S00_AXI.vhd", 'c'); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_core_v1_0.vhd", 1); // k (j, cj)
+selectCodeEditor("adc_core_v1_0.vhd", 110, 41); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0.vhd", 92, 185); // cd (w, cj)
+typeControlKey((HResource) null, "adc_core_v1_0.vhd", 'v'); // cd (w, cj)
+typeControlKey(null, null, 'z');
+selectCodeEditor("adc_core_v1_0.vhd", 80, 76); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0.vhd", 366, 160); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0.vhd", 248, 128); // cd (w, cj)
+typeControlKey((HResource) null, "adc_core_v1_0.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0.vhd", 39, 112); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0.vhd", 112, 124); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0.vhd", 252, 226); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0.vhd", 146, 197); // cd (w, cj)
+typeControlKey((HResource) null, "adc_core_v1_0.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0.vhd", 87, 156); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0.vhd", 342, 143); // cd (w, cj)
+// Elapsed time: 13 seconds
+selectCodeEditor("adc_core_v1_0.vhd", 213, 178); // cd (w, cj)
+// Elapsed time: 10 seconds
+selectCodeEditor("adc_core_v1_0.vhd", 212, 197); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0.vhd", 356, 216); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0.vhd", 222, 231); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0.vhd", 211, 246); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0.vhd", 208, 267); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0.vhd", 220, 214); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_core_v1_0_S00_AXI.vhd", 2); // k (j, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Data_Collector.vhd", 3); // k (j, cj)
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 15, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis]", 3); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bs (cj):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: [Tue Aug  7 10:37:40 2018] Launched synth_1... Run output will be captured here: C:/Users/mloui/Documents/ROIC/ip_repo/edit_adc_core_v1_0.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bs (cj)
+// TclEventType: RUN_FAILED
+// ah (cj): Synthesis Failed: addNotify
+// Elapsed time: 57 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-2715] syntax error near ) [C:/Users/mloui/Documents/ROIC/ip_repo/adc_core_1.0/src/Data_Collector.vhd:101]. ]", 2, false); // ah (O, cj)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\mloui\Documents\ROIC\ip_repo\adc_core_1.0\src\Data_Collector.vhd;-;;-;16;-;line;-;101;-;;-;16;-;"); // ah (O, cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-2715] syntax error near ) [C:/Users/mloui/Documents/ROIC/ip_repo/adc_core_1.0/src/Data_Collector.vhd:101]. ]", 2, false); // ah (O, cj)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\mloui\Documents\ROIC\ip_repo\adc_core_1.0\src\Data_Collector.vhd;-;;-;16;-;line;-;101;-;;-;16;-;"); // ah (O, cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-2715] syntax error near ) [C:/Users/mloui/Documents/ROIC/ip_repo/adc_core_1.0/src/Data_Collector.vhd:101]. ]", 2, false); // ah (O, cj)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\mloui\Documents\ROIC\ip_repo\adc_core_1.0\src\Data_Collector.vhd;-;;-;16;-;line;-;101;-;;-;16;-;"); // ah (O, cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis]", 0, true); // ah (O, cj) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\mloui\Documents\ROIC\ip_repo\adc_core_1.0\src\Data_Collector.vhd;-;;-;16;-;line;-;101;-;;-;16;-;"); // ah (O, cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-2715] syntax error near ) [C:/Users/mloui/Documents/ROIC/ip_repo/adc_core_1.0/src/Data_Collector.vhd:101]. ]", 2, false); // ah (O, cj)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\mloui\Documents\ROIC\ip_repo\adc_core_1.0\src\Data_Collector.vhd;-;;-;16;-;line;-;101;-;;-;16;-;"); // ah (O, cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis]", 0, true); // ah (O, cj) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\mloui\Documents\ROIC\ip_repo\adc_core_1.0\src\Data_Collector.vhd;-;;-;16;-;line;-;101;-;;-;16;-;"); // ah (O, cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-2715] syntax error near ) [C:/Users/mloui/Documents/ROIC/ip_repo/adc_core_1.0/src/Data_Collector.vhd:101]. ]", 2, false, false, false, false, false, true); // ah (O, cj) - Double Click
+selectCodeEditor("Data_Collector.vhd", 133, 226); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 151, 160); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 147, 218); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0); // u (O, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // u (O, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 15, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bs (cj):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: [Tue Aug  7 10:39:08 2018] Launched synth_1... Run output will be captured here: C:/Users/mloui/Documents/ROIC/ip_repo/edit_adc_core_v1_0.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bs (cj)
+// TclEventType: RUN_FAILED
+// ah (cj): Synthesis Failed: addNotify
+// Elapsed time: 39 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-549] port width mismatch for port 'DataIn': port width = 14, actual width = 16 [C:/Users/mloui/Documents/ROIC/ip_repo/adc_core_1.0/src/Data_Collector.vhd:96]. ]", 2, true); // ah (O, cj) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\mloui\Documents\ROIC\ip_repo\adc_core_1.0\src\Data_Collector.vhd;-;;-;16;-;line;-;96;-;;-;16;-;"); // ah (O, cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-549] port width mismatch for port 'DataIn': port width = 14, actual width = 16 [C:/Users/mloui/Documents/ROIC/ip_repo/adc_core_1.0/src/Data_Collector.vhd:96]. ]", 2, true); // ah (O, cj) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\mloui\Documents\ROIC\ip_repo\adc_core_1.0\src\Data_Collector.vhd;-;;-;16;-;line;-;96;-;;-;16;-;"); // ah (O, cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-549] port width mismatch for port 'DataIn': port width = 14, actual width = 16 [C:/Users/mloui/Documents/ROIC/ip_repo/adc_core_1.0/src/Data_Collector.vhd:96]. ]", 2, true); // ah (O, cj) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\mloui\Documents\ROIC\ip_repo\adc_core_1.0\src\Data_Collector.vhd;-;;-;16;-;line;-;96;-;;-;16;-;"); // ah (O, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("Data_Collector.vhd", 141, 97); // cd (w, cj)
+// Elapsed time: 12 seconds
+selectCodeEditor("Data_Collector.vhd", 175, 94); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 168, 94); // cd (w, cj)
+// Elapsed time: 29 seconds
+selectCodeEditor("Data_Collector.vhd", 2, 195); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 0, 214); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 423, 178); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 11 seconds
+selectCodeEditor("Data_Collector.vhd", 202, 132); // cd (w, cj)
+// Elapsed time: 19 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FIFO.vhd", 5); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_interface.vhd", 4); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Data_Collector.vhd", 3); // k (j, cj)
+// Elapsed time: 12 seconds
+selectCodeEditor("Data_Collector.vhd", 181, 147); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 247, 228); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Data_Collector.vhd", 192, 217); // cd (w, cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Data_Collector.vhd", 344, 60); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Data_Collector.vhd", 78, 75); // cd (w, cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 15, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator]", 1); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bs (cj):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: [Tue Aug  7 10:42:11 2018] Launched synth_1... Run output will be captured here: C:/Users/mloui/Documents/ROIC/ip_repo/edit_adc_core_v1_0.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bs (cj)
+// TclEventType: RUN_FAILED
+// ah (cj): Synthesis Failed: addNotify
+// Elapsed time: 26 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-97] array index 15 out of range [C:/Users/mloui/Documents/ROIC/ip_repo/adc_core_1.0/src/Data_Collector.vhd:83]. ]", 2, false); // ah (O, cj)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\mloui\Documents\ROIC\ip_repo\adc_core_1.0\src\Data_Collector.vhd;-;;-;16;-;line;-;83;-;;-;16;-;"); // ah (O, cj)
+selectCodeEditor("Data_Collector.vhd", 294, 176); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Data_Collector.vhd", 143, 182); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 173, 231); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 169, 208); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 200, 158); // cd (w, cj)
+selectCodeEditor("Data_Collector.vhd", 118, 212); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Data_Collector.vhd", 194, 213); // cd (w, cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 15, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 2); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bs (cj):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: [Tue Aug  7 10:43:26 2018] Launched synth_1... Run output will be captured here: C:/Users/mloui/Documents/ROIC/ip_repo/edit_adc_core_v1_0.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bs (cj)
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_core_v1_0_S00_AXI.vhd", 2); // k (j, cj)
+selectCodeEditor("adc_core_v1_0_S00_AXI.vhd", 322, 114); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "adc_core_v1_0.vhd", 1); // k (j, cj)
+// TclEventType: RUN_COMPLETED
+// ah (cj): Synthesis Completed: addNotify
+// Elapsed time: 18 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Synthesis Completed"); // ah (cj)
+// Elapsed time: 18 seconds
+selectCodeEditor("adc_core_v1_0.vhd", 261, 113); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0.vhd", 365, 128); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("adc_core_v1_0.vhd", 220, 147); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0.vhd", 230, 165); // cd (w, cj)
+// Elapsed time: 30 seconds
+selectCodeEditor("adc_core_v1_0.vhd", 363, 174); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0.vhd", 253, 197); // cd (w, cj)
+// Elapsed time: 12 seconds
+selectCodeEditor("adc_core_v1_0.vhd", 245, 216); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0.vhd", 411, 196); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0.vhd", 318, 220); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("adc_core_v1_0.vhd", 292, 231); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0.vhd", 425, 213); // cd (w, cj)
+// Elapsed time: 12 seconds
+selectCodeEditor("adc_core_v1_0.vhd", 459, 229); // cd (w, cj)
+// Elapsed time: 15 seconds
+selectCodeEditor("adc_core_v1_0.vhd", 486, 205); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0.vhd", 523, 220); // cd (w, cj)
+selectCodeEditor("adc_core_v1_0.vhd", 501, 229); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("adc_core_v1_0.vhd", 291, 192); // cd (w, cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Package IP]", 5, false); // u (O, cj)
+// bs (cj):  Open Project Manager : addNotify
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+dismissDialog("Open Project Manager"); // bs (cj)
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::open_ipxact_file C:/Users/mloui/Documents/ROIC/ip_repo/adc_core_1.0/component.xml 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// bs (cj):  IP Packager : addNotify
+// [GUI Memory]: 112 MB (+2193kb) [00:48:30]
+dismissDialog("IP Packager"); // bs (cj)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // an (O, cj)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from File Groups Wizard"); // h (M, cj)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: ipx::merge_project_changes files [ipx::current_core] 
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // an (O, cj)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from Customization Parameters Wizard"); // h (M, cj)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: ipx::merge_project_changes hdl_parameters [ipx::current_core] 
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // an (O, cj)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a (c, cj)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property core_revision 2 [ipx::current_core] 
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// bs (cj):  Package IP : addNotify
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: update_ip_catalog -rebuild -repo_path c:/Users/mloui/Documents/ROIC/ip_repo/adc_core_1.0 
+// Tcl Message: INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/mloui/Documents/ROIC/ip_repo/adc_core_1.0' 
+// TclEventType: FILE_SET_CHANGE
+selectButton("PAResourceQtoS.ReviewContentPanel_FINISHED_PACKAGING_SUCCESSFULLY_OK", "OK"); // JButton (A, G)

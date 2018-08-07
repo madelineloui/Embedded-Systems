@@ -1,0 +1,285 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date              : Fri Aug  3 14:25:53 2018
+| Host              : GSSLW17031962 running 64-bit major release  (build 9200)
+| Command           : report_timing_summary -max_paths 10 -file design_1_wrapper_timing_summary_routed.rpt -rpx design_1_wrapper_timing_summary_routed.rpx -warn_on_violation
+| Design            : design_1_wrapper
+| Device            : xcku040-ffva1156
+| Speed File        : -2  PRODUCTION 1.24 11-02-2017
+| Temperature Grade : E
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 3 ports with no output delay but with a timing clock defined on it or propagating through it (LOW)
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+         NA           NA                     NA                   NA           NA           NA                     NA                   NA        0.666        0.000                       0                     8  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock                            Waveform(ns)         Period(ns)      Frequency(MHz)
+-----                            ------------         ----------      --------------
+default_sysclk_300_clk_p         {0.000 1.666}        3.333           300.030         
+  clk_out1_design_1_clk_wiz_0_1  {0.000 33.330}       66.660          15.002          
+  clk_out2_design_1_clk_wiz_0_1  {33.330 66.660}      66.660          15.002          
+  clkfbout_design_1_clk_wiz_0_1  {0.000 8.333}        16.665          60.006          
+fmc_clk_n                        {0.000 33.330}       66.660          15.002          
+fmc_clk_p                        {0.000 33.330}       66.660          15.002          
+sma_clk_N[0]                     {0.000 33.333}       66.667          15.000          
+sma_clk_P[0]                     {0.000 33.330}       66.660          15.002          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock                                WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----                                -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+default_sysclk_300_clk_p                                                                                                                                                           0.666        0.000                       0                     1  
+  clk_out1_design_1_clk_wiz_0_1                                                                                                                                                   65.281        0.000                       0                     2  
+  clk_out2_design_1_clk_wiz_0_1                                                                                                                                                   65.281        0.000                       0                     2  
+  clkfbout_design_1_clk_wiz_0_1                                                                                                                                                   15.286        0.000                       0                     3  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  default_sysclk_300_clk_p
+  To Clock:  default_sysclk_300_clk_p
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        0.666ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         default_sysclk_300_clk_p
+Waveform(ns):       { 0.000 1.666 }
+Period(ns):         3.333
+Sources:            { default_sysclk_300_clk_p }
+
+Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     MMCME3_ADV/CLKIN1  n/a            1.071         3.333       2.262      MMCME3_ADV_X0Y1  design_1_i/clk_wiz_0/inst/mmcme3_adv_inst/CLKIN1
+Low Pulse Width   Slow    MMCME3_ADV/CLKIN1  n/a            1.000         1.666       0.666      MMCME3_ADV_X0Y1  design_1_i/clk_wiz_0/inst/mmcme3_adv_inst/CLKIN1
+Low Pulse Width   Fast    MMCME3_ADV/CLKIN1  n/a            1.000         1.667       0.667      MMCME3_ADV_X0Y1  design_1_i/clk_wiz_0/inst/mmcme3_adv_inst/CLKIN1
+High Pulse Width  Slow    MMCME3_ADV/CLKIN1  n/a            1.000         1.666       0.666      MMCME3_ADV_X0Y1  design_1_i/clk_wiz_0/inst/mmcme3_adv_inst/CLKIN1
+High Pulse Width  Fast    MMCME3_ADV/CLKIN1  n/a            1.000         1.667       0.667      MMCME3_ADV_X0Y1  design_1_i/clk_wiz_0/inst/mmcme3_adv_inst/CLKIN1
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_out1_design_1_clk_wiz_0_1
+  To Clock:  clk_out1_design_1_clk_wiz_0_1
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack       65.281ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_out1_design_1_clk_wiz_0_1
+Waveform(ns):       { 0.000 33.330 }
+Period(ns):         66.660
+Sources:            { design_1_i/clk_wiz_0/inst/mmcme3_adv_inst/CLKOUT0 }
+
+Check Type  Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period  n/a     BUFGCE/I            n/a            1.379         66.660      65.281     BUFGCE_X0Y38     design_1_i/clk_wiz_0/inst/clkout1_buf/I
+Min Period  n/a     MMCME3_ADV/CLKOUT0  n/a            1.071         66.660      65.589     MMCME3_ADV_X0Y1  design_1_i/clk_wiz_0/inst/mmcme3_adv_inst/CLKOUT0
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_out2_design_1_clk_wiz_0_1
+  To Clock:  clk_out2_design_1_clk_wiz_0_1
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack       65.281ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_out2_design_1_clk_wiz_0_1
+Waveform(ns):       { 33.330 66.660 }
+Period(ns):         66.660
+Sources:            { design_1_i/clk_wiz_0/inst/mmcme3_adv_inst/CLKOUT0B }
+
+Check Type  Corner  Lib Pin              Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period  n/a     BUFGCE/I             n/a            1.379         66.660      65.281     BUFGCE_X0Y26     design_1_i/clk_wiz_0/inst/clkout2_buf/I
+Min Period  n/a     MMCME3_ADV/CLKOUT0B  n/a            1.071         66.660      65.589     MMCME3_ADV_X0Y1  design_1_i/clk_wiz_0/inst/mmcme3_adv_inst/CLKOUT0B
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clkfbout_design_1_clk_wiz_0_1
+  To Clock:  clkfbout_design_1_clk_wiz_0_1
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack       15.286ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clkfbout_design_1_clk_wiz_0_1
+Waveform(ns):       { 0.000 8.333 }
+Period(ns):         16.665
+Sources:            { design_1_i/clk_wiz_0/inst/mmcme3_adv_inst/CLKFBOUT }
+
+Check Type  Corner  Lib Pin              Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period  n/a     BUFGCE/I             n/a            1.379         16.665      15.286     BUFGCE_X0Y44     design_1_i/clk_wiz_0/inst/clkf_buf/I
+Min Period  n/a     MMCME3_ADV/CLKFBOUT  n/a            1.071         16.665      15.594     MMCME3_ADV_X0Y1  design_1_i/clk_wiz_0/inst/mmcme3_adv_inst/CLKFBOUT
+Min Period  n/a     MMCME3_ADV/CLKFBIN   n/a            1.071         16.665      15.594     MMCME3_ADV_X0Y1  design_1_i/clk_wiz_0/inst/mmcme3_adv_inst/CLKFBIN
+
+
+

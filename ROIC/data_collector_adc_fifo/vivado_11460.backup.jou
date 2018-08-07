@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Jul 25 15:06:03 2018
+# Process ID: 11460
+# Current directory: C:/Users/mloui/Documents/ROIC/data_collector_adc_fifo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5028 C:\Users\mloui\Documents\ROIC\data_collector_adc_fifo\adc.xpr
+# Log file: C:/Users/mloui/Documents/ROIC/data_collector_adc_fifo/vivado.log
+# Journal file: C:/Users/mloui/Documents/ROIC/data_collector_adc_fifo\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/mloui/Documents/ROIC/data_collector_adc_fifo/adc.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source data_collector_sim.tcl
+close_sim

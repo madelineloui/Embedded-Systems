@@ -1,0 +1,1 @@
+-wto "9ba9817649364264ae5966e7dfb181dd" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "pwmcore_v1_0_behav" "xil_defaultlib.pwmcore_v1_0" -log "elaborate.log" 

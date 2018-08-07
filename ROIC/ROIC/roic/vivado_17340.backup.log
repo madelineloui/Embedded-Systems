@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue Jul 24 10:26:15 2018
+# Process ID: 17340
+# Current directory: C:/Users/mloui/Documents/ROIC/ROIC/roic
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22300 C:\Users\mloui\Documents\ROIC\ROIC\roic\roic.xpr
+# Log file: C:/Users/mloui/Documents/ROIC/ROIC/roic/vivado.log
+# Journal file: C:/Users/mloui/Documents/ROIC/ROIC/roic\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/mloui/Documents/ROIC/ROIC/roic/roic.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/mloui/Documents/ROIC/ROIC/ip_repo/adc'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/mloui/Documents/ROIC/ROIC/ip_repo/pwm'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/XilinxV/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 868.961 ; gain = 138.270
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/mloui/Documents/ROIC/ROIC/roic/roic.srcs/sources_1/bd/design_1/design_1.bd}
+Adding cell -- xilinx.com:ip:clk_wiz:5.4 - clk_wiz_0
+Adding cell -- nasa.gov:user:pwm:1.0 - pwm_0
+Successfully read diagram <design_1> from BD file <C:/Users/mloui/Documents/ROIC/ROIC/roic/roic.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 906.906 ; gain = 37.945
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 24 10:26:56 2018...

@@ -1,0 +1,30 @@
+Telemetry - files look like this Thu-Jun-7-18.57.36-2018-telem
+Format- 
+Unix Timestamp [Accelerometer X Y Z] [gyro X Y Z]
+Assume Drone stationary and that we mpu-9255 sensor (using defaults)
+accel numbers are signed 16 bit
+From that data figure out inclination of the camera
+use num pi
+
+Raw data 
+Read the .raw .raw.2 ...
+Existing code to go from .raw to .ppm
+http://www.evocortex.org/downloads-1/ direct sdk is what you need
+download something.deb install "dpkg --install something.deb"
+                               "apt-get install -f"
+
+void onThermalFrame(unsigned short* thermal, unsigned int w, unsigned int h, IRFrameMetadata meta, void* arg)
+{
+    ...
+    float t = ((((float)data[i])-1000.f))/10.f;
+    ...
+}
+
+help page for direct sdk is http://documentation.evocortex.com/libirimager2/html/index.html
+
+in "onThermalFrame" callback function
+output thermal data in celsius to csv file
+
+
+email luke.ellison@nasa.gov and ask about the orientation of the IMU (inertial measurement unit).
+We need to know the directions of the positive x,y,x axis'

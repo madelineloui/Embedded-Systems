@@ -1,0 +1,6 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/mloui/Documents/ROIC/data_collector_adc_fifo/adc.srcs/sources_1/new/Data_Collector.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Data_Collector
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/mloui/Documents/ROIC/data_collector_adc_fifo/adc.srcs/sources_1/new/adc_interface.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity adc_interface
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/mloui/Documents/ROIC/data_collector_adc_fifo/adc.srcs/sim_1/new/data_collector_sim.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity data_collector_sim

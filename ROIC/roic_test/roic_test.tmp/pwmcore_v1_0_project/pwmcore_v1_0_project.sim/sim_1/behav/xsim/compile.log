@@ -1,0 +1,6 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "c:/users/mloui/documents/roic-ip/ip_repo/pwmcore_1.0/src/pwm_core.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity pwm_core
+INFO: [VRFC 10-163] Analyzing VHDL file "c:/users/mloui/documents/roic-ip/ip_repo/pwmcore_1.0/hdl/pwmcore_v1_0_S00_AXI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity pwmcore_v1_0_S00_AXI
+INFO: [VRFC 10-163] Analyzing VHDL file "c:/users/mloui/documents/roic-ip/ip_repo/pwmcore_1.0/hdl/pwmcore_v1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity pwmcore_v1_0

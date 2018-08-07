@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Jul 23 13:19:55 2018
+# Process ID: 12232
+# Current directory: C:/Users/mloui/Documents/ROIC/ROIC/roic
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1312 C:\Users\mloui\Documents\ROIC\ROIC\roic\roic.xpr
+# Log file: C:/Users/mloui/Documents/ROIC/ROIC/roic/vivado.log
+# Journal file: C:/Users/mloui/Documents/ROIC/ROIC/roic\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/mloui/Documents/ROIC/ROIC/roic/roic.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/mloui/Documents/ROIC/ROIC/roic/roic.srcs/sources_1/bd/design_1/design_1.bd}
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/mloui/Documents/ROIC/ROIC/roic/roic.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcku040_0]
+current_hw_device [get_hw_devices xcku040_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xcku040_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xcku040_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xcku040_0]
+set_property PROGRAM.FILE {C:/Users/mloui/Documents/ROIC/ROIC/roic/roic.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcku040_0]
+program_hw_devices [get_hw_devices xcku040_0]
+refresh_hw_device [lindex [get_hw_devices xcku040_0] 0]
+open_bd_design {C:/Users/mloui/Documents/ROIC/ROIC/roic/roic.srcs/sources_1/bd/design_1/design_1.bd}

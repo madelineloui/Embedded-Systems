@@ -1,0 +1,6 @@
+vhdl xil_defaultlib  \
+"../../../bd/design_1/ipshared/2072/src/pwm_board.vhd" \
+"../../../bd/design_1/ip/design_1_pwm_sim1_0_0/sim/design_1_pwm_sim1_0_0.vhd" \
+"../../../bd/design_1/sim/design_1.vhd" \
+
+nosort

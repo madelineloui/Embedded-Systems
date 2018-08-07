@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+
+
+int main()
+{
+    init_platform();
+
+
+    uint32_t *ptr = (uint32_t *) 0x44A00000;
+
+    ptr[0] = 50;
+
+    print("Hello World\n\r");
+
+    cleanup_platform();
+    return 0;
+}

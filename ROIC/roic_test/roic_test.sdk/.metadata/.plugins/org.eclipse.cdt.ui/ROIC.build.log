@@ -1,0 +1,21 @@
+15:44:46 **** Auto Build of configuration Debug for project ROIC ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../ROIC_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: ROIC.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ROIC_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ROIC.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ROIC.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ROIC.elf  |tee "ROIC.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23488	   1312	   3168	  27968	   6d40	ROIC.elf
+'Finished building: ROIC.elf.size'
+' '
+
+15:44:46 Build Finished (took 831ms)
+

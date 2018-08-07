@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# updatemem v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# 
+# Start of session at: Tue Jul 24 15:17:14 2018
+# Process ID: 2712
+# Current directory: C:/Users/mloui/Documents/ROIC/roic_test
+# Command line: updatemem.exe -mode batch -source C:/XilinxV/SDK/2017.4/scripts/updatemem/main.tcl -notrace -tclargs -meminfo C:/Users/mloui/Documents/ROIC/roic_test/roic_test.sdk/base_mb_wrapper_hw_platform_0/base_mb_wrapper.mmi -data C:\Users\mloui\Documents\ROIC\roic_test\roic_test.sdk\ROIC\Debug\ROIC.elf -proc base_mb_i/microblaze_0 -bit C:/Users/mloui/Documents/ROIC/roic_test/roic_test.sdk/base_mb_wrapper_hw_platform_0/base_mb_wrapper.bit -out C:/Users/mloui/Documents/ROIC/roic_test/roic_test.sdk/base_mb_wrapper_hw_platform_0/download.bit -force
+# Log file: C:/Users/mloui/Documents/ROIC/roic_test/updatemem.log
+# Journal file: C:/Users/mloui/Documents/ROIC/roic_test\updatemem.jou
+#-----------------------------------------------------------
+source C:/XilinxV/SDK/2017.4/scripts/updatemem/main.tcl -notrace
+ Loading bitfile C:/Users/mloui/Documents/ROIC/roic_test/roic_test.sdk/base_mb_wrapper_hw_platform_0/base_mb_wrapper.bit
+Loading data files...
+Updating memory content...
+Creating bitstream...
+Writing bitstream C:/Users/mloui/Documents/ROIC/roic_test/roic_test.sdk/base_mb_wrapper_hw_platform_0/download.bit...
+  update_mem: Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 221.000 ; gain = 167.699
+INFO: [Common 17-206] Exiting updatemem at Tue Jul 24 15:17:38 2018...
