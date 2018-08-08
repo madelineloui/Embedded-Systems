@@ -2,23 +2,115 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Tue Jul 31 14:13:11 2018
-# Process ID: 21712
+# Start of session at: Wed Aug  8 14:34:08 2018
+# Process ID: 5588
 # Current directory: C:/Users/mloui/Documents/ROIC/roic_test
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21884 C:\Users\mloui\Documents\ROIC\roic_test\roic_test.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11896 C:\Users\mloui\Documents\ROIC\roic_test\roic_test.xpr
 # Log file: C:/Users/mloui/Documents/ROIC/roic_test/vivado.log
 # Journal file: C:/Users/mloui/Documents/ROIC/roic_test\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/mloui/Documents/ROIC/roic_test/roic_test.xpr
-open_bd_design {C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd}
 update_compile_order -fileset sources_1
+open_bd_design {C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd}
+update_ip_catalog -rebuild -repo_path c:/Users/mloui/Documents/roic-ip
+report_ip_status -name ip_status 
+upgrade_ip -vlnv nasa.gov:user:roic_interface_driver:1.0 [get_ips  base_mb_roic_interface_driver_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips base_mb_roic_interface_driver_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
 startgroup
-set_property -dict [list CONFIG.CLKOUT3_USED {true} CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {6.25} CONFIG.MMCM_DIVCLK_DIVIDE {3} CONFIG.MMCM_CLKOUT2_DIVIDE {128} CONFIG.NUM_OUT_CLKS {3} CONFIG.CLKOUT3_JITTER {245.480} CONFIG.CLKOUT3_PHASE_ERROR {114.212}] [get_bd_cells clk_wiz_1]
+create_bd_cell -type ip -vlnv nasa.gov:user:adc_core:1.0 adc_core_0
+endgroup
+set_property location {6.5 2132 385} [get_bd_cells adc_core_0]
+startgroup
+create_bd_cell -type ip -vlnv nasa.gov:user:adc_core:1.0 adc_core_1
 endgroup
 startgroup
-make_bd_pins_external  [get_bd_pins clk_wiz_1/clk_out3]
+create_bd_cell -type ip -vlnv nasa.gov:user:adc_core:1.0 adc_core_2
 endgroup
+startgroup
+create_bd_cell -type ip -vlnv nasa.gov:user:adc_core:1.0 adc_core_3
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/microblaze_0 (Periph)" intc_ip "/microblaze_0_axi_periph" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins adc_core_0/S00_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/microblaze_0 (Periph)" intc_ip "/microblaze_0_axi_periph" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins adc_core_1/S00_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/microblaze_0 (Periph)" intc_ip "/microblaze_0_axi_periph" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins adc_core_2/S00_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/microblaze_0 (Periph)" intc_ip "/microblaze_0_axi_periph" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins adc_core_3/S00_AXI]
+endgroup
+regenerate_bd_layout
+report_ip_status -name ip_status 
+connect_bd_net [get_bd_pins adc_core_0/DSYNC] [get_bd_pins roic_interface_driver_0/dsync]
+connect_bd_net [get_bd_pins roic_interface_driver_0/dsync] [get_bd_pins adc_core_1/DSYNC]
+connect_bd_net [get_bd_pins roic_interface_driver_0/dsync] [get_bd_pins adc_core_2/DSYNC]
+connect_bd_net [get_bd_pins roic_interface_driver_0/dsync] [get_bd_pins adc_core_3/DSYNC]
+startgroup
+make_bd_pins_external  [get_bd_pins adc_core_3/DRDY]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins adc_core_3/READY]
+endgroup
+undo
+startgroup
+make_bd_pins_external  [get_bd_pins adc_core_2/DIN]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins adc_core_2/DRDY]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins adc_core_3/DIN]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins adc_core_1/DIN]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins adc_core_1/DRDY]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins adc_core_0/DIN]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins adc_core_0/DRDY]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins roic_interface_driver_0/data]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins roic_interface_driver_0/fsync]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins roic_interface_driver_0/lsync]
+endgroup
+create_bd_port -dir I roic
+set_property name roic_clk [get_bd_ports roic]
+delete_bd_objs [get_bd_ports roic_clk]
+startgroup
+create_bd_port -dir O -type clk roic_clk
+connect_bd_net [get_bd_pins /clk_wiz_1/clk_out3] [get_bd_ports roic_clk]
+endgroup
+set_property location {1913 1315} [get_bd_ports clk_out3_0]
+disconnect_bd_net /clk_wiz_1_clk_out3 [get_bd_ports roic_clk]
+connect_bd_net [get_bd_ports roic_clk] [get_bd_pins clk_wiz_1/clk_out2]
+startgroup
+set_property -dict [list CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {12} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {2.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {6.000} CONFIG.MMCM_CLKOUT1_DIVIDE {96} CONFIG.MMCM_CLKOUT2_DIVIDE {50} CONFIG.CLKOUT1_JITTER {108.112} CONFIG.CLKOUT1_PHASE_ERROR {105.563} CONFIG.CLKOUT2_JITTER {188.541} CONFIG.CLKOUT2_PHASE_ERROR {105.563} CONFIG.CLKOUT3_JITTER {165.538} CONFIG.CLKOUT3_PHASE_ERROR {105.563}] [get_bd_cells clk_wiz_1]
+endgroup
+set_property name adc_clk [get_bd_ports clk_out3_0]
+set_property CONFIG.FREQ_HZ 12000000 [get_bd_ports /adc_clk]
+regenerate_bd_layout
+startgroup
+copy_bd_objs /  [get_bd_ports {adc_clk}]
+set_property location {1643 1335} [get_bd_ports adc_clk1]
+endgroup
+startgroup
+copy_bd_objs /  [get_bd_ports {adc_clk1}]
+set_property location {1649 1372} [get_bd_ports adc_clk2]
+endgroup
+startgroup
+copy_bd_objs /  [get_bd_ports {adc_clk2}]
+set_property location {1660 1409} [get_bd_ports adc_clk3]
+endgroup
+connect_bd_net [get_bd_ports adc_clk1] [get_bd_pins clk_wiz_1/clk_out3]
+connect_bd_net [get_bd_ports adc_clk2] [get_bd_pins clk_wiz_1/clk_out3]
+connect_bd_net [get_bd_ports adc_clk3] [get_bd_pins clk_wiz_1/clk_out3]
 regenerate_bd_layout
 reset_run base_mb_clk_wiz_1_0_synth_1
 reset_run base_mb_xbar_0_synth_1
@@ -26,253 +118,258 @@ save_bd_design
 reset_run synth_1
 launch_runs synth_1 -jobs 4
 wait_on_run synth_1
-create_project testing C:/Users/mloui/Documents/ROIC/testing -part xcku040-ffva1156-2-e
-set_property board_part xilinx.com:kcu105:part0:1.3 [current_project]
-set_property target_language VHDL [current_project]
-create_bd_design "design_1"
-update_compile_order -fileset sources_1
-open_bd_design {C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd}
-open_bd_design {C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd}
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze:10.0 microblaze_0
-endgroup
-current_project roic_test
-open_run synth_1 -name synth_1
-place_ports clk_out3_0 G17
-save_constraints
-launch_runs impl_1 -jobs 4
-wait_on_run impl_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-current_project testing
-delete_bd_objs [get_bd_cells microblaze_0]
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.4 clk_wiz_0
-endgroup
-set_property -dict [list CONFIG.CLK_IN1_BOARD_INTERFACE {default_sysclk_300} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {5} CONFIG.PRIM_SOURCE {Differential_clock_capable_pin} CONFIG.CLKIN1_JITTER_PS {33.330000000000005} CONFIG.MMCM_DIVCLK_DIVIDE {15} CONFIG.MMCM_CLKFBOUT_MULT_F {32.000} CONFIG.MMCM_CLKIN1_PERIOD {3.333} CONFIG.MMCM_CLKIN2_PERIOD {10.0} CONFIG.MMCM_CLKOUT0_DIVIDE_F {128.000} CONFIG.CLKOUT1_JITTER {594.042} CONFIG.CLKOUT1_PHASE_ERROR {346.848}] [get_bd_cells clk_wiz_0]
-startgroup
-apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "default_sysclk_300 ( 300 MHz System differential clock ) " }  [get_bd_intf_pins clk_wiz_0/CLK_IN1_D]
-apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "reset ( FPGA Reset ) " }  [get_bd_pins clk_wiz_0/reset]
-endgroup
-startgroup
-make_bd_pins_external  [get_bd_pins clk_wiz_0/clk_out1]
-endgroup
-save_bd_design
-generate_target all [get_files  C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd]
-catch { config_ip_cache -export [get_ips -all design_1_clk_wiz_0_0] }
-export_ip_user_files -of_objects [get_files C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd]
-launch_runs -jobs 4 design_1_clk_wiz_0_0_synth_1
-export_simulation -of_objects [get_files C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/mloui/Documents/ROIC/testing/testing.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/mloui/Documents/ROIC/testing/testing.ip_user_files -ipstatic_source_dir C:/Users/mloui/Documents/ROIC/testing/testing.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/mloui/Documents/ROIC/testing/testing.cache/compile_simlib/modelsim} {questa=C:/Users/mloui/Documents/ROIC/testing/testing.cache/compile_simlib/questa} {riviera=C:/Users/mloui/Documents/ROIC/testing/testing.cache/compile_simlib/riviera} {activehdl=C:/Users/mloui/Documents/ROIC/testing/testing.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-make_wrapper -files [get_files C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd] -top
-add_files -norecurse C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
-launch_runs synth_1 -jobs 4
-wait_on_run synth_1
-open_run synth_1 -name synth_1
-place_ports clk_out1_0 G17
-set_property IOSTANDARD LVCMOS18 [get_ports [list clk_out1_0]]
-file mkdir C:/Users/mloui/Documents/ROIC/testing/testing.srcs/constrs_1/new
-close [ open C:/Users/mloui/Documents/ROIC/testing/testing.srcs/constrs_1/new/clk_design.xdc w ]
-add_files -fileset constrs_1 C:/Users/mloui/Documents/ROIC/testing/testing.srcs/constrs_1/new/clk_design.xdc
-set_property target_constrs_file C:/Users/mloui/Documents/ROIC/testing/testing.srcs/constrs_1/new/clk_design.xdc [current_fileset -constrset]
-save_constraints -force
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-close_design
-open_run impl_1
-open_hw
-connect_hw_server
-set_property PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property PROGRAM.FILE {C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcku040_0]
-program_hw_devices [get_hw_devices xcku040_0]
-refresh_hw_device [lindex [get_hw_devices xcku040_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property PROGRAM.FILE {C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcku040_0]
-program_hw_devices [get_hw_devices xcku040_0]
-refresh_hw_device [lindex [get_hw_devices xcku040_0] 0]
-refresh_hw_device [lindex [get_hw_devices xcku040_0] 0]
-disconnect_hw_server localhost:3121
-connect_hw_server
-open_hw_target
-set_property PROGRAM.FILE {C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcku040_0]
-current_hw_device [get_hw_devices xcku040_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xcku040_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property PROGRAM.FILE {C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcku040_0]
-program_hw_devices [get_hw_devices xcku040_0]
-refresh_hw_device [lindex [get_hw_devices xcku040_0] 0]
-disconnect_hw_server localhost:3121
-connect_hw_server
-set_property PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property PROGRAM.FILE {C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcku040_0]
-program_hw_devices [get_hw_devices xcku040_0]
-refresh_hw_device [lindex [get_hw_devices xcku040_0] 0]
-close_hw
-close_design
-open_bd_design {C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd}
-open_run synth_1 -name synth_1
-close_design
-startgroup
-endgroup
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-reset_run synth_1
-startgroup
-make_bd_pins_external  [get_bd_pins clk_wiz_0/locked]
-endgroup
-save_bd_design
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-open_hw
-connect_hw_server
-open_hw_target
-set_property PROGRAM.FILE {C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcku040_0]
-current_hw_device [get_hw_devices xcku040_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xcku040_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property PROGRAM.FILE {C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcku040_0]
-program_hw_devices [get_hw_devices xcku040_0]
-refresh_hw_device [lindex [get_hw_devices xcku040_0] 0]
-open_bd_design {C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd}
-startgroup
-set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {100} CONFIG.MMCM_DIVCLK_DIVIDE {3} CONFIG.MMCM_CLKFBOUT_MULT_F {10.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {10.000} CONFIG.CLKOUT1_JITTER {129.666} CONFIG.CLKOUT1_PHASE_ERROR {98.575}] [get_bd_cells clk_wiz_0]
-endgroup
-save_bd_design
-reset_run synth_1
-launch_runs synth_1 -jobs 4
-startgroup
-endgroup
-save_bd_design
-startgroup
-set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {5} CONFIG.MMCM_DIVCLK_DIVIDE {15} CONFIG.MMCM_CLKFBOUT_MULT_F {32.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {128.000} CONFIG.CLKOUT1_JITTER {594.042} CONFIG.CLKOUT1_PHASE_ERROR {346.848}] [get_bd_cells clk_wiz_0]
-endgroup
-startgroup
-set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {150} CONFIG.MMCM_DIVCLK_DIVIDE {2} CONFIG.MMCM_CLKFBOUT_MULT_F {6.625} CONFIG.MMCM_CLKOUT0_DIVIDE_F {6.625} CONFIG.CLKOUT1_JITTER {107.611} CONFIG.CLKOUT1_PHASE_ERROR {92.971}] [get_bd_cells clk_wiz_0]
-endgroup
-save_bd_design
-launch_runs synth_1 -jobs 4
-delete_bd_objs [get_bd_nets clk_wiz_0_locked] [get_bd_nets clk_wiz_0_clk_out1] [get_bd_nets reset_1] [get_bd_intf_nets default_sysclk_300_1] [get_bd_cells clk_wiz_0]
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.4 clk_wiz_0
-endgroup
-connect_bd_net [get_bd_ports reset] [get_bd_pins clk_wiz_0/reset]
-apply_bd_automation -rule xilinx.com:bd_rule:board -config {Clk "New External Port (100 MHz)" }  [get_bd_pins clk_wiz_0/clk_in1]
-delete_bd_objs [get_bd_nets clk_100MHz_1] [get_bd_ports clk_100MHz]
-startgroup
-set_property -dict [list CONFIG.CLK_IN1_BOARD_INTERFACE {default_sysclk_300} CONFIG.RESET_BOARD_INTERFACE {reset} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {150} CONFIG.PRIM_SOURCE {Differential_clock_capable_pin} CONFIG.CLKIN1_JITTER_PS {33.330000000000005} CONFIG.MMCM_DIVCLK_DIVIDE {2} CONFIG.MMCM_CLKFBOUT_MULT_F {6.625} CONFIG.MMCM_CLKIN1_PERIOD {3.333} CONFIG.MMCM_CLKIN2_PERIOD {10.0} CONFIG.MMCM_CLKOUT0_DIVIDE_F {6.625} CONFIG.CLKOUT1_JITTER {107.611} CONFIG.CLKOUT1_PHASE_ERROR {92.971}] [get_bd_cells clk_wiz_0]
-endgroup
-connect_bd_intf_net [get_bd_intf_ports default_sysclk_300] [get_bd_intf_pins clk_wiz_0/CLK_IN1_D]
-connect_bd_net [get_bd_ports clk_out1_0] [get_bd_pins clk_wiz_0/clk_out1]
-connect_bd_net [get_bd_ports locked_0] [get_bd_pins clk_wiz_0/locked]
-save_bd_design
-launch_runs synth_1 -jobs 4
-delete_bd_objs [get_bd_nets clk_wiz_0_clk_out1] [get_bd_ports clk_out1_0]
-startgroup
-make_bd_pins_external  [get_bd_pins clk_wiz_0/clk_out1]
-endgroup
-save_bd_design
-launch_runs synth_1 -jobs 4
-wait_on_run synth_1
-launch_runs impl_1 -jobs 4
-wait_on_run impl_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property PROGRAM.FILE {C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcku040_0]
-program_hw_devices [get_hw_devices xcku040_0]
-refresh_hw_device [lindex [get_hw_devices xcku040_0] 0]
-current_project roic_test
 open_bd_design {C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd}
-current_project testing
-open_bd_design {C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd}
-delete_bd_objs [get_bd_nets clk_wiz_0_clk_out1] [get_bd_ports clk_out1_0]
-startgroup
-set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {15} CONFIG.MMCM_DIVCLK_DIVIDE {20} CONFIG.MMCM_CLKFBOUT_MULT_F {52.375} CONFIG.MMCM_CLKOUT0_DIVIDE_F {52.375} CONFIG.CLKOUT1_JITTER {478.277} CONFIG.CLKOUT1_PHASE_ERROR {446.811}] [get_bd_cells clk_wiz_0]
-endgroup
-startgroup
-make_bd_pins_external  [get_bd_pins clk_wiz_0/clk_out1]
-endgroup
-save_bd_design
+open_bd_design {C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd}
+make_wrapper -files [get_files C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd] -top
+ipx::edit_ip_in_project -upgrade true -name adc_core_v1_0_project -directory C:/Users/mloui/Documents/ROIC/roic_test/roic_test.tmp/adc_core_v1_0_project c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/component.xml
+update_compile_order -fileset sources_1
+set_property core_revision 4 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/mloui/Documents/roic-ip
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {base_mb_adc_core_0_0 base_mb_adc_core_3_0 base_mb_adc_core_1_0 base_mb_adc_core_2_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {base_mb_adc_core_0_0 base_mb_adc_core_3_0 base_mb_adc_core_1_0 base_mb_adc_core_2_0}] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+reset_run base_mb_roic_interface_driver_0_0_synth_1
 reset_run synth_1
-reset_run design_1_clk_wiz_0_1_synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property PROGRAM.FILE {C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcku040_0]
-program_hw_devices [get_hw_devices xcku040_0]
-refresh_hw_device [lindex [get_hw_devices xcku040_0] 0]
-disconnect_hw_server localhost:3121
-connect_hw_server
-disconnect_hw_server localhost:3121
-connect_hw_server
-set_property PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property PROGRAM.FILE {C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcku040_0]
-program_hw_devices [get_hw_devices xcku040_0]
-refresh_hw_device [lindex [get_hw_devices xcku040_0] 0]
-disconnect_hw_server localhost:3121
-connect_hw_server
-open_hw_target
-set_property PROGRAM.FILE {C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcku040_0]
-current_hw_device [get_hw_devices xcku040_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xcku040_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property PROGRAM.FILE {C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcku040_0]
-program_hw_devices [get_hw_devices xcku040_0]
-refresh_hw_device [lindex [get_hw_devices xcku040_0] 0]
-close_hw
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+ipx::edit_ip_in_project -upgrade true -name pwmcore_v1_0_project -directory C:/Users/mloui/Documents/ROIC/roic_test/roic_test.tmp/pwmcore_v1_0_project c:/Users/mloui/Documents/roic-ip/ip_repo/pwmcore_1.0/component.xml
+update_compile_order -fileset sources_1
+set_property core_revision 4 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/mloui/Documents/roic-ip
+report_ip_status -name ip_status 
+upgrade_ip -vlnv nasa.gov:user:pwmcore:1.0 [get_ips  base_mb_pwmcore_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips base_mb_pwmcore_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd]
+catch { config_ip_cache -export [get_ips -all base_mb_clk_wiz_1_0] }
+catch { [ delete_ip_run [get_ips -all base_mb_clk_wiz_1_0] ] }
+catch { config_ip_cache -export [get_ips -all base_mb_xbar_0] }
+catch { config_ip_cache -export [get_ips -all base_mb_pwmcore_0_0] }
+catch { config_ip_cache -export [get_ips -all base_mb_roic_interface_driver_0_0] }
+catch { config_ip_cache -export [get_ips -all base_mb_adc_core_0_0] }
+catch { config_ip_cache -export [get_ips -all base_mb_adc_core_1_0] }
+catch { config_ip_cache -export [get_ips -all base_mb_adc_core_2_0] }
+catch { config_ip_cache -export [get_ips -all base_mb_adc_core_3_0] }
+export_ip_user_files -of_objects [get_files C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd]
+launch_runs -jobs 4 {base_mb_xbar_0_synth_1 base_mb_roic_interface_driver_0_0_synth_1 base_mb_adc_core_2_0_synth_1 base_mb_adc_core_0_0_synth_1 base_mb_adc_core_3_0_synth_1 base_mb_adc_core_1_0_synth_1 base_mb_pwmcore_0_0_synth_1}
+export_simulation -of_objects [get_files C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd] -directory C:/Users/mloui/Documents/ROIC/roic_test/roic_test.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/mloui/Documents/ROIC/roic_test/roic_test.ip_user_files -ipstatic_source_dir C:/Users/mloui/Documents/ROIC/roic_test/roic_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/mloui/Documents/ROIC/roic_test/roic_test.cache/compile_simlib/modelsim} {questa=C:/Users/mloui/Documents/ROIC/roic_test/roic_test.cache/compile_simlib/questa} {riviera=C:/Users/mloui/Documents/ROIC/roic_test/roic_test.cache/compile_simlib/riviera} {activehdl=C:/Users/mloui/Documents/ROIC/roic_test/roic_test.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
 open_run synth_1 -name synth_1
-set_property IOSTANDARD LVCMOS33 [get_ports [list clk_out1_0]]
-set_property IOSTANDARD LVCMOS33 [get_ports [list clk_out1_0]]
+place_ports adc_clk1 G17
+place_ports adc_clk2 G16
+place_ports adc_clk3 E16
+place_ports adc_clk D16
+place_ports roic_clk F8
+set_property package_pin "" [get_ports [list  {DIN_0[12]}]]
+set_property package_pin "" [get_ports [list  {DIN_0[12]}]]
+set_property package_pin "" [get_ports [list  {DIN_0[13]}]]
+set_property package_pin "" [get_ports [list  {DIN_0[13]}]]
+place_ports {DIN_2[13]} J9
+place_ports {DIN_2[12]} H9
+place_ports {DIN_2[11]} L8
+place_ports {DIN_2[10]} K8
+place_ports {DIN_2[9]} K11
+place_ports {DIN_2[8]} J11
+place_ports {DIN_2[7]} E10
+place_ports {DIN_2[6]} D10
+place_ports {DIN_2[5]} D9
+place_ports {DIN_2[4]} C9
+place_ports {DIN_2[3]} B10
+set_property package_pin "" [get_ports [list  {DIN_2[0]}]]
+place_ports {DIN_2[13]} C8
+place_ports {DIN_2[12]} D8
+place_ports {DIN_2[11]} A10
+startgroup
+set_property package_pin "" [get_ports [list  {DIN_2[3]}]]
+place_ports {DIN_2[10]} B10
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {DIN_2[4]}]]
+place_ports {DIN_2[9]} C9
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {DIN_2[5]}]]
+place_ports {DIN_2[8]} D9
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {DIN_2[6]}]]
+place_ports {DIN_2[7]} D10
+endgroup
+place_ports {DIN_2[6]} E10
+place_ports {DIN_2[5]} J11
+place_ports {DIN_2[4]} K11
+place_ports {DIN_2[3]} K8
+place_ports {DIN_2[2]} L8
+place_ports {DIN_2[1]} H9
+place_ports {DIN_2[0]} J9
+place_ports {DIN_3[13]} F25
+place_ports {DIN_3[12]} G24
+place_ports {DIN_3[11]} F24
+place_ports {DIN_3[10]} F23
+place_ports {DIN_3[9]} A24
+place_ports {DIN_3[8]} B24
+place_ports {DIN_3[7]} C22
+place_ports {DIN_3[6]} C21
+place_ports {DIN_3[5]} E23
+place_ports {DIN_3[4]} E22
+place_ports {DIN_3[3]} C24
+place_ports {DIN_3[2]} D24
+place_ports {DIN_3[1]} A9
+place_ports {DIN_3[0]} B9
+place_ports fsync_0 D13
+place_ports lsync_0 C13
+place_ports pwm_out_0 J8
+place_ports data_0 E8
+place_ports DRDY_0 H11
+place_ports DRDY_1 G9
+place_ports DRDY_2 K10
+place_ports DRDY_3 A13
+place_ports {DIN_0[13]} J15
+place_ports {DIN_0[12]} J14
+set_property package_pin "" [get_ports [list  {DIN_0[11]}]]
+place_ports {DIN_0[13]} H8
+set_property package_pin "" [get_ports [list  {DIN_0[12]}]]
+place_ports {DIN_0[11]} A12
+place_ports {DIN_0[9]} B19
+place_ports {DIN_0[8]} C19
+place_ports {DIN_0[7]} A18
+place_ports {DIN_0[6]} A19
+place_ports {DIN_0[5]} A14
+place_ports {DIN_0[4]} B14
+place_ports {DIN_0[3]} F17
+place_ports {DIN_0[2]} F18
+place_ports {DIN_0[1]} J14
+place_ports {DIN_0[0]} J15
+place_ports {DIN_0[13]} L19
+place_ports {DIN_0[12]} L18
+place_ports {DIN_0[11]} G14
+place_ports {DIN_0[10]} G15
+startgroup
+set_property package_pin "" [get_ports [list  {DIN_0[12]}]]
+place_ports {DIN_0[13]} L18
+endgroup
+place_ports {DIN_0[12]} L19
+place_ports {DIN_1[13]} K15
+place_ports {DIN_1[12]} L15
+place_ports {DIN_1[11]} H18
+place_ports {DIN_1[10]} H19
+place_ports {DIN_1[9]} D18
+place_ports {DIN_1[8]} D19
+place_ports {DIN_1[7]} C14
+place_ports {DIN_1[6]} D14
+place_ports {DIN_1[5]} J16
+place_ports {DIN_1[4]} K16
+place_ports {DIN_1[3]} K17
+place_ports {DIN_1[2]} K18
+place_ports {DIN_1[1]} F19
+place_ports {DIN_1[0]} G19
+set_property IOSTANDARD LVCMOS18 [get_ports [list adc_clk1]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list adc_clk2]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list adc_clk3]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list adc_clk]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list roic_clk]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list {DIN_0[13]} {DIN_0[12]} {DIN_0[11]} {DIN_0[10]} {DIN_0[9]} {DIN_0[8]} {DIN_0[7]} {DIN_0[6]} {DIN_0[5]} {DIN_0[4]} {DIN_0[3]} {DIN_0[2]} {DIN_0[1]} {DIN_0[0]}]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list {DIN_1[13]} {DIN_1[12]} {DIN_1[11]} {DIN_1[10]} {DIN_1[9]} {DIN_1[8]} {DIN_1[7]} {DIN_1[6]} {DIN_1[5]} {DIN_1[4]} {DIN_1[3]} {DIN_1[2]} {DIN_1[1]} {DIN_1[0]}]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list {DIN_2[13]} {DIN_2[12]} {DIN_2[11]} {DIN_2[10]} {DIN_2[9]} {DIN_2[8]} {DIN_2[7]} {DIN_2[6]} {DIN_2[5]} {DIN_2[4]} {DIN_2[3]} {DIN_2[2]} {DIN_2[1]} {DIN_2[0]}]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list {DIN_3[13]} {DIN_3[12]} {DIN_3[11]} {DIN_3[10]} {DIN_3[9]} {DIN_3[8]} {DIN_3[7]} {DIN_3[6]} {DIN_3[5]} {DIN_3[4]} {DIN_3[3]} {DIN_3[2]} {DIN_3[1]} {DIN_3[0]}]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list data_0]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list DRDY_0]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list DRDY_1]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list DRDY_2]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list DRDY_3]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list fsync_0]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list lsync_0]]
 save_constraints
 reset_run synth_1
 launch_runs synth_1 -jobs 4
 wait_on_run synth_1
 close_design
-reset_run synth_1
-launch_runs synth_1 -jobs 4
-wait_on_run synth_1
 open_run synth_1 -name synth_1
 launch_runs impl_1 -jobs 4
 wait_on_run impl_1
-set_property IOSTANDARD LVCMOS25 [get_ports [list clk_out1_0]]
-set_property IOSTANDARD LVCMOS18 [get_ports [list clk_out1_0]]
-set_property IOSTANDARD LVCMOS15 [get_ports [list clk_out1_0]]
-set_property IOSTANDARD LVCMOS12 [get_ports [list clk_out1_0]]
-set_property IOSTANDARD LVCMOS33 [get_ports [list clk_out1_0]]
-set_property IOSTANDARD LVCMOS33 [get_ports [list reset]]
-set_property IOSTANDARD LVCMOS18 [get_ports [list reset]]
-set_property IOSTANDARD HSLVDCI_15 [get_ports [list clk_out1_0]]
-set_property IOSTANDARD HSTL_II [get_ports [list clk_out1_0]]
-set_property IOSTANDARD HSTL_I_DCI [get_ports [list clk_out1_0]]
-set_property IOSTANDARD LVDCI_18 [get_ports [list clk_out1_0]]
-set_property IOSTANDARD LVCMOS33 [get_ports [list clk_out1_0]]
-set_property IOSTANDARD LVCMOS33 [get_ports [list locked_0]]
-set_property IOSTANDARD LVCMOS18 [get_ports [list locked_0]]
-set_property IOSTANDARD LVCMOS33 [get_ports [list clk_out1_0]]
-set_property IOSTANDARD LVDS [get_ports [list default_sysclk_300_clk_p]]
-set_property IOSTANDARD LVCMOS18 [get_ports [list clk_out1_0]]
-set_property IOSTANDARD LVDS [get_ports [list clk_out1_0]]
-set_property IOSTANDARD LVCMOS18 [get_ports [list clk_out1_0]]
-open_bd_design {C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd}
-place_ports clk_out1_0 H12
-set_property IOSTANDARD LVCMOS33 [get_ports [list clk_out1_0]]
-set_property IOSTANDARD LVCMOS33 [get_ports [list reset]]
-set_property IOSTANDARD LVCMOS33 [get_ports [list locked_0]]
-place_ports clk_out1_0 G19
-place_ports clk_out1_0 H19
-place_ports clk_out1_0 K13
-set_property IOSTANDARD LVCMOS33 [get_ports [list clk_out1_0]]
+open_bd_design {C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd}
+ipx::edit_ip_in_project -upgrade true -name adc_core_v1_0_project -directory C:/Users/mloui/Documents/ROIC/roic_test/roic_test.tmp/adc_core_v1_0_project c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/component.xml
+update_compile_order -fileset sources_1
+create_ip -name axis_data_fifo -vendor xilinx.com -library ip -version 1.1 -module_name axis_data_fifo_0 -dir c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src
+generate_target {instantiation_template} [get_files c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src/axis_data_fifo_0_1/axis_data_fifo_0.xci]
+generate_target all [get_files  c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src/axis_data_fifo_0_1/axis_data_fifo_0.xci]
+catch { config_ip_cache -export [get_ips -all axis_data_fifo_0] }
+export_ip_user_files -of_objects [get_files c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src/axis_data_fifo_0_1/axis_data_fifo_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src/axis_data_fifo_0_1/axis_data_fifo_0.xci]
+launch_runs -jobs 4 axis_data_fifo_0_synth_1
+export_simulation -of_objects [get_files c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src/axis_data_fifo_0_1/axis_data_fifo_0.xci] -directory c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.ip_user_files/sim_scripts -ip_user_files_dir c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.ip_user_files -ipstatic_source_dir c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.ip_user_files/ipstatic -lib_map_path [list {modelsim=c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.cache/compile_simlib/modelsim} {questa=c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.cache/compile_simlib/questa} {riviera=c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.cache/compile_simlib/riviera} {activehdl=c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 5 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/mloui/Documents/roic-ip
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {base_mb_adc_core_0_0 base_mb_adc_core_3_0 base_mb_adc_core_1_0 base_mb_adc_core_2_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {base_mb_adc_core_0_0 base_mb_adc_core_3_0 base_mb_adc_core_1_0 base_mb_adc_core_2_0}] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd]
+catch { config_ip_cache -export [get_ips -all base_mb_adc_core_0_0] }
+catch { config_ip_cache -export [get_ips -all base_mb_adc_core_1_0] }
+catch { config_ip_cache -export [get_ips -all base_mb_adc_core_2_0] }
+catch { config_ip_cache -export [get_ips -all base_mb_adc_core_3_0] }
+export_ip_user_files -of_objects [get_files C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd]
+launch_runs -jobs 4 {base_mb_adc_core_0_0_synth_1 base_mb_adc_core_1_0_synth_1 base_mb_adc_core_2_0_synth_1 base_mb_adc_core_3_0_synth_1}
+export_simulation -of_objects [get_files C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd] -directory C:/Users/mloui/Documents/ROIC/roic_test/roic_test.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/mloui/Documents/ROIC/roic_test/roic_test.ip_user_files -ipstatic_source_dir C:/Users/mloui/Documents/ROIC/roic_test/roic_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/mloui/Documents/ROIC/roic_test/roic_test.cache/compile_simlib/modelsim} {questa=C:/Users/mloui/Documents/ROIC/roic_test/roic_test.cache/compile_simlib/questa} {riviera=C:/Users/mloui/Documents/ROIC/roic_test/roic_test.cache/compile_simlib/riviera} {activehdl=C:/Users/mloui/Documents/ROIC/roic_test/roic_test.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+report_ip_status -name ip_status 
+ipx::edit_ip_in_project -upgrade true -name adc_core_v1_0_project -directory C:/Users/mloui/Documents/ROIC/roic_test/roic_test.tmp/adc_core_v1_0_project c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/component.xml
+update_compile_order -fileset sources_1
+create_ip -name axis_data_fifo -vendor xilinx.com -library ip -version 1.1 -module_name axis_data_fifo_0 -dir c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src
+set_property -dict [list CONFIG.TDATA_NUM_BYTES {2} CONFIG.IS_ACLK_ASYNC {1}] [get_ips axis_data_fifo_0]
+generate_target {instantiation_template} [get_files c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src/axis_data_fifo_0_2/axis_data_fifo_0.xci]
+generate_target all [get_files  c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src/axis_data_fifo_0_2/axis_data_fifo_0.xci]
+catch { config_ip_cache -export [get_ips -all axis_data_fifo_0] }
+export_ip_user_files -of_objects [get_files c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src/axis_data_fifo_0_2/axis_data_fifo_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src/axis_data_fifo_0_2/axis_data_fifo_0.xci]
+launch_runs -jobs 4 axis_data_fifo_0_synth_1
+export_simulation -of_objects [get_files c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src/axis_data_fifo_0_2/axis_data_fifo_0.xci] -directory c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.ip_user_files/sim_scripts -ip_user_files_dir c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.ip_user_files -ipstatic_source_dir c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.ip_user_files/ipstatic -lib_map_path [list {modelsim=c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.cache/compile_simlib/modelsim} {questa=c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.cache/compile_simlib/questa} {riviera=c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.cache/compile_simlib/riviera} {activehdl=c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+copy_ip -name axis_data_fifo_0_1 -dir c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src [get_ips  axis_data_fifo_0]
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 6 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/mloui/Documents/roic-ip
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {base_mb_adc_core_0_0 base_mb_adc_core_3_0 base_mb_adc_core_1_0 base_mb_adc_core_2_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {base_mb_adc_core_0_0 base_mb_adc_core_3_0 base_mb_adc_core_1_0 base_mb_adc_core_2_0}] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd]
+catch { config_ip_cache -export [get_ips -all base_mb_adc_core_0_0] }
+catch { config_ip_cache -export [get_ips -all base_mb_adc_core_1_0] }
+catch { config_ip_cache -export [get_ips -all base_mb_adc_core_2_0] }
+catch { config_ip_cache -export [get_ips -all base_mb_adc_core_3_0] }
+export_ip_user_files -of_objects [get_files C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd]
+launch_runs -jobs 4 {base_mb_adc_core_0_0_synth_1 base_mb_adc_core_1_0_synth_1 base_mb_adc_core_2_0_synth_1 base_mb_adc_core_3_0_synth_1}
+export_simulation -of_objects [get_files C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd] -directory C:/Users/mloui/Documents/ROIC/roic_test/roic_test.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/mloui/Documents/ROIC/roic_test/roic_test.ip_user_files -ipstatic_source_dir C:/Users/mloui/Documents/ROIC/roic_test/roic_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/mloui/Documents/ROIC/roic_test/roic_test.cache/compile_simlib/modelsim} {questa=C:/Users/mloui/Documents/ROIC/roic_test/roic_test.cache/compile_simlib/questa} {riviera=C:/Users/mloui/Documents/ROIC/roic_test/roic_test.cache/compile_simlib/riviera} {activehdl=C:/Users/mloui/Documents/ROIC/roic_test/roic_test.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+report_ip_status -name ip_status 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1

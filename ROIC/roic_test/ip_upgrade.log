@@ -1,6 +1,392 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Wed Aug  8 16:19:29 2018
+| Host         : GSSLW17031962 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_mb_adc_core_3_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_mb_adc_core_3_0 (nasa.gov:user:adc_core:1.0) from (Rev. 5) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Wed Aug  8 16:19:29 2018
+| Host         : GSSLW17031962 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_mb_adc_core_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_mb_adc_core_2_0 (nasa.gov:user:adc_core:1.0) from (Rev. 5) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Wed Aug  8 16:19:29 2018
+| Host         : GSSLW17031962 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_mb_adc_core_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_mb_adc_core_1_0 (nasa.gov:user:adc_core:1.0) from (Rev. 5) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Wed Aug  8 16:19:29 2018
+| Host         : GSSLW17031962 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_mb_adc_core_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_mb_adc_core_0_0 (nasa.gov:user:adc_core:1.0) from (Rev. 5) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Wed Aug  8 16:00:45 2018
+| Host         : GSSLW17031962 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_mb_adc_core_3_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_mb_adc_core_3_0 (nasa.gov:user:adc_core:1.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Wed Aug  8 16:00:45 2018
+| Host         : GSSLW17031962 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_mb_adc_core_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_mb_adc_core_2_0 (nasa.gov:user:adc_core:1.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Wed Aug  8 16:00:45 2018
+| Host         : GSSLW17031962 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_mb_adc_core_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_mb_adc_core_1_0 (nasa.gov:user:adc_core:1.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Wed Aug  8 16:00:45 2018
+| Host         : GSSLW17031962 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_mb_adc_core_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_mb_adc_core_0_0 (nasa.gov:user:adc_core:1.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Wed Aug  8 15:06:42 2018
+| Host         : GSSLW17031962 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_mb_pwmcore_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_mb_pwmcore_0_0 (nasa.gov:user:pwmcore:1.0) from (Rev. 3) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Wed Aug  8 15:04:10 2018
+| Host         : GSSLW17031962 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_mb_adc_core_3_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_mb_adc_core_3_0 (nasa.gov:user:adc_core:1.0) from (Rev. 3) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Wed Aug  8 15:04:10 2018
+| Host         : GSSLW17031962 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_mb_adc_core_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_mb_adc_core_2_0 (nasa.gov:user:adc_core:1.0) from (Rev. 3) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Wed Aug  8 15:04:10 2018
+| Host         : GSSLW17031962 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_mb_adc_core_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_mb_adc_core_1_0 (nasa.gov:user:adc_core:1.0) from (Rev. 3) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Wed Aug  8 15:04:10 2018
+| Host         : GSSLW17031962 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_mb_adc_core_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_mb_adc_core_0_0 (nasa.gov:user:adc_core:1.0) from (Rev. 3) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Wed Aug  8 14:40:47 2018
+| Host         : GSSLW17031962 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_mb_roic_interface_driver_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of base_mb_roic_interface_driver_0_0 (nasa.gov:user:roic_interface_driver:1.0) from (Rev. 16) to (Rev. 18)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'base_mb_roic_interface_driver_0_0'. These changes may impact your design.
+
+
+-Upgraded port 's00_axi_araddr' width 32 differs from original width 4
+
+-Upgraded port 's00_axi_awaddr' width 32 differs from original width 4
+
+-Upgrade has removed port 's00_axi_arprot'
+
+-Upgrade has removed port 's00_axi_awprot'
+
+-Upgrade has added port 'dsync'
+
+-Upgrade has added port 'enabled'
+
+
+3. Customization warnings
+-------------------------
+
+An attempt to modify the value of disabled parameter 'C_S00_AXI_ADDR_WIDTH' from '32' to '4' has been ignored for IP 'base_mb_roic_interface_driver_0_0'
+
+
+4. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv nasa.gov:user:roic_interface_driver:1.0 -user_name base_mb_roic_interface_driver_0_0
+set_property -dict "\
+  CONFIG.C_CLK_FREQ_KHZ {6250} \
+  CONFIG.C_S00_AXI_ADDR_WIDTH {4} \
+  CONFIG.C_S00_AXI_BASEADDR {0xFFFFFFFF} \
+  CONFIG.C_S00_AXI_DATA_WIDTH {32} \
+  CONFIG.C_S00_AXI_HIGHADDR {0x00000000} \
+  CONFIG.C_VER_DEV_FLAG {Development} \
+  CONFIG.C_VER_ITERATION_NUM {0} \
+  CONFIG.C_VER_XIL_INFO {1.00.a} \
+  CONFIG.Component_Name {base_mb_roic_interface_driver_0_0} \
+  CONFIG.S00_AXI.ADDR_WIDTH {4} \
+  CONFIG.S00_AXI.ARUSER_WIDTH {0} \
+  CONFIG.S00_AXI.AWUSER_WIDTH {0} \
+  CONFIG.S00_AXI.BUSER_WIDTH {0} \
+  CONFIG.S00_AXI.CLK_DOMAIN {base_mb_clk_wiz_1_0_clk_out1} \
+  CONFIG.S00_AXI.DATA_WIDTH {32} \
+  CONFIG.S00_AXI.FREQ_HZ {100000000} \
+  CONFIG.S00_AXI.HAS_BRESP {1} \
+  CONFIG.S00_AXI.HAS_BURST {0} \
+  CONFIG.S00_AXI.HAS_CACHE {0} \
+  CONFIG.S00_AXI.HAS_LOCK {0} \
+  CONFIG.S00_AXI.HAS_PROT {1} \
+  CONFIG.S00_AXI.HAS_QOS {0} \
+  CONFIG.S00_AXI.HAS_REGION {0} \
+  CONFIG.S00_AXI.HAS_RRESP {1} \
+  CONFIG.S00_AXI.HAS_WSTRB {1} \
+  CONFIG.S00_AXI.ID_WIDTH {0} \
+  CONFIG.S00_AXI.MAX_BURST_LENGTH {1} \
+  CONFIG.S00_AXI.NUM_READ_OUTSTANDING {2} \
+  CONFIG.S00_AXI.NUM_READ_THREADS {1} \
+  CONFIG.S00_AXI.NUM_WRITE_OUTSTANDING {2} \
+  CONFIG.S00_AXI.NUM_WRITE_THREADS {1} \
+  CONFIG.S00_AXI.PHASE {0.0} \
+  CONFIG.S00_AXI.PROTOCOL {AXI4LITE} \
+  CONFIG.S00_AXI.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.S00_AXI.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.S00_AXI.RUSER_WIDTH {0} \
+  CONFIG.S00_AXI.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.S00_AXI.WIZ_DATA_WIDTH {32} \
+  CONFIG.S00_AXI.WIZ_NUM_REG {4} \
+  CONFIG.S00_AXI.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.S00_AXI.WUSER_WIDTH {0} \
+  CONFIG.S00_AXI_CLK.ASSOCIATED_BUSIF {S00_AXI} \
+  CONFIG.S00_AXI_CLK.ASSOCIATED_RESET {s00_axi_aresetn} \
+  CONFIG.S00_AXI_CLK.CLK_DOMAIN {base_mb_clk_wiz_1_0_clk_out1} \
+  CONFIG.S00_AXI_CLK.FREQ_HZ {100000000} \
+  CONFIG.S00_AXI_CLK.PHASE {0.0} \
+  CONFIG.S00_AXI_RST.POLARITY {ACTIVE_LOW} \
+  CONFIG.roic_clk.ASSOCIATED_BUSIF {} \
+  CONFIG.roic_clk.ASSOCIATED_RESET {} \
+  CONFIG.roic_clk.CLK_DOMAIN {base_mb_clk_wiz_1_0_clk_out1} \
+  CONFIG.roic_clk.FREQ_HZ {6250000} \
+  CONFIG.roic_clk.PHASE {0.0} " [get_ips base_mb_roic_interface_driver_0_0]
+
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
 | Date         : Tue Jul 31 09:01:09 2018
 | Host         : GSSLW17031962 running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

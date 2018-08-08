@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xcku040-ffva1156-2-e" LaunchTime="1533061336">
-  <File Type="OPT-HWDEF" Name="base_mb_wrapper.hwdef"/>
-  <File Type="PA-DCP" Name="base_mb_wrapper.dcp"/>
-  <File Type="OPT-DCP" Name="base_mb_wrapper_opt.dcp"/>
+<GenRun Id="impl_1" LaunchPart="xcku040-ffva1156-2-e" LaunchTime="1533759609">
+  <File Type="PWROPT-DCP" Name="base_mb_wrapper_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="base_mb_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="base_mb_wrapper.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="base_mb_wrapper_power_summary_routed.pb"/>
@@ -10,9 +8,10 @@
   <File Type="BG-DRC" Name="base_mb_wrapper.drc"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="base_mb_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="base_mb_wrapper_timing_summary_init.rpt"/>
+  <File Type="OPT-HWDEF" Name="base_mb_wrapper.hwdef"/>
+  <File Type="OPT-DCP" Name="base_mb_wrapper_opt.dcp"/>
   <File Type="OPT-DRC" Name="base_mb_wrapper_drc_opted.rpt"/>
   <File Type="OPT-TIMING" Name="base_mb_wrapper_timing_summary_opted.rpt"/>
-  <File Type="PWROPT-DCP" Name="base_mb_wrapper_pwropt.dcp"/>
   <File Type="PWROPT-DRC" Name="base_mb_wrapper_drc_pwropted.rpt"/>
   <File Type="PWROPT-TIMING" Name="base_mb_wrapper_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="base_mb_wrapper_placed.dcp"/>
@@ -109,16 +108,20 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="base_mb_clk_wiz_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_mb_lmb_bram_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_mb_axi_uartlite_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_mb_rst_clk_wiz_1_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_mb_microblaze_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_mb_adc_core_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_mb_mdm_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_mb_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_mb_dlmb_v10_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="base_mb_dlmb_bram_if_cntlr_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_mb_ilmb_v10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_mb_dlmb_bram_if_cntlr_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_mb_ilmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_mb_adc_core_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_mb_roic_interface_driver_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_mb_pwmcore_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_mb_adc_core_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_mb_adc_core_3_0"/>
 </GenRun>

@@ -3,45 +3,80 @@
    commentid: "",
    guistr: "# # String gsaved with Nlview 6.6.11  2017-06-12 bk=1.3860 VDI=40 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
-preplace port default_sysclk_300 -pg 1 -y 650 -defaultsOSRD
-preplace port pwm_out_0 -pg 1 -y 200 -defaultsOSRD
-preplace port clk_out3_0 -pg 1 -y 690 -defaultsOSRD
-preplace port rs232_uart -pg 1 -y 60 -defaultsOSRD
-preplace port reset -pg 1 -y 670 -defaultsOSRD
-preplace inst roic_interface_driver_0 -pg 1 -lvl 5 -y 510 -defaultsOSRD
-preplace inst pwmcore_0 -pg 1 -lvl 5 -y 200 -defaultsOSRD
-preplace inst microblaze_0_axi_periph -pg 1 -lvl 4 -y 160 -defaultsOSRD
-preplace inst mdm_1 -pg 1 -lvl 2 -y 410 -defaultsOSRD
-preplace inst axi_uartlite_0 -pg 1 -lvl 5 -y 70 -defaultsOSRD
-preplace inst microblaze_0 -pg 1 -lvl 3 -y 410 -defaultsOSRD
-preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 2 -y 600 -defaultsOSRD
-preplace inst clk_wiz_1 -pg 1 -lvl 1 -y 660 -defaultsOSRD
-preplace inst microblaze_0_local_memory -pg 1 -lvl 4 -y 420 -defaultsOSRD
-preplace netloc default_sysclk_300_1 1 0 1 NJ
-preplace netloc pwmcore_0_pwm_out 1 5 1 NJ
-preplace netloc microblaze_0_Clk 1 1 4 250 510 610 90 1120 320 1410
-preplace netloc microblaze_0_axi_periph_M00_AXI 1 4 1 1400
-preplace netloc microblaze_0_M_AXI_DP 1 3 1 1110
-preplace netloc microblaze_0_ilmb_1 1 3 1 N
-preplace netloc rst_clk_wiz_1_100M_interconnect_aresetn 1 2 2 620 100 NJ
-preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 2 2 NJ 580 1140
-preplace netloc microblaze_0_axi_periph_M01_AXI 1 4 1 1400
-preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 2 3 NJ 640 1130 330 1420
-preplace netloc rst_clk_wiz_1_100M_mb_reset 1 2 1 630
-preplace netloc clk_wiz_1_locked 1 1 1 260
-preplace netloc axi_uartlite_0_UART 1 5 1 NJ
-preplace netloc clk_wiz_1_clk_out2 1 1 4 240 500 NJ 500 NJ 500 NJ
-preplace netloc microblaze_0_axi_periph_M02_AXI 1 4 1 N
-preplace netloc microblaze_0_dlmb_1 1 3 1 N
-preplace netloc clk_wiz_1_clk_out3 1 1 5 NJ 690 NJ 690 NJ 690 NJ 690 NJ
-preplace netloc microblaze_0_debug 1 2 1 N
-preplace netloc reset_1 1 0 2 20 580 NJ
-preplace netloc mdm_1_debug_sys_rst 1 1 2 260 350 600
-levelinfo -pg 1 0 130 430 870 1270 1540 1680 -top 0 -bot 740
+preplace port adc_clk3 -pg 1 -y 1300 -defaultsOSRD
+preplace port DRDY_0 -pg 1 -y 690 -defaultsOSRD
+preplace port default_sysclk_300 -pg 1 -y 1200 -defaultsOSRD
+preplace port DRDY_1 -pg 1 -y 90 -defaultsOSRD
+preplace port pwm_out_0 -pg 1 -y 920 -defaultsOSRD
+preplace port fsync_0 -pg 1 -y 1190 -defaultsOSRD
+preplace port DRDY_2 -pg 1 -y 730 -defaultsOSRD
+preplace port DRDY_3 -pg 1 -y 1040 -defaultsOSRD
+preplace port roic_clk -pg 1 -y 1120 -defaultsOSRD
+preplace port lsync_0 -pg 1 -y 1210 -defaultsOSRD
+preplace port data_0 -pg 1 -y 1170 -defaultsOSRD
+preplace port adc_clk -pg 1 -y 1240 -defaultsOSRD
+preplace port rs232_uart -pg 1 -y 1040 -defaultsOSRD
+preplace port adc_clk1 -pg 1 -y 1260 -defaultsOSRD
+preplace port adc_clk2 -pg 1 -y 1280 -defaultsOSRD
+preplace port reset -pg 1 -y 920 -defaultsOSRD
+preplace portBus DIN_0 -pg 1 -y 70 -defaultsOSRD
+preplace portBus DIN_1 -pg 1 -y 670 -defaultsOSRD
+preplace portBus DIN_2 -pg 1 -y 710 -defaultsOSRD
+preplace portBus DIN_3 -pg 1 -y 1020 -defaultsOSRD
+preplace inst adc_core_0 -pg 1 -lvl 4 -y 740 -defaultsOSRD
+preplace inst adc_core_1 -pg 1 -lvl 4 -y 530 -defaultsOSRD
+preplace inst adc_core_2 -pg 1 -lvl 4 -y 110 -defaultsOSRD
+preplace inst adc_core_3 -pg 1 -lvl 4 -y 320 -defaultsOSRD
+preplace inst pwmcore_0 -pg 1 -lvl 4 -y 920 -defaultsOSRD
+preplace inst roic_interface_driver_0 -pg 1 -lvl 4 -y 1210 -defaultsOSRD
+preplace inst microblaze_0_axi_periph -pg 1 -lvl 3 -y 450 -defaultsOSRD
+preplace inst mdm_1 -pg 1 -lvl 1 -y 780 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 4 -y 1050 -defaultsOSRD
+preplace inst microblaze_0 -pg 1 -lvl 2 -y 820 -defaultsOSRD
+preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 1 -y 940 -defaultsOSRD
+preplace inst clk_wiz_1 -pg 1 -lvl 3 -y 1210 -defaultsOSRD
+preplace inst microblaze_0_local_memory -pg 1 -lvl 3 -y 830 -defaultsOSRD
+preplace netloc DIN_2_1 1 0 4 -40J 150 NJ 150 NJ 150 1240J
+preplace netloc microblaze_0_axi_periph_M04_AXI 1 3 1 N
+preplace netloc default_sysclk_300_1 1 0 3 NJ 1200 NJ 1200 NJ
+preplace netloc pwmcore_0_pwm_out 1 4 1 NJ
+preplace netloc roic_interface_driver_0_lsync 1 4 1 NJ
+preplace netloc roic_interface_driver_0_fsync 1 4 1 NJ
+preplace netloc DRDY_1_1 1 0 4 NJ 90 NJ 90 NJ 90 NJ
+preplace netloc microblaze_0_Clk 1 0 4 50 840 430 900 920 180 1250
+preplace netloc microblaze_0_axi_periph_M06_AXI 1 3 1 1300
+preplace netloc microblaze_0_axi_periph_M03_AXI 1 3 1 1280
+preplace netloc microblaze_0_axi_periph_M00_AXI 1 3 1 1290
+preplace netloc microblaze_0_M_AXI_DP 1 2 1 910
+preplace netloc microblaze_0_ilmb_1 1 2 1 N
+preplace netloc DIN_0_1 1 0 4 NJ 70 NJ 70 NJ 70 NJ
+preplace netloc microblaze_0_axi_periph_M05_AXI 1 3 1 1230
+preplace netloc roic_interface_driver_0_data 1 4 1 NJ
+preplace netloc rst_clk_wiz_1_100M_interconnect_aresetn 1 1 2 400J 310 N
+preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 1 2 N 920 930J
+preplace netloc microblaze_0_axi_periph_M01_AXI 1 3 1 1260
+preplace netloc DIN_1_1 1 0 4 -20J 190 NJ 190 NJ 190 1330J
+preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 1 3 410J 630 930 210 1310
+preplace netloc rst_clk_wiz_1_100M_mb_reset 1 1 1 420
+preplace netloc clk_wiz_1_locked 1 0 4 30 680 NJ 680 930J 690 1220
+preplace netloc axi_uartlite_0_UART 1 4 1 NJ
+preplace netloc DRDY_2_1 1 0 4 -10J 200 NJ 200 NJ 200 1320J
+preplace netloc roic_interface_driver_0_dsync 1 3 2 1340 850 1610
+preplace netloc clk_wiz_1_clk_out2 1 3 2 1340 1120 NJ
+preplace netloc microblaze_0_axi_periph_M02_AXI 1 3 1 1270
+preplace netloc microblaze_0_dlmb_1 1 2 1 N
+preplace netloc clk_wiz_1_clk_out3 1 3 2 1240J 1300 1610J
+preplace netloc microblaze_0_debug 1 1 1 430
+preplace netloc reset_1 1 0 3 20 850 390J 910 910J
+preplace netloc mdm_1_debug_sys_rst 1 0 2 40 720 390
+preplace netloc DRDY_3_1 1 0 4 10J 710 NJ 710 NJ 710 1240J
+preplace netloc DIN_3_1 1 0 4 0J 700 NJ 700 NJ 700 NJ
+preplace netloc DRDY_0_1 1 0 4 -30J 170 NJ 170 NJ 170 1220J
+levelinfo -pg 1 -60 220 670 1090 1480 1630 -top 0 -bot 1320
 ",
 }
 {
-   da_axi4_cnt: "4",
+   da_axi4_cnt: "8",
    da_clkrst_cnt: "1",
    da_mb_cnt: "1",
 }

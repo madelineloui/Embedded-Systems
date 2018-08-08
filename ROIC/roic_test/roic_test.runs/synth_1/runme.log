@@ -12,63 +12,95 @@ source base_mb_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/mloui/Documents/roic-ip'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/XilinxV/Vivado/2017.4/data/ip'.
-add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 361.832 ; gain = 83.754
+add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 362.906 ; gain = 83.707
 Command: synth_design -top base_mb_wrapper -part xcku040-ffva1156-2-e
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xcku040'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku040'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 6092 
+INFO: Helper process launched with PID 15684 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 442.445 ; gain = 80.613
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 443.539 ; gain = 80.633
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'base_mb_wrapper' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/hdl/base_mb_wrapper.vhd:25]
-INFO: [Synth 8-3491] module 'base_mb' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:1647' bound to instance 'base_mb_i' of component 'base_mb' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/hdl/base_mb_wrapper.vhd:37]
-INFO: [Synth 8-638] synthesizing module 'base_mb' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:1662]
-INFO: [Synth 8-3491] module 'base_mb_axi_uartlite_0_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/realtime/base_mb_axi_uartlite_0_0_stub.vhdl:5' bound to instance 'axi_uartlite_0' of component 'base_mb_axi_uartlite_0_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:1980]
-INFO: [Synth 8-638] synthesizing module 'base_mb_axi_uartlite_0_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/realtime/base_mb_axi_uartlite_0_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'base_mb_clk_wiz_1_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/realtime/base_mb_clk_wiz_1_0_stub.vhdl:5' bound to instance 'clk_wiz_1' of component 'base_mb_clk_wiz_1_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:2005]
-INFO: [Synth 8-638] synthesizing module 'base_mb_clk_wiz_1_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/realtime/base_mb_clk_wiz_1_0_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'base_mb_mdm_1_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/realtime/base_mb_mdm_1_0_stub.vhdl:5' bound to instance 'mdm_1' of component 'base_mb_mdm_1_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:2014]
-INFO: [Synth 8-638] synthesizing module 'base_mb_mdm_1_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/realtime/base_mb_mdm_1_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'base_mb_microblaze_0_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/realtime/base_mb_microblaze_0_0_stub.vhdl:5' bound to instance 'microblaze_0' of component 'base_mb_microblaze_0_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:2027]
-INFO: [Synth 8-638] synthesizing module 'base_mb_microblaze_0_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/realtime/base_mb_microblaze_0_0_stub.vhdl:63]
-INFO: [Synth 8-638] synthesizing module 'base_mb_microblaze_0_axi_periph_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:1095]
+INFO: [Synth 8-638] synthesizing module 'base_mb_wrapper' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/hdl/base_mb_wrapper.vhd:41]
+INFO: [Synth 8-3491] module 'base_mb' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:2651' bound to instance 'base_mb_i' of component 'base_mb' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/hdl/base_mb_wrapper.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'base_mb' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:2682]
+INFO: [Synth 8-3491] module 'base_mb_adc_core_0_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_adc_core_0_0_stub.vhdl:5' bound to instance 'adc_core_0' of component 'base_mb_adc_core_0_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:3244]
+INFO: [Synth 8-638] synthesizing module 'base_mb_adc_core_0_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_adc_core_0_0_stub.vhdl:38]
+INFO: [Synth 8-3491] module 'base_mb_adc_core_1_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_adc_core_1_0_stub.vhdl:5' bound to instance 'adc_core_1' of component 'base_mb_adc_core_1_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:3274]
+INFO: [Synth 8-638] synthesizing module 'base_mb_adc_core_1_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_adc_core_1_0_stub.vhdl:38]
+INFO: [Synth 8-3491] module 'base_mb_adc_core_2_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_adc_core_2_0_stub.vhdl:5' bound to instance 'adc_core_2' of component 'base_mb_adc_core_2_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:3304]
+INFO: [Synth 8-638] synthesizing module 'base_mb_adc_core_2_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_adc_core_2_0_stub.vhdl:38]
+INFO: [Synth 8-3491] module 'base_mb_adc_core_3_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_adc_core_3_0_stub.vhdl:5' bound to instance 'adc_core_3' of component 'base_mb_adc_core_3_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:3334]
+INFO: [Synth 8-638] synthesizing module 'base_mb_adc_core_3_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_adc_core_3_0_stub.vhdl:38]
+INFO: [Synth 8-3491] module 'base_mb_axi_uartlite_0_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_axi_uartlite_0_0_stub.vhdl:5' bound to instance 'axi_uartlite_0' of component 'base_mb_axi_uartlite_0_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:3364]
+INFO: [Synth 8-638] synthesizing module 'base_mb_axi_uartlite_0_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_axi_uartlite_0_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'base_mb_clk_wiz_1_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_clk_wiz_1_0_stub.vhdl:5' bound to instance 'clk_wiz_1' of component 'base_mb_clk_wiz_1_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:3389]
+INFO: [Synth 8-638] synthesizing module 'base_mb_clk_wiz_1_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_clk_wiz_1_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'base_mb_mdm_1_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_mdm_1_0_stub.vhdl:5' bound to instance 'mdm_1' of component 'base_mb_mdm_1_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:3399]
+INFO: [Synth 8-638] synthesizing module 'base_mb_mdm_1_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_mdm_1_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'base_mb_microblaze_0_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_microblaze_0_0_stub.vhdl:5' bound to instance 'microblaze_0' of component 'base_mb_microblaze_0_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:3412]
+INFO: [Synth 8-638] synthesizing module 'base_mb_microblaze_0_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_microblaze_0_0_stub.vhdl:63]
+INFO: [Synth 8-638] synthesizing module 'base_mb_microblaze_0_axi_periph_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:1611]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_18U4BL6' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:57]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_18U4BL6' (1#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:57]
-INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_AM0Y5L' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:162]
-INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_AM0Y5L' (2#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:162]
-INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_WN3TYL' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:273]
-INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_WN3TYL' (3#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:273]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_AQ37SM' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:942]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_AQ37SM' (4#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:942]
-INFO: [Synth 8-3491] module 'base_mb_xbar_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/realtime/base_mb_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'base_mb_xbar_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:1561]
-INFO: [Synth 8-638] synthesizing module 'base_mb_xbar_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/realtime/base_mb_xbar_0_stub.vhdl:51]
-INFO: [Synth 8-256] done synthesizing module 'base_mb_microblaze_0_axi_periph_0' (5#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:1095]
-INFO: [Synth 8-638] synthesizing module 'microblaze_0_local_memory_imp_Q0A2Y' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:363]
-INFO: [Synth 8-3491] module 'base_mb_dlmb_bram_if_cntlr_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/realtime/base_mb_dlmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'dlmb_bram_if_cntlr' of component 'base_mb_dlmb_bram_if_cntlr_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:577]
-INFO: [Synth 8-638] synthesizing module 'base_mb_dlmb_bram_if_cntlr_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/realtime/base_mb_dlmb_bram_if_cntlr_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'base_mb_dlmb_v10_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/realtime/base_mb_dlmb_v10_0_stub.vhdl:5' bound to instance 'dlmb_v10' of component 'base_mb_dlmb_v10_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:631]
-INFO: [Synth 8-638] synthesizing module 'base_mb_dlmb_v10_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/realtime/base_mb_dlmb_v10_0_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'base_mb_ilmb_bram_if_cntlr_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/realtime/base_mb_ilmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'ilmb_bram_if_cntlr' of component 'base_mb_ilmb_bram_if_cntlr_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:659]
-INFO: [Synth 8-638] synthesizing module 'base_mb_ilmb_bram_if_cntlr_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/realtime/base_mb_ilmb_bram_if_cntlr_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'base_mb_ilmb_v10_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/realtime/base_mb_ilmb_v10_0_stub.vhdl:5' bound to instance 'ilmb_v10' of component 'base_mb_ilmb_v10_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:713]
-INFO: [Synth 8-638] synthesizing module 'base_mb_ilmb_v10_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/realtime/base_mb_ilmb_v10_0_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'base_mb_lmb_bram_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/realtime/base_mb_lmb_bram_0_stub.vhdl:5' bound to instance 'lmb_bram' of component 'base_mb_lmb_bram_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:741]
-INFO: [Synth 8-638] synthesizing module 'base_mb_lmb_bram_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/realtime/base_mb_lmb_bram_0_stub.vhdl:27]
-INFO: [Synth 8-256] done synthesizing module 'microblaze_0_local_memory_imp_Q0A2Y' (6#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:363]
-INFO: [Synth 8-3491] module 'base_mb_pwmcore_0_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/realtime/base_mb_pwmcore_0_0_stub.vhdl:5' bound to instance 'pwmcore_0' of component 'base_mb_pwmcore_0_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:2193]
-INFO: [Synth 8-638] synthesizing module 'base_mb_pwmcore_0_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/realtime/base_mb_pwmcore_0_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'base_mb_roic_interface_driver_0_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/realtime/base_mb_roic_interface_driver_0_0_stub.vhdl:5' bound to instance 'roic_interface_driver_0' of component 'base_mb_roic_interface_driver_0_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:2218]
-INFO: [Synth 8-638] synthesizing module 'base_mb_roic_interface_driver_0_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/realtime/base_mb_roic_interface_driver_0_0_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'base_mb_rst_clk_wiz_1_100M_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/realtime/base_mb_rst_clk_wiz_1_100M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_1_100M' of component 'base_mb_rst_clk_wiz_1_100M_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:2246]
-INFO: [Synth 8-638] synthesizing module 'base_mb_rst_clk_wiz_1_100M_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/realtime/base_mb_rst_clk_wiz_1_100M_0_stub.vhdl:21]
-INFO: [Synth 8-256] done synthesizing module 'base_mb' (7#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:1662]
-INFO: [Synth 8-256] done synthesizing module 'base_mb_wrapper' (8#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/hdl/base_mb_wrapper.vhd:25]
+INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_AM0Y5L' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:158]
+INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_AM0Y5L' (2#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:158]
+INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_WN3TYL' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:263]
+INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_WN3TYL' (3#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:263]
+INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_1V5D7VY' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:374]
+INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_1V5D7VY' (4#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:374]
+INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_1MF91ET' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:485]
+INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_1MF91ET' (5#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:485]
+INFO: [Synth 8-638] synthesizing module 'm05_couplers_imp_NN6GPY' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:596]
+INFO: [Synth 8-256] done synthesizing module 'm05_couplers_imp_NN6GPY' (6#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:596]
+INFO: [Synth 8-638] synthesizing module 'm06_couplers_imp_1UNZQA' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:707]
+INFO: [Synth 8-256] done synthesizing module 'm06_couplers_imp_1UNZQA' (7#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:707]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_AQ37SM' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:1376]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_AQ37SM' (8#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:1376]
+INFO: [Synth 8-3491] module 'base_mb_xbar_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'base_mb_xbar_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:2491]
+INFO: [Synth 8-638] synthesizing module 'base_mb_xbar_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-256] done synthesizing module 'base_mb_microblaze_0_axi_periph_0' (9#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:1611]
+INFO: [Synth 8-638] synthesizing module 'microblaze_0_local_memory_imp_Q0A2Y' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:797]
+INFO: [Synth 8-3491] module 'base_mb_dlmb_bram_if_cntlr_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_dlmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'dlmb_bram_if_cntlr' of component 'base_mb_dlmb_bram_if_cntlr_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:1011]
+INFO: [Synth 8-638] synthesizing module 'base_mb_dlmb_bram_if_cntlr_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_dlmb_bram_if_cntlr_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'base_mb_dlmb_v10_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_dlmb_v10_0_stub.vhdl:5' bound to instance 'dlmb_v10' of component 'base_mb_dlmb_v10_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:1065]
+INFO: [Synth 8-638] synthesizing module 'base_mb_dlmb_v10_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_dlmb_v10_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'base_mb_ilmb_bram_if_cntlr_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_ilmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'ilmb_bram_if_cntlr' of component 'base_mb_ilmb_bram_if_cntlr_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:1093]
+INFO: [Synth 8-638] synthesizing module 'base_mb_ilmb_bram_if_cntlr_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_ilmb_bram_if_cntlr_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'base_mb_ilmb_v10_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_ilmb_v10_0_stub.vhdl:5' bound to instance 'ilmb_v10' of component 'base_mb_ilmb_v10_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:1147]
+INFO: [Synth 8-638] synthesizing module 'base_mb_ilmb_v10_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_ilmb_v10_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'base_mb_lmb_bram_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_lmb_bram_0_stub.vhdl:5' bound to instance 'lmb_bram' of component 'base_mb_lmb_bram_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:1175]
+INFO: [Synth 8-638] synthesizing module 'base_mb_lmb_bram_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_lmb_bram_0_stub.vhdl:27]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_0_local_memory_imp_Q0A2Y' (10#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:797]
+INFO: [Synth 8-3491] module 'base_mb_pwmcore_0_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_pwmcore_0_0_stub.vhdl:5' bound to instance 'pwmcore_0' of component 'base_mb_pwmcore_0_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:3660]
+INFO: [Synth 8-638] synthesizing module 'base_mb_pwmcore_0_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_pwmcore_0_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'base_mb_roic_interface_driver_0_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_roic_interface_driver_0_0_stub.vhdl:5' bound to instance 'roic_interface_driver_0' of component 'base_mb_roic_interface_driver_0_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:3685]
+INFO: [Synth 8-638] synthesizing module 'base_mb_roic_interface_driver_0_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_roic_interface_driver_0_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'base_mb_rst_clk_wiz_1_100M_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_rst_clk_wiz_1_100M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_1_100M' of component 'base_mb_rst_clk_wiz_1_100M_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:3713]
+INFO: [Synth 8-638] synthesizing module 'base_mb_rst_clk_wiz_1_100M_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/realtime/base_mb_rst_clk_wiz_1_100M_0_stub.vhdl:21]
+INFO: [Synth 8-256] done synthesizing module 'base_mb' (11#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:2682]
+INFO: [Synth 8-256] done synthesizing module 'base_mb_wrapper' (12#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/hdl/base_mb_wrapper.vhd:41]
 WARNING: [Synth 8-3331] design s00_couplers_imp_AQ37SM has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design s00_couplers_imp_AQ37SM has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design s00_couplers_imp_AQ37SM has unconnected port S_ACLK
 WARNING: [Synth 8-3331] design s00_couplers_imp_AQ37SM has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m06_couplers_imp_1UNZQA has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m06_couplers_imp_1UNZQA has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m06_couplers_imp_1UNZQA has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m06_couplers_imp_1UNZQA has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m05_couplers_imp_NN6GPY has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m05_couplers_imp_NN6GPY has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m05_couplers_imp_NN6GPY has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m05_couplers_imp_NN6GPY has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m04_couplers_imp_1MF91ET has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m04_couplers_imp_1MF91ET has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m04_couplers_imp_1MF91ET has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m04_couplers_imp_1MF91ET has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_1V5D7VY has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_1V5D7VY has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_1V5D7VY has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_1V5D7VY has unconnected port S_ARESETN
 WARNING: [Synth 8-3331] design m02_couplers_imp_WN3TYL has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design m02_couplers_imp_WN3TYL has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design m02_couplers_imp_WN3TYL has unconnected port S_ACLK
@@ -82,7 +114,7 @@ WARNING: [Synth 8-3331] design m00_couplers_imp_18U4BL6 has unconnected port M_A
 WARNING: [Synth 8-3331] design m00_couplers_imp_18U4BL6 has unconnected port S_ACLK
 WARNING: [Synth 8-3331] design m00_couplers_imp_18U4BL6 has unconnected port S_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 496.625 ; gain = 134.793
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 499.652 ; gain = 136.746
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -92,41 +124,51 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 496.625 ; gain = 134.793
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 499.652 ; gain = 136.746
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xcku040-ffva1156-2-e
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp13/base_mb_microblaze_0_0_in_context.xdc] for cell 'base_mb_i/microblaze_0'
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp13/base_mb_microblaze_0_0_in_context.xdc] for cell 'base_mb_i/microblaze_0'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp14/base_mb_mdm_1_0_in_context.xdc] for cell 'base_mb_i/mdm_1'
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp14/base_mb_mdm_1_0_in_context.xdc] for cell 'base_mb_i/mdm_1'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp15/base_mb_clk_wiz_1_0_in_context.xdc] for cell 'base_mb_i/clk_wiz_1'
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp15/base_mb_clk_wiz_1_0_in_context.xdc] for cell 'base_mb_i/clk_wiz_1'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp16/base_mb_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'base_mb_i/rst_clk_wiz_1_100M'
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp16/base_mb_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'base_mb_i/rst_clk_wiz_1_100M'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp17/base_mb_axi_uartlite_0_0_in_context.xdc] for cell 'base_mb_i/axi_uartlite_0'
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp17/base_mb_axi_uartlite_0_0_in_context.xdc] for cell 'base_mb_i/axi_uartlite_0'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp18/base_mb_xbar_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_axi_periph/xbar'
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp18/base_mb_xbar_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_axi_periph/xbar'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp19/base_mb_dlmb_v10_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/dlmb_v10'
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp19/base_mb_dlmb_v10_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/dlmb_v10'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp20/base_mb_dlmb_v10_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/ilmb_v10'
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp20/base_mb_dlmb_v10_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/ilmb_v10'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp21/base_mb_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp21/base_mb_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp22/base_mb_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp22/base_mb_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp23/base_mb_lmb_bram_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/lmb_bram'
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp23/base_mb_lmb_bram_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/lmb_bram'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp24/base_mb_pwmcore_0_0_in_context.xdc] for cell 'base_mb_i/pwmcore_0'
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp24/base_mb_pwmcore_0_0_in_context.xdc] for cell 'base_mb_i/pwmcore_0'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp25/base_mb_roic_interface_driver_0_0_in_context.xdc] for cell 'base_mb_i/roic_interface_driver_0'
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp25/base_mb_roic_interface_driver_0_0_in_context.xdc] for cell 'base_mb_i/roic_interface_driver_0'
+Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp17/base_mb_microblaze_0_0_in_context.xdc] for cell 'base_mb_i/microblaze_0'
+Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp17/base_mb_microblaze_0_0_in_context.xdc] for cell 'base_mb_i/microblaze_0'
+Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp18/base_mb_mdm_1_0_in_context.xdc] for cell 'base_mb_i/mdm_1'
+Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp18/base_mb_mdm_1_0_in_context.xdc] for cell 'base_mb_i/mdm_1'
+Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp19/base_mb_clk_wiz_1_0_in_context.xdc] for cell 'base_mb_i/clk_wiz_1'
+Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp19/base_mb_clk_wiz_1_0_in_context.xdc] for cell 'base_mb_i/clk_wiz_1'
+Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp20/base_mb_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'base_mb_i/rst_clk_wiz_1_100M'
+Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp20/base_mb_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'base_mb_i/rst_clk_wiz_1_100M'
+Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp21/base_mb_axi_uartlite_0_0_in_context.xdc] for cell 'base_mb_i/axi_uartlite_0'
+Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp21/base_mb_axi_uartlite_0_0_in_context.xdc] for cell 'base_mb_i/axi_uartlite_0'
+Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp22/base_mb_xbar_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_axi_periph/xbar'
+Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp22/base_mb_xbar_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_axi_periph/xbar'
+Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp23/base_mb_dlmb_v10_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/dlmb_v10'
+Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp23/base_mb_dlmb_v10_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/dlmb_v10'
+Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp24/base_mb_dlmb_v10_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/ilmb_v10'
+Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp24/base_mb_dlmb_v10_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/ilmb_v10'
+Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp25/base_mb_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp25/base_mb_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp26/base_mb_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp26/base_mb_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp27/base_mb_lmb_bram_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/lmb_bram'
+Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp27/base_mb_lmb_bram_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/lmb_bram'
+Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp28/base_mb_pwmcore_0_0_in_context.xdc] for cell 'base_mb_i/pwmcore_0'
+Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp28/base_mb_pwmcore_0_0_in_context.xdc] for cell 'base_mb_i/pwmcore_0'
+Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp29/base_mb_roic_interface_driver_0_0_in_context.xdc] for cell 'base_mb_i/roic_interface_driver_0'
+Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp29/base_mb_roic_interface_driver_0_0_in_context.xdc] for cell 'base_mb_i/roic_interface_driver_0'
+Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp30/base_mb_adc_core_0_0_in_context.xdc] for cell 'base_mb_i/adc_core_0'
+Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp30/base_mb_adc_core_0_0_in_context.xdc] for cell 'base_mb_i/adc_core_0'
+Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp31/base_mb_adc_core_1_0_in_context.xdc] for cell 'base_mb_i/adc_core_1'
+Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp31/base_mb_adc_core_1_0_in_context.xdc] for cell 'base_mb_i/adc_core_1'
+Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp32/base_mb_adc_core_3_0_in_context.xdc] for cell 'base_mb_i/adc_core_2'
+Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp32/base_mb_adc_core_3_0_in_context.xdc] for cell 'base_mb_i/adc_core_2'
+Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp33/base_mb_adc_core_3_0_in_context.xdc] for cell 'base_mb_i/adc_core_3'
+Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp33/base_mb_adc_core_3_0_in_context.xdc] for cell 'base_mb_i/adc_core_3'
 Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/constrs_2/new/contrs_roic.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk_out3_0'. [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/constrs_2/new/contrs_roic.xdc:4]
 Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/constrs_2/new/contrs_roic.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/constrs_2/new/contrs_roic.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/base_mb_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/constrs_2/new/contrs_roic.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/base_mb_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/base_mb_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/dont_touch.xdc]
@@ -136,7 +178,7 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1043.484 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1053.918 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'base_mb_i/axi_uartlite_0' at clock pin 's_axi_aclk' is different from the actual clock period '9.999', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'base_mb_i/microblaze_0' at clock pin 'Clk' is different from the actual clock period '9.999', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'base_mb_i/rst_clk_wiz_1_100M' at clock pin 'slowest_sync_clk' is different from the actual clock period '9.999', this can lead to different synthesis results.
@@ -147,23 +189,27 @@ WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context s
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'base_mb_i/microblaze_0_local_memory/ilmb_v10' at clock pin 'LMB_Clk' is different from the actual clock period '9.999', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'base_mb_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1043.484 ; gain = 681.652
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1053.918 ; gain = 691.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xcku040-ffva1156-2-e
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1043.484 ; gain = 681.652
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1053.918 ; gain = 691.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for default_sysclk_300_clk_n. (constraint file  C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp15/base_mb_clk_wiz_1_0_in_context.xdc, line 4).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for default_sysclk_300_clk_n. (constraint file  C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp15/base_mb_clk_wiz_1_0_in_context.xdc, line 5).
-Applied set_property IO_BUFFER_TYPE = NONE for default_sysclk_300_clk_p. (constraint file  C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp15/base_mb_clk_wiz_1_0_in_context.xdc, line 6).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for default_sysclk_300_clk_p. (constraint file  C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-3044-GSSLW17031962/dcp15/base_mb_clk_wiz_1_0_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for default_sysclk_300_clk_n. (constraint file  C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp19/base_mb_clk_wiz_1_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for default_sysclk_300_clk_n. (constraint file  C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp19/base_mb_clk_wiz_1_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for default_sysclk_300_clk_p. (constraint file  C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp19/base_mb_clk_wiz_1_0_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for default_sysclk_300_clk_p. (constraint file  C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-11316-GSSLW17031962/dcp19/base_mb_clk_wiz_1_0_in_context.xdc, line 8).
 Applied set_property DONT_TOUCH = true for base_mb_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for base_mb_i/adc_core_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for base_mb_i/adc_core_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for base_mb_i/adc_core_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for base_mb_i/adc_core_3. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for base_mb_i/axi_uartlite_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for base_mb_i/clk_wiz_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for base_mb_i/mdm_1. (constraint file  auto generated constraint, line ).
@@ -179,10 +225,10 @@ Applied set_property DONT_TOUCH = true for base_mb_i/pwmcore_0. (constraint file
 Applied set_property DONT_TOUCH = true for base_mb_i/roic_interface_driver_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for base_mb_i/rst_clk_wiz_1_100M. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1043.484 ; gain = 681.652
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1053.918 ; gain = 691.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1043.484 ; gain = 681.652
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1053.918 ; gain = 691.012
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -222,419 +268,18 @@ WARNING: [Synth 8-3331] design base_mb_microblaze_0_axi_periph_0 has unconnected
 WARNING: [Synth 8-3331] design base_mb_microblaze_0_axi_periph_0 has unconnected port M01_ARESETN
 WARNING: [Synth 8-3331] design base_mb_microblaze_0_axi_periph_0 has unconnected port M02_ACLK
 WARNING: [Synth 8-3331] design base_mb_microblaze_0_axi_periph_0 has unconnected port M02_ARESETN
+WARNING: [Synth 8-3331] design base_mb_microblaze_0_axi_periph_0 has unconnected port M03_ACLK
+WARNING: [Synth 8-3331] design base_mb_microblaze_0_axi_periph_0 has unconnected port M03_ARESETN
+WARNING: [Synth 8-3331] design base_mb_microblaze_0_axi_periph_0 has unconnected port M04_ACLK
+WARNING: [Synth 8-3331] design base_mb_microblaze_0_axi_periph_0 has unconnected port M04_ARESETN
+WARNING: [Synth 8-3331] design base_mb_microblaze_0_axi_periph_0 has unconnected port M05_ACLK
+WARNING: [Synth 8-3331] design base_mb_microblaze_0_axi_periph_0 has unconnected port M05_ARESETN
+WARNING: [Synth 8-3331] design base_mb_microblaze_0_axi_periph_0 has unconnected port M06_ACLK
+WARNING: [Synth 8-3331] design base_mb_microblaze_0_axi_periph_0 has unconnected port M06_ARESETN
 WARNING: [Synth 8-3331] design base_mb_microblaze_0_axi_periph_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design base_mb_microblaze_0_axi_periph_0 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1043.484 ; gain = 681.652
----------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
----------------------------------------------------------------------------------
-Start Applying XDC Timing Constraints
----------------------------------------------------------------------------------
-INFO: [Synth 8-5578] Moved timing constraint from pin 'base_mb_i/mdm_1/Dbg_Clk_0' to pin 'base_mb_i/mdm_1/bbstub_Dbg_Clk_0/O'
-INFO: [Synth 8-5578] Moved timing constraint from pin 'base_mb_i/mdm_1/Dbg_Update_0' to pin 'base_mb_i/mdm_1/bbstub_Dbg_Update_0/O'
-INFO: [Synth 8-5578] Moved timing constraint from pin 'base_mb_i/clk_wiz_1/clk_out1' to pin 'base_mb_i/clk_wiz_1/bbstub_clk_out1/O'
-INFO: [Synth 8-5578] Moved timing constraint from pin 'base_mb_i/clk_wiz_1/clk_out2' to pin 'base_mb_i/clk_wiz_1/bbstub_clk_out2/O'
-INFO: [Synth 8-5578] Moved timing constraint from pin 'base_mb_i/microblaze_0_local_memory/dlmb_bram_if_cntlr/BRAM_Clk_A' to pin 'base_mb_i/microblaze_0_local_memory/dlmb_bram_if_cntlr/bbstub_BRAM_Clk_A/O'
-INFO: [Synth 8-5578] Moved timing constraint from pin 'base_mb_i/microblaze_0_local_memory/ilmb_bram_if_cntlr/BRAM_Clk_A' to pin 'base_mb_i/microblaze_0_local_memory/ilmb_bram_if_cntlr/bbstub_BRAM_Clk_A/O'
-INFO: [Synth 8-5819] Moved 6 constraints on hierarchical pins to their respective driving/loading pins
----------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1286.074 ; gain = 924.242
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Timing Optimization
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1286.148 ; gain = 924.316
----------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
----------------------------------------------------------------------------------
-Start Technology Mapping
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1297.336 ; gain = 935.504
----------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
----------------------------------------------------------------------------------
-Start IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Flattening Before IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Flattening Before IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Final Netlist Cleanup
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Final Netlist Cleanup
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1297.336 ; gain = 935.504
----------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
----------------------------------------------------------------------------------
-Start Renaming Generated Instances
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1297.336 ; gain = 935.504
----------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
----------------------------------------------------------------------------------
-Start Rebuilding User Hierarchy
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1297.336 ; gain = 935.504
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Ports
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1297.336 ; gain = 935.504
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1297.336 ; gain = 935.504
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Nets
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1297.336 ; gain = 935.504
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Writing Synthesis Report
----------------------------------------------------------------------------------
-
-Report BlackBoxes: 
-+------+----------------------------------+----------+
-|      |BlackBox name                     |Instances |
-+------+----------------------------------+----------+
-|1     |base_mb_xbar_0                    |         1|
-|2     |base_mb_axi_uartlite_0_0          |         1|
-|3     |base_mb_clk_wiz_1_0               |         1|
-|4     |base_mb_mdm_1_0                   |         1|
-|5     |base_mb_microblaze_0_0            |         1|
-|6     |base_mb_pwmcore_0_0               |         1|
-|7     |base_mb_roic_interface_driver_0_0 |         1|
-|8     |base_mb_rst_clk_wiz_1_100M_0      |         1|
-|9     |base_mb_dlmb_bram_if_cntlr_0      |         1|
-|10    |base_mb_dlmb_v10_0                |         1|
-|11    |base_mb_ilmb_bram_if_cntlr_0      |         1|
-|12    |base_mb_ilmb_v10_0                |         1|
-|13    |base_mb_lmb_bram_0                |         1|
-+------+----------------------------------+----------+
-
-Report Cell Usage: 
-+------+------------------------------------------+------+
-|      |Cell                                      |Count |
-+------+------------------------------------------+------+
-|1     |base_mb_axi_uartlite_0_0_bbox_0           |     1|
-|2     |base_mb_clk_wiz_1_0_bbox_1                |     1|
-|3     |base_mb_dlmb_bram_if_cntlr_0_bbox_5       |     1|
-|4     |base_mb_dlmb_v10_0_bbox_6                 |     1|
-|5     |base_mb_ilmb_bram_if_cntlr_0_bbox_7       |     1|
-|6     |base_mb_ilmb_v10_0_bbox_8                 |     1|
-|7     |base_mb_lmb_bram_0_bbox_9                 |     1|
-|8     |base_mb_mdm_1_0_bbox_2                    |     1|
-|9     |base_mb_microblaze_0_0_bbox_3             |     1|
-|10    |base_mb_pwmcore_0_0_bbox_10               |     1|
-|11    |base_mb_roic_interface_driver_0_0_bbox_11 |     1|
-|12    |base_mb_rst_clk_wiz_1_100M_0_bbox_12      |     1|
-|13    |base_mb_xbar_0_bbox_4                     |     1|
-|14    |IBUF                                      |     2|
-|15    |OBUF                                      |     2|
-+------+------------------------------------------+------+
-
-Report Instance Areas: 
-+------+------------------------------+------------------------------------+------+
-|      |Instance                      |Module                              |Cells |
-+------+------------------------------+------------------------------------+------+
-|1     |top                           |                                    |  1246|
-|2     |  base_mb_i                   |base_mb                             |  1242|
-|3     |    microblaze_0_axi_periph   |base_mb_microblaze_0_axi_periph_0   |   374|
-|4     |    microblaze_0_local_memory |microblaze_0_local_memory_imp_Q0A2Y |   496|
-+------+------------------------------+------------------------------------+------+
----------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1297.336 ; gain = 935.504
----------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 1297.336 ; gain = 388.645
-Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1297.336 ; gain = 935.504
-INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  IBUF => IBUF (IBUFCTRL, INBUF): 2 instances
-
-INFO: [Common 17-83] Releasing license: Synthesis
-65 Infos, 34 Warnings, 0 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 1327.848 ; gain = 966.016
-INFO: [Common 17-1381] The checkpoint 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/base_mb_wrapper.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file base_mb_wrapper_utilization_synth.rpt -pb base_mb_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.146 . Memory (MB): peak = 1328.223 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Jul 26 14:48:19 2018...
-
-*** Running vivado
-    with args -log base_mb_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source base_mb_wrapper.tcl
-
-
-****** Vivado v2017.4 (64-bit)
-  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
-  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
-
-source base_mb_wrapper.tcl -notrace
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/mloui/Documents/roic-ip'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/XilinxV/Vivado/2017.4/data/ip'.
-add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 362.293 ; gain = 85.023
-Command: synth_design -top base_mb_wrapper -part xcku040-ffva1156-2-e
-Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xcku040'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku040'
-INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 19148 
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 443.504 ; gain = 81.211
----------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'base_mb_wrapper' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/hdl/base_mb_wrapper.vhd:26]
-INFO: [Synth 8-3491] module 'base_mb' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:1647' bound to instance 'base_mb_i' of component 'base_mb' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/hdl/base_mb_wrapper.vhd:39]
-INFO: [Synth 8-638] synthesizing module 'base_mb' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:1663]
-INFO: [Synth 8-3491] module 'base_mb_axi_uartlite_0_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/realtime/base_mb_axi_uartlite_0_0_stub.vhdl:5' bound to instance 'axi_uartlite_0' of component 'base_mb_axi_uartlite_0_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:1986]
-INFO: [Synth 8-638] synthesizing module 'base_mb_axi_uartlite_0_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/realtime/base_mb_axi_uartlite_0_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'base_mb_clk_wiz_1_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/realtime/base_mb_clk_wiz_1_0_stub.vhdl:5' bound to instance 'clk_wiz_1' of component 'base_mb_clk_wiz_1_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:2011]
-INFO: [Synth 8-638] synthesizing module 'base_mb_clk_wiz_1_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/realtime/base_mb_clk_wiz_1_0_stub.vhdl:18]
-INFO: [Synth 8-3491] module 'base_mb_mdm_1_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/realtime/base_mb_mdm_1_0_stub.vhdl:5' bound to instance 'mdm_1' of component 'base_mb_mdm_1_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:2021]
-INFO: [Synth 8-638] synthesizing module 'base_mb_mdm_1_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/realtime/base_mb_mdm_1_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'base_mb_microblaze_0_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/realtime/base_mb_microblaze_0_0_stub.vhdl:5' bound to instance 'microblaze_0' of component 'base_mb_microblaze_0_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:2034]
-INFO: [Synth 8-638] synthesizing module 'base_mb_microblaze_0_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/realtime/base_mb_microblaze_0_0_stub.vhdl:63]
-INFO: [Synth 8-638] synthesizing module 'base_mb_microblaze_0_axi_periph_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:1095]
-INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_18U4BL6' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:57]
-INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_18U4BL6' (1#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:57]
-INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_AM0Y5L' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:162]
-INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_AM0Y5L' (2#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:162]
-INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_WN3TYL' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:273]
-INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_WN3TYL' (3#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:273]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_AQ37SM' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:942]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_AQ37SM' (4#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:942]
-INFO: [Synth 8-3491] module 'base_mb_xbar_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/realtime/base_mb_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'base_mb_xbar_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:1561]
-INFO: [Synth 8-638] synthesizing module 'base_mb_xbar_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/realtime/base_mb_xbar_0_stub.vhdl:51]
-INFO: [Synth 8-256] done synthesizing module 'base_mb_microblaze_0_axi_periph_0' (5#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:1095]
-INFO: [Synth 8-638] synthesizing module 'microblaze_0_local_memory_imp_Q0A2Y' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:363]
-INFO: [Synth 8-3491] module 'base_mb_dlmb_bram_if_cntlr_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/realtime/base_mb_dlmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'dlmb_bram_if_cntlr' of component 'base_mb_dlmb_bram_if_cntlr_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:577]
-INFO: [Synth 8-638] synthesizing module 'base_mb_dlmb_bram_if_cntlr_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/realtime/base_mb_dlmb_bram_if_cntlr_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'base_mb_dlmb_v10_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/realtime/base_mb_dlmb_v10_0_stub.vhdl:5' bound to instance 'dlmb_v10' of component 'base_mb_dlmb_v10_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:631]
-INFO: [Synth 8-638] synthesizing module 'base_mb_dlmb_v10_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/realtime/base_mb_dlmb_v10_0_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'base_mb_ilmb_bram_if_cntlr_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/realtime/base_mb_ilmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'ilmb_bram_if_cntlr' of component 'base_mb_ilmb_bram_if_cntlr_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:659]
-INFO: [Synth 8-638] synthesizing module 'base_mb_ilmb_bram_if_cntlr_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/realtime/base_mb_ilmb_bram_if_cntlr_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'base_mb_ilmb_v10_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/realtime/base_mb_ilmb_v10_0_stub.vhdl:5' bound to instance 'ilmb_v10' of component 'base_mb_ilmb_v10_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:713]
-INFO: [Synth 8-638] synthesizing module 'base_mb_ilmb_v10_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/realtime/base_mb_ilmb_v10_0_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'base_mb_lmb_bram_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/realtime/base_mb_lmb_bram_0_stub.vhdl:5' bound to instance 'lmb_bram' of component 'base_mb_lmb_bram_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:741]
-INFO: [Synth 8-638] synthesizing module 'base_mb_lmb_bram_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/realtime/base_mb_lmb_bram_0_stub.vhdl:27]
-INFO: [Synth 8-256] done synthesizing module 'microblaze_0_local_memory_imp_Q0A2Y' (6#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:363]
-INFO: [Synth 8-3491] module 'base_mb_pwmcore_0_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/realtime/base_mb_pwmcore_0_0_stub.vhdl:5' bound to instance 'pwmcore_0' of component 'base_mb_pwmcore_0_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:2200]
-INFO: [Synth 8-638] synthesizing module 'base_mb_pwmcore_0_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/realtime/base_mb_pwmcore_0_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'base_mb_roic_interface_driver_0_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/realtime/base_mb_roic_interface_driver_0_0_stub.vhdl:5' bound to instance 'roic_interface_driver_0' of component 'base_mb_roic_interface_driver_0_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:2225]
-INFO: [Synth 8-638] synthesizing module 'base_mb_roic_interface_driver_0_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/realtime/base_mb_roic_interface_driver_0_0_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'base_mb_rst_clk_wiz_1_100M_0' declared at 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/realtime/base_mb_rst_clk_wiz_1_100M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_1_100M' of component 'base_mb_rst_clk_wiz_1_100M_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:2253]
-INFO: [Synth 8-638] synthesizing module 'base_mb_rst_clk_wiz_1_100M_0' [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/realtime/base_mb_rst_clk_wiz_1_100M_0_stub.vhdl:21]
-INFO: [Synth 8-256] done synthesizing module 'base_mb' (7#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd:1663]
-INFO: [Synth 8-256] done synthesizing module 'base_mb_wrapper' (8#1) [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/hdl/base_mb_wrapper.vhd:26]
-WARNING: [Synth 8-3331] design s00_couplers_imp_AQ37SM has unconnected port M_ACLK
-WARNING: [Synth 8-3331] design s00_couplers_imp_AQ37SM has unconnected port M_ARESETN
-WARNING: [Synth 8-3331] design s00_couplers_imp_AQ37SM has unconnected port S_ACLK
-WARNING: [Synth 8-3331] design s00_couplers_imp_AQ37SM has unconnected port S_ARESETN
-WARNING: [Synth 8-3331] design m02_couplers_imp_WN3TYL has unconnected port M_ACLK
-WARNING: [Synth 8-3331] design m02_couplers_imp_WN3TYL has unconnected port M_ARESETN
-WARNING: [Synth 8-3331] design m02_couplers_imp_WN3TYL has unconnected port S_ACLK
-WARNING: [Synth 8-3331] design m02_couplers_imp_WN3TYL has unconnected port S_ARESETN
-WARNING: [Synth 8-3331] design m01_couplers_imp_AM0Y5L has unconnected port M_ACLK
-WARNING: [Synth 8-3331] design m01_couplers_imp_AM0Y5L has unconnected port M_ARESETN
-WARNING: [Synth 8-3331] design m01_couplers_imp_AM0Y5L has unconnected port S_ACLK
-WARNING: [Synth 8-3331] design m01_couplers_imp_AM0Y5L has unconnected port S_ARESETN
-WARNING: [Synth 8-3331] design m00_couplers_imp_18U4BL6 has unconnected port M_ACLK
-WARNING: [Synth 8-3331] design m00_couplers_imp_18U4BL6 has unconnected port M_ARESETN
-WARNING: [Synth 8-3331] design m00_couplers_imp_18U4BL6 has unconnected port S_ACLK
-WARNING: [Synth 8-3331] design m00_couplers_imp_18U4BL6 has unconnected port S_ARESETN
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 497.492 ; gain = 135.199
----------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 497.492 ; gain = 135.199
----------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xcku040-ffva1156-2-e
-INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp13/base_mb_microblaze_0_0_in_context.xdc] for cell 'base_mb_i/microblaze_0'
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp13/base_mb_microblaze_0_0_in_context.xdc] for cell 'base_mb_i/microblaze_0'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp14/base_mb_mdm_1_0_in_context.xdc] for cell 'base_mb_i/mdm_1'
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp14/base_mb_mdm_1_0_in_context.xdc] for cell 'base_mb_i/mdm_1'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp15/base_mb_clk_wiz_1_0_in_context.xdc] for cell 'base_mb_i/clk_wiz_1'
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp15/base_mb_clk_wiz_1_0_in_context.xdc] for cell 'base_mb_i/clk_wiz_1'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp16/base_mb_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'base_mb_i/rst_clk_wiz_1_100M'
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp16/base_mb_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'base_mb_i/rst_clk_wiz_1_100M'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp17/base_mb_axi_uartlite_0_0_in_context.xdc] for cell 'base_mb_i/axi_uartlite_0'
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp17/base_mb_axi_uartlite_0_0_in_context.xdc] for cell 'base_mb_i/axi_uartlite_0'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp18/base_mb_xbar_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_axi_periph/xbar'
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp18/base_mb_xbar_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_axi_periph/xbar'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp19/base_mb_dlmb_v10_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/dlmb_v10'
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp19/base_mb_dlmb_v10_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/dlmb_v10'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp20/base_mb_dlmb_v10_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/ilmb_v10'
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp20/base_mb_dlmb_v10_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/ilmb_v10'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp21/base_mb_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp21/base_mb_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp22/base_mb_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp22/base_mb_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp23/base_mb_lmb_bram_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/lmb_bram'
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp23/base_mb_lmb_bram_0_in_context.xdc] for cell 'base_mb_i/microblaze_0_local_memory/lmb_bram'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp24/base_mb_pwmcore_0_0_in_context.xdc] for cell 'base_mb_i/pwmcore_0'
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp24/base_mb_pwmcore_0_0_in_context.xdc] for cell 'base_mb_i/pwmcore_0'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp25/base_mb_roic_interface_driver_0_0_in_context.xdc] for cell 'base_mb_i/roic_interface_driver_0'
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp25/base_mb_roic_interface_driver_0_0_in_context.xdc] for cell 'base_mb_i/roic_interface_driver_0'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/constrs_2/new/contrs_roic.xdc]
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/constrs_2/new/contrs_roic.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/constrs_2/new/contrs_roic.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/base_mb_wrapper_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/base_mb_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/dont_touch.xdc]
-Completed Processing XDC Constraints
-
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1042.813 ; gain = 0.000
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'base_mb_i/axi_uartlite_0' at clock pin 's_axi_aclk' is different from the actual clock period '9.999', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'base_mb_i/microblaze_0' at clock pin 'Clk' is different from the actual clock period '9.999', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'base_mb_i/rst_clk_wiz_1_100M' at clock pin 'slowest_sync_clk' is different from the actual clock period '9.999', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'base_mb_i/microblaze_0_axi_periph/xbar' at clock pin 'aclk' is different from the actual clock period '9.999', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'base_mb_i/microblaze_0_local_memory/dlmb_bram_if_cntlr' at clock pin 'LMB_Clk' is different from the actual clock period '9.999', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'base_mb_i/microblaze_0_local_memory/dlmb_v10' at clock pin 'LMB_Clk' is different from the actual clock period '9.999', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'base_mb_i/microblaze_0_local_memory/ilmb_bram_if_cntlr' at clock pin 'LMB_Clk' is different from the actual clock period '9.999', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'base_mb_i/microblaze_0_local_memory/ilmb_v10' at clock pin 'LMB_Clk' is different from the actual clock period '9.999', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'base_mb_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
----------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1042.813 ; gain = 680.520
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Loading Part and Timing Information
----------------------------------------------------------------------------------
-Loading part: xcku040-ffva1156-2-e
----------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1042.813 ; gain = 680.520
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Applying 'set_property' XDC Constraints
----------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for default_sysclk_300_clk_n. (constraint file  C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp15/base_mb_clk_wiz_1_0_in_context.xdc, line 5).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for default_sysclk_300_clk_n. (constraint file  C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp15/base_mb_clk_wiz_1_0_in_context.xdc, line 6).
-Applied set_property IO_BUFFER_TYPE = NONE for default_sysclk_300_clk_p. (constraint file  C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp15/base_mb_clk_wiz_1_0_in_context.xdc, line 7).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for default_sysclk_300_clk_p. (constraint file  C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/.Xil/Vivado-18332-GSSLW17031962/dcp15/base_mb_clk_wiz_1_0_in_context.xdc, line 8).
-Applied set_property DONT_TOUCH = true for base_mb_i. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for base_mb_i/axi_uartlite_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for base_mb_i/clk_wiz_1. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for base_mb_i/mdm_1. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for base_mb_i/microblaze_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for base_mb_i/microblaze_0_axi_periph. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for base_mb_i/microblaze_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for base_mb_i/microblaze_0_local_memory/dlmb_bram_if_cntlr. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for base_mb_i/microblaze_0_local_memory/dlmb_v10. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for base_mb_i/microblaze_0_local_memory/ilmb_bram_if_cntlr. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for base_mb_i/microblaze_0_local_memory/ilmb_v10. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for base_mb_i/microblaze_0_local_memory/lmb_bram. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for base_mb_i/pwmcore_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for base_mb_i/roic_interface_driver_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for base_mb_i/rst_clk_wiz_1_100M. (constraint file  auto generated constraint, line ).
----------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1042.813 ; gain = 680.520
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1042.813 ; gain = 680.520
----------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
----------------------------------------------------------------------------------
-Start RTL Component Statistics 
----------------------------------------------------------------------------------
-Detailed RTL Component Info : 
----------------------------------------------------------------------------------
-Finished RTL Component Statistics 
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start RTL Hierarchical Component Statistics 
----------------------------------------------------------------------------------
-Hierarchical RTL Component report 
----------------------------------------------------------------------------------
-Finished RTL Hierarchical Component Statistics
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Part Resource Summary
----------------------------------------------------------------------------------
-Part Resources:
-DSPs: 1920 (col length:120)
-BRAMs: 1200 (col length: RAMB18 120 RAMB36 60)
----------------------------------------------------------------------------------
-Finished Part Resource Summary
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Cross Boundary and Area Optimization
----------------------------------------------------------------------------------
-WARNING: [Synth 8-3331] design base_mb_microblaze_0_axi_periph_0 has unconnected port M00_ACLK
-WARNING: [Synth 8-3331] design base_mb_microblaze_0_axi_periph_0 has unconnected port M00_ARESETN
-WARNING: [Synth 8-3331] design base_mb_microblaze_0_axi_periph_0 has unconnected port M01_ACLK
-WARNING: [Synth 8-3331] design base_mb_microblaze_0_axi_periph_0 has unconnected port M01_ARESETN
-WARNING: [Synth 8-3331] design base_mb_microblaze_0_axi_periph_0 has unconnected port M02_ACLK
-WARNING: [Synth 8-3331] design base_mb_microblaze_0_axi_periph_0 has unconnected port M02_ARESETN
-WARNING: [Synth 8-3331] design base_mb_microblaze_0_axi_periph_0 has unconnected port S00_ACLK
-WARNING: [Synth 8-3331] design base_mb_microblaze_0_axi_periph_0 has unconnected port S00_ARESETN
----------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1042.813 ; gain = 680.520
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1053.918 ; gain = 691.012
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -654,13 +299,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'base_mb_i/microblaze_0_lo
 INFO: [Synth 8-5578] Moved timing constraint from pin 'base_mb_i/microblaze_0_local_memory/ilmb_bram_if_cntlr/BRAM_Clk_A' to pin 'base_mb_i/microblaze_0_local_memory/ilmb_bram_if_cntlr/bbstub_BRAM_Clk_A/O'
 INFO: [Synth 8-5819] Moved 7 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1286.102 ; gain = 923.809
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1289.023 ; gain = 926.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1286.250 ; gain = 923.957
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1289.230 ; gain = 926.324
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -672,7 +317,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1297.180 ; gain = 934.887
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1300.691 ; gain = 937.785
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -696,7 +341,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1297.180 ; gain = 934.887
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1300.691 ; gain = 937.785
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -709,7 +354,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1297.180 ; gain = 934.887
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1300.691 ; gain = 937.785
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -721,25 +366,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1297.180 ; gain = 934.887
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1300.691 ; gain = 937.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1297.180 ; gain = 934.887
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1300.691 ; gain = 937.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1297.180 ; gain = 934.887
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1300.691 ; gain = 937.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1297.180 ; gain = 934.887
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1300.691 ; gain = 937.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -750,70 +395,78 @@ Report BlackBoxes:
 |      |BlackBox name                     |Instances |
 +------+----------------------------------+----------+
 |1     |base_mb_xbar_0                    |         1|
-|2     |base_mb_axi_uartlite_0_0          |         1|
-|3     |base_mb_clk_wiz_1_0               |         1|
-|4     |base_mb_mdm_1_0                   |         1|
-|5     |base_mb_microblaze_0_0            |         1|
-|6     |base_mb_pwmcore_0_0               |         1|
-|7     |base_mb_roic_interface_driver_0_0 |         1|
-|8     |base_mb_rst_clk_wiz_1_100M_0      |         1|
-|9     |base_mb_dlmb_bram_if_cntlr_0      |         1|
-|10    |base_mb_dlmb_v10_0                |         1|
-|11    |base_mb_ilmb_bram_if_cntlr_0      |         1|
-|12    |base_mb_ilmb_v10_0                |         1|
-|13    |base_mb_lmb_bram_0                |         1|
+|2     |base_mb_adc_core_0_0              |         1|
+|3     |base_mb_adc_core_1_0              |         1|
+|4     |base_mb_adc_core_2_0              |         1|
+|5     |base_mb_adc_core_3_0              |         1|
+|6     |base_mb_axi_uartlite_0_0          |         1|
+|7     |base_mb_clk_wiz_1_0               |         1|
+|8     |base_mb_mdm_1_0                   |         1|
+|9     |base_mb_microblaze_0_0            |         1|
+|10    |base_mb_pwmcore_0_0               |         1|
+|11    |base_mb_roic_interface_driver_0_0 |         1|
+|12    |base_mb_rst_clk_wiz_1_100M_0      |         1|
+|13    |base_mb_dlmb_bram_if_cntlr_0      |         1|
+|14    |base_mb_dlmb_v10_0                |         1|
+|15    |base_mb_ilmb_bram_if_cntlr_0      |         1|
+|16    |base_mb_ilmb_v10_0                |         1|
+|17    |base_mb_lmb_bram_0                |         1|
 +------+----------------------------------+----------+
 
 Report Cell Usage: 
 +------+------------------------------------------+------+
 |      |Cell                                      |Count |
 +------+------------------------------------------+------+
-|1     |base_mb_axi_uartlite_0_0_bbox_0           |     1|
-|2     |base_mb_clk_wiz_1_0_bbox_1                |     1|
-|3     |base_mb_dlmb_bram_if_cntlr_0_bbox_5       |     1|
-|4     |base_mb_dlmb_v10_0_bbox_6                 |     1|
-|5     |base_mb_ilmb_bram_if_cntlr_0_bbox_7       |     1|
-|6     |base_mb_ilmb_v10_0_bbox_8                 |     1|
-|7     |base_mb_lmb_bram_0_bbox_9                 |     1|
-|8     |base_mb_mdm_1_0_bbox_2                    |     1|
-|9     |base_mb_microblaze_0_0_bbox_3             |     1|
-|10    |base_mb_pwmcore_0_0_bbox_10               |     1|
-|11    |base_mb_roic_interface_driver_0_0_bbox_11 |     1|
-|12    |base_mb_rst_clk_wiz_1_100M_0_bbox_12      |     1|
-|13    |base_mb_xbar_0_bbox_4                     |     1|
-|14    |IBUF                                      |     2|
-|15    |OBUF                                      |     3|
+|1     |base_mb_adc_core_0_0_bbox_0               |     1|
+|2     |base_mb_adc_core_1_0_bbox_1               |     1|
+|3     |base_mb_adc_core_2_0_bbox_2               |     1|
+|4     |base_mb_adc_core_3_0_bbox_3               |     1|
+|5     |base_mb_axi_uartlite_0_0_bbox_4           |     1|
+|6     |base_mb_clk_wiz_1_0_bbox_5                |     1|
+|7     |base_mb_dlmb_bram_if_cntlr_0_bbox_9       |     1|
+|8     |base_mb_dlmb_v10_0_bbox_10                |     1|
+|9     |base_mb_ilmb_bram_if_cntlr_0_bbox_11      |     1|
+|10    |base_mb_ilmb_v10_0_bbox_12                |     1|
+|11    |base_mb_lmb_bram_0_bbox_13                |     1|
+|12    |base_mb_mdm_1_0_bbox_6                    |     1|
+|13    |base_mb_microblaze_0_0_bbox_7             |     1|
+|14    |base_mb_pwmcore_0_0_bbox_14               |     1|
+|15    |base_mb_roic_interface_driver_0_0_bbox_15 |     1|
+|16    |base_mb_rst_clk_wiz_1_100M_0_bbox_16      |     1|
+|17    |base_mb_xbar_0_bbox_8                     |     1|
+|18    |IBUF                                      |    62|
+|19    |OBUF                                      |    10|
 +------+------------------------------------------+------+
 
 Report Instance Areas: 
 +------+------------------------------+------------------------------------+------+
 |      |Instance                      |Module                              |Cells |
 +------+------------------------------+------------------------------------+------+
-|1     |top                           |                                    |  1248|
-|2     |  base_mb_i                   |base_mb                             |  1243|
-|3     |    microblaze_0_axi_periph   |base_mb_microblaze_0_axi_periph_0   |   374|
+|1     |top                           |                                    |  1985|
+|2     |  base_mb_i                   |base_mb                             |  1913|
+|3     |    microblaze_0_axi_periph   |base_mb_microblaze_0_axi_periph_0   |   818|
 |4     |    microblaze_0_local_memory |microblaze_0_local_memory_imp_Q0A2Y |   496|
 +------+------------------------------+------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1297.180 ; gain = 934.887
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1300.691 ; gain = 937.785
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 1297.180 ; gain = 389.566
-Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1297.180 ; gain = 934.887
+Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 1300.691 ; gain = 383.520
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1300.691 ; gain = 937.785
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 62 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  IBUF => IBUF (IBUFCTRL, INBUF): 2 instances
+  A total of 62 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 62 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-66 Infos, 34 Warnings, 0 Critical Warnings and 0 Errors encountered.
+82 Infos, 60 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:49 . Memory (MB): peak = 1326.934 ; gain = 964.641
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:49 . Memory (MB): peak = 1332.426 ; gain = 969.520
 INFO: [Common 17-1381] The checkpoint 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/base_mb_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file base_mb_wrapper_utilization_synth.rpt -pb base_mb_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.154 . Memory (MB): peak = 1327.316 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Jul 31 14:18:37 2018...
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.154 . Memory (MB): peak = 1332.852 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Aug  8 16:24:00 2018...

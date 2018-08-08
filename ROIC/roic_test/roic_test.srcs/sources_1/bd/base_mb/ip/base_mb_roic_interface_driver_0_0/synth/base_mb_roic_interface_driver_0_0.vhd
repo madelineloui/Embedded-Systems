@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: nasa.gov:user:roic_interface_driver:1.0
--- IP Revision: 16
+-- IP Revision: 18
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -62,8 +62,9 @@ ENTITY base_mb_roic_interface_driver_0_0 IS
     data : OUT STD_LOGIC;
     fsync : OUT STD_LOGIC;
     lsync : OUT STD_LOGIC;
-    s00_axi_awaddr : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    s00_axi_awprot : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+    dsync : OUT STD_LOGIC;
+    enabled : OUT STD_LOGIC;
+    s00_axi_awaddr : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     s00_axi_awvalid : IN STD_LOGIC;
     s00_axi_awready : OUT STD_LOGIC;
     s00_axi_wdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -73,8 +74,7 @@ ENTITY base_mb_roic_interface_driver_0_0 IS
     s00_axi_bresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     s00_axi_bvalid : OUT STD_LOGIC;
     s00_axi_bready : IN STD_LOGIC;
-    s00_axi_araddr : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    s00_axi_arprot : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+    s00_axi_araddr : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     s00_axi_arvalid : IN STD_LOGIC;
     s00_axi_arready : OUT STD_LOGIC;
     s00_axi_rdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -103,8 +103,9 @@ ARCHITECTURE base_mb_roic_interface_driver_0_0_arch OF base_mb_roic_interface_dr
       data : OUT STD_LOGIC;
       fsync : OUT STD_LOGIC;
       lsync : OUT STD_LOGIC;
-      s00_axi_awaddr : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-      s00_axi_awprot : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+      dsync : OUT STD_LOGIC;
+      enabled : OUT STD_LOGIC;
+      s00_axi_awaddr : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       s00_axi_awvalid : IN STD_LOGIC;
       s00_axi_awready : OUT STD_LOGIC;
       s00_axi_wdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -114,8 +115,7 @@ ARCHITECTURE base_mb_roic_interface_driver_0_0_arch OF base_mb_roic_interface_dr
       s00_axi_bresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
       s00_axi_bvalid : OUT STD_LOGIC;
       s00_axi_bready : IN STD_LOGIC;
-      s00_axi_araddr : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-      s00_axi_arprot : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+      s00_axi_araddr : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       s00_axi_arvalid : IN STD_LOGIC;
       s00_axi_arready : OUT STD_LOGIC;
       s00_axi_rdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -142,7 +142,6 @@ ARCHITECTURE base_mb_roic_interface_driver_0_0_arch OF base_mb_roic_interface_dr
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_rdata: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI RDATA";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_arready: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI ARREADY";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_arvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI ARVALID";
-  ATTRIBUTE X_INTERFACE_INFO OF s00_axi_arprot: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI ARPROT";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_araddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI ARADDR";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_bready: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI BREADY";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_bvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI BVALID";
@@ -153,8 +152,7 @@ ARCHITECTURE base_mb_roic_interface_driver_0_0_arch OF base_mb_roic_interface_dr
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_wdata: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI WDATA";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_awready: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI AWREADY";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_awvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI AWVALID";
-  ATTRIBUTE X_INTERFACE_INFO OF s00_axi_awprot: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF s00_axi_awaddr: SIGNAL IS "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN base_mb_clk_wiz_1_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF s00_axi_awaddr: SIGNAL IS "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN base_mb_clk_wiz_1_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_awaddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR";
   ATTRIBUTE X_INTERFACE_PARAMETER OF roic_clk: SIGNAL IS "XIL_INTERFACENAME roic_clk, FREQ_HZ 6250000, PHASE 0.0, CLK_DOMAIN base_mb_clk_wiz_1_0_clk_out1";
   ATTRIBUTE X_INTERFACE_INFO OF roic_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 roic_clk CLK";
@@ -162,7 +160,7 @@ BEGIN
   U0 : roic_interface_driver
     GENERIC MAP (
       C_S00_AXI_DATA_WIDTH => 32,
-      C_S00_AXI_ADDR_WIDTH => 4,
+      C_S00_AXI_ADDR_WIDTH => 32,
       C_VER_DEV_FLAG => "Development",
       C_VER_XIL_INFO => "1.00.a",
       C_VER_ITERATION_NUM => 0,
@@ -173,8 +171,9 @@ BEGIN
       data => data,
       fsync => fsync,
       lsync => lsync,
+      dsync => dsync,
+      enabled => enabled,
       s00_axi_awaddr => s00_axi_awaddr,
-      s00_axi_awprot => s00_axi_awprot,
       s00_axi_awvalid => s00_axi_awvalid,
       s00_axi_awready => s00_axi_awready,
       s00_axi_wdata => s00_axi_wdata,
@@ -185,7 +184,6 @@ BEGIN
       s00_axi_bvalid => s00_axi_bvalid,
       s00_axi_bready => s00_axi_bready,
       s00_axi_araddr => s00_axi_araddr,
-      s00_axi_arprot => s00_axi_arprot,
       s00_axi_arvalid => s00_axi_arvalid,
       s00_axi_arready => s00_axi_arready,
       s00_axi_rdata => s00_axi_rdata,

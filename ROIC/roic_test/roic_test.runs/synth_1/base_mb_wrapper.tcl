@@ -55,6 +55,18 @@ set_property used_in_implementation false [get_files -all c:/Users/mloui/Documen
 set_property used_in_implementation false [get_files -all c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_dlmb_bram_if_cntlr_0/base_mb_dlmb_bram_if_cntlr_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_ilmb_bram_if_cntlr_0/base_mb_ilmb_bram_if_cntlr_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_lmb_bram_0/base_mb_lmb_bram_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_0_0/src/axis_data_fifo_0_2/axis_data_fifo_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_0_0/src/axis_data_fifo_0_2/axis_data_fifo_0/axis_data_fifo_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_0_0/src/axis_data_fifo_0_2/axis_data_fifo_0/axis_data_fifo_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_1_0/src/axis_data_fifo_0_2/axis_data_fifo_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_1_0/src/axis_data_fifo_0_2/axis_data_fifo_0/axis_data_fifo_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_1_0/src/axis_data_fifo_0_2/axis_data_fifo_0/axis_data_fifo_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_2_0/src/axis_data_fifo_0_2/axis_data_fifo_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_2_0/src/axis_data_fifo_0_2/axis_data_fifo_0/axis_data_fifo_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_2_0/src/axis_data_fifo_0_2/axis_data_fifo_0/axis_data_fifo_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_3_0/src/axis_data_fifo_0_2/axis_data_fifo_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_3_0/src/axis_data_fifo_0_2/axis_data_fifo_0/axis_data_fifo_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_3_0/src/axis_data_fifo_0_2/axis_data_fifo_0/axis_data_fifo_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being

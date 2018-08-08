@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Aug  8 16:20:11 2018
+# Process ID: 13528
+# Current directory: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_0_0_synth_1
+# Command line: vivado.exe -log base_mb_adc_core_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source base_mb_adc_core_0_0.tcl
+# Log file: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_0_0_synth_1/base_mb_adc_core_0_0.vds
+# Journal file: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source base_mb_adc_core_0_0.tcl -notrace

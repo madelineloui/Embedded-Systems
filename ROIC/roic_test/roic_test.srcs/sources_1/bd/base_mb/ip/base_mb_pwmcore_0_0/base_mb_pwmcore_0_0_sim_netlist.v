@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Wed Jul 18 10:30:33 2018
+// Date        : Wed Aug  8 15:09:45 2018
 // Host        : GSSLW17031962 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top base_mb_pwmcore_0_0 -prefix
-//               base_mb_pwmcore_0_0_ base_mb_pwmcore_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_pwmcore_0_0/base_mb_pwmcore_0_0_sim_netlist.v
 // Design      : base_mb_pwmcore_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -105,6 +105,7 @@ module base_mb_pwmcore_0_0
         .s00_axi_wvalid(s00_axi_wvalid));
 endmodule
 
+(* ORIG_REF_NAME = "pwmcore_v1_0" *) 
 module base_mb_pwmcore_0_0_pwmcore_v1_0
    (S_AXI_AWREADY,
     S_AXI_WREADY,
@@ -179,6 +180,7 @@ module base_mb_pwmcore_0_0_pwmcore_v1_0
         .s00_axi_wvalid(s00_axi_wvalid));
 endmodule
 
+(* ORIG_REF_NAME = "pwmcore_v1_0_S00_AXI" *) 
 module base_mb_pwmcore_0_0_pwmcore_v1_0_S00_AXI
    (S_AXI_AWREADY,
     S_AXI_WREADY,

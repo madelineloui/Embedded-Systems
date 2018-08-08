@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Tue Jul 31 14:16:17 2018
-# Process ID: 21944
+# Start of session at: Wed Aug  8 15:07:51 2018
+# Process ID: 17752
 # Current directory: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_xbar_0_synth_1
 # Command line: vivado.exe -log base_mb_xbar_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source base_mb_xbar_0.tcl
 # Log file: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_xbar_0_synth_1/base_mb_xbar_0.vds

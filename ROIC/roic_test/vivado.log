@@ -2,10 +2,10 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Tue Jul 31 14:13:11 2018
-# Process ID: 21712
+# Start of session at: Wed Aug  8 14:34:08 2018
+# Process ID: 5588
 # Current directory: C:/Users/mloui/Documents/ROIC/roic_test
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21884 C:\Users\mloui\Documents\ROIC\roic_test\roic_test.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11896 C:\Users\mloui\Documents\ROIC\roic_test\roic_test.xpr
 # Log file: C:/Users/mloui/Documents/ROIC/roic_test/vivado.log
 # Journal file: C:/Users/mloui/Documents/ROIC/roic_test\vivado.jou
 #-----------------------------------------------------------
@@ -13,10 +13,18 @@ start_gui
 open_project C:/Users/mloui/Documents/ROIC/roic_test/roic_test.xpr
 Scanning sources...
 Finished scanning sources
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'C:/Users/mloui/Documents/roic-ip'.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/mloui/Documents/roic-ip'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/mloui/Documents/roic-ip'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/XilinxV/Vivado/2017.4/data/ip'.
-open_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:17 . Memory (MB): peak = 909.379 ; gain = 216.496
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'base_mb.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+base_mb_pwmcore_0_0
+base_mb_roic_interface_driver_0_0
+
+open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 915.363 ; gain = 230.934
+update_compile_order -fileset sources_1
 open_bd_design {C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd}
 Adding cell -- xilinx.com:ip:microblaze:10.0 - microblaze_0
 Adding cell -- xilinx.com:ip:mdm:3.2 - mdm_1
@@ -32,31 +40,310 @@ Adding cell -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - dlmb_bram_if_cntlr
 Adding cell -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - ilmb_bram_if_cntlr
 Adding cell -- xilinx.com:ip:blk_mem_gen:8.4 - lmb_bram
 Successfully read diagram <base_mb> from BD file <C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd>
-open_bd_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1001.453 ; gain = 85.734
-update_compile_order -fileset sources_1
+open_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 964.152 ; gain = 48.789
+update_ip_catalog -rebuild -repo_path c:/Users/mloui/Documents/roic-ip
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/mloui/Documents/roic-ip'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv nasa.gov:user:roic_interface_driver:1.0 [get_ips  base_mb_roic_interface_driver_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'C_S00_AXI_ADDR_WIDTH' from '32' to '4' has been ignored for IP 'base_mb_roic_interface_driver_0_0'
+INFO: [IP_Flow 19-3422] Upgraded base_mb_roic_interface_driver_0_0 (roic_interface_driver_v1.0 1.0) from revision 16 to revision 18
+WARNING: [IP_Flow 19-4706] Upgraded port 's00_axi_araddr' width 32 differs from original width 4
+WARNING: [IP_Flow 19-4706] Upgraded port 's00_axi_awaddr' width 32 differs from original width 4
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 's00_axi_arprot'
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 's00_axi_awprot'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'dsync'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'enabled'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'base_mb_roic_interface_driver_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'base_mb_roic_interface_driver_0_0' has identified issues that may require user intervention. Please review the upgrade log 'c:/Users/mloui/Documents/ROIC/roic_test/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+Wrote  : <C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd> 
+Wrote  : <C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ui/bd_c2e9b563.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/mloui/Documents/ROIC/roic_test/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips base_mb_roic_interface_driver_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
 startgroup
-set_property -dict [list CONFIG.CLKOUT3_USED {true} CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {6.25} CONFIG.MMCM_DIVCLK_DIVIDE {3} CONFIG.MMCM_CLKOUT2_DIVIDE {128} CONFIG.NUM_OUT_CLKS {3} CONFIG.CLKOUT3_JITTER {245.480} CONFIG.CLKOUT3_PHASE_ERROR {114.212}] [get_bd_cells clk_wiz_1]
+create_bd_cell -type ip -vlnv nasa.gov:user:adc_core:1.0 adc_core_0
+endgroup
+set_property location {6.5 2132 385} [get_bd_cells adc_core_0]
+startgroup
+create_bd_cell -type ip -vlnv nasa.gov:user:adc_core:1.0 adc_core_1
 endgroup
 startgroup
-make_bd_pins_external  [get_bd_pins clk_wiz_1/clk_out3]
+create_bd_cell -type ip -vlnv nasa.gov:user:adc_core:1.0 adc_core_2
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv nasa.gov:user:adc_core:1.0 adc_core_3
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/microblaze_0 (Periph)" intc_ip "/microblaze_0_axi_periph" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins adc_core_0/S00_AXI]
+</adc_core_0/S00_AXI/S00_AXI_reg> is being mapped into </microblaze_0/Data> at <0x44A20000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/microblaze_0 (Periph)" intc_ip "/microblaze_0_axi_periph" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins adc_core_1/S00_AXI]
+</adc_core_1/S00_AXI/S00_AXI_reg> is being mapped into </microblaze_0/Data> at <0x44A30000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/microblaze_0 (Periph)" intc_ip "/microblaze_0_axi_periph" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins adc_core_2/S00_AXI]
+</adc_core_2/S00_AXI/S00_AXI_reg> is being mapped into </microblaze_0/Data> at <0x44A40000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/microblaze_0 (Periph)" intc_ip "/microblaze_0_axi_periph" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins adc_core_3/S00_AXI]
+</adc_core_3/S00_AXI/S00_AXI_reg> is being mapped into </microblaze_0/Data> at <0x44A50000 [ 64K ]>
 endgroup
 regenerate_bd_layout
+report_ip_status -name ip_status 
+connect_bd_net [get_bd_pins adc_core_0/DSYNC] [get_bd_pins roic_interface_driver_0/dsync]
+connect_bd_net [get_bd_pins roic_interface_driver_0/dsync] [get_bd_pins adc_core_1/DSYNC]
+connect_bd_net [get_bd_pins roic_interface_driver_0/dsync] [get_bd_pins adc_core_2/DSYNC]
+connect_bd_net [get_bd_pins roic_interface_driver_0/dsync] [get_bd_pins adc_core_3/DSYNC]
+startgroup
+make_bd_pins_external  [get_bd_pins adc_core_3/DRDY]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins adc_core_3/READY]
+endgroup
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'make_bd_pins_external  [get_bd_pins adc_core_3/READY]'
+INFO: [Common 17-17] undo 'startgroup'
+startgroup
+make_bd_pins_external  [get_bd_pins adc_core_2/DIN]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins adc_core_2/DRDY]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins adc_core_3/DIN]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins adc_core_1/DIN]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins adc_core_1/DRDY]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins adc_core_0/DIN]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins adc_core_0/DRDY]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins roic_interface_driver_0/data]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins roic_interface_driver_0/fsync]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins roic_interface_driver_0/lsync]
+endgroup
+create_bd_port -dir I roic
+set_property name roic_clk [get_bd_ports roic]
+delete_bd_objs [get_bd_ports roic_clk]
+startgroup
+create_bd_port -dir O -type clk roic_clk
+connect_bd_net [get_bd_pins /clk_wiz_1/clk_out3] [get_bd_ports roic_clk]
+endgroup
+set_property location {1913 1315} [get_bd_ports clk_out3_0]
+disconnect_bd_net /clk_wiz_1_clk_out3 [get_bd_ports roic_clk]
+connect_bd_net [get_bd_ports roic_clk] [get_bd_pins clk_wiz_1/clk_out2]
+missing operand at _@_
+in expression "100.000 / (_@_*1.0)"
+missing operand at _@_
+in expression "100.000 / (_@_*1.0)"
+missing operand at _@_
+in expression "100.000 / (_@_*1.0)"
+missing operand at _@_
+in expression "100.000 / (_@_*1.0)"
+missing operand at _@_
+in expression "100.000 / (_@_*1.0)"
+missing operand at _@_
+in expression "100.000 / (_@_*1.0)"
+missing operand at _@_
+in expression "100.000 / (_@_*1.0)"
+missing operand at _@_
+in expression "100.000 / (_@_*1.0)"
+missing operand at _@_
+in expression "100.000 / (_@_*1.0)"
+missing operand at _@_
+in expression "300.000 *1.0 / _@_"
+missing operand at _@_
+in expression "300.000 *1.0 / _@_"
+missing operand at _@_
+in expression "300.000 *1.0 / _@_"
+missing operand at _@_
+in expression "300.000 *1.0 / _@_"
+missing operand at _@_
+in expression "300.000 *1.0 / _@_"
+missing operand at _@_
+in expression "100.000 / (_@_*1.0)"
+missing operand at _@_
+in expression "100.000 / (_@_*1.0)"
+missing operand at _@_
+in expression "100.000 / (_@_*1.0)"
+startgroup
+set_property -dict [list CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {12} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {2.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {6.000} CONFIG.MMCM_CLKOUT1_DIVIDE {96} CONFIG.MMCM_CLKOUT2_DIVIDE {50} CONFIG.CLKOUT1_JITTER {108.112} CONFIG.CLKOUT1_PHASE_ERROR {105.563} CONFIG.CLKOUT2_JITTER {188.541} CONFIG.CLKOUT2_PHASE_ERROR {105.563} CONFIG.CLKOUT3_JITTER {165.538} CONFIG.CLKOUT3_PHASE_ERROR {105.563}] [get_bd_cells clk_wiz_1]
+endgroup
+set_property name adc_clk [get_bd_ports clk_out3_0]
+set_property CONFIG.FREQ_HZ 12000000 [get_bd_ports /adc_clk]
+regenerate_bd_layout
+startgroup
+copy_bd_objs /  [get_bd_ports {adc_clk}]
+set_property location {1643 1335} [get_bd_ports adc_clk1]
+endgroup
+startgroup
+copy_bd_objs /  [get_bd_ports {adc_clk1}]
+set_property location {1649 1372} [get_bd_ports adc_clk2]
+endgroup
+startgroup
+copy_bd_objs /  [get_bd_ports {adc_clk2}]
+set_property location {1660 1409} [get_bd_ports adc_clk3]
+endgroup
+connect_bd_net [get_bd_ports adc_clk1] [get_bd_pins clk_wiz_1/clk_out3]
+connect_bd_net [get_bd_ports adc_clk2] [get_bd_pins clk_wiz_1/clk_out3]
+connect_bd_net [get_bd_ports adc_clk3] [get_bd_pins clk_wiz_1/clk_out3]
+regenerate_bd_layout
 reset_run base_mb_clk_wiz_1_0_synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_clk_wiz_1_0_synth_1
-
 reset_run base_mb_xbar_0_synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_xbar_0_synth_1
-
 save_bd_design
 Wrote  : <C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd> 
 Wrote  : <C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ui/bd_c2e9b563.ui> 
 reset_run synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1
-
 launch_runs synth_1 -jobs 4
+WARNING: [Vivado 12-4801] The synthesis checkpoint for IP 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_clk_wiz_1_0/base_mb_clk_wiz_1_0.xci' is available but stale and the IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4801] The synthesis checkpoint for IP 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_xbar_0/base_mb_xbar_0.xci' is available but stale and the IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_roic_interface_driver_0_0/base_mb_roic_interface_driver_0_0.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_0_0/base_mb_adc_core_0_0.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_1_0/base_mb_adc_core_1_0.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_2_0/base_mb_adc_core_2_0.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_3_0/base_mb_adc_core_3_0.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'base_mb_microblaze_0_axi_periph_0' found in library 'xil_defaultlib'
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd
+
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Implementation target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd
+
+[Wed Aug  8 14:58:13 2018] Launched base_mb_clk_wiz_1_0_synth_1, base_mb_xbar_0_synth_1, base_mb_adc_core_2_0_synth_1, base_mb_adc_core_0_0_synth_1, base_mb_adc_core_3_0_synth_1, base_mb_adc_core_1_0_synth_1, base_mb_roic_interface_driver_0_0_synth_1...
+Run output will be captured here:
+base_mb_clk_wiz_1_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_clk_wiz_1_0_synth_1/runme.log
+base_mb_xbar_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_xbar_0_synth_1/runme.log
+base_mb_adc_core_2_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_2_0_synth_1/runme.log
+base_mb_adc_core_0_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_0_0_synth_1/runme.log
+base_mb_adc_core_3_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_3_0_synth_1/runme.log
+base_mb_adc_core_1_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_1_0_synth_1/runme.log
+base_mb_roic_interface_driver_0_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_roic_interface_driver_0_0_synth_1/runme.log
+[Wed Aug  8 14:58:13 2018] Launched synth_1...
+Run output will be captured here: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1538.266 ; gain = 8.172
+open_bd_design {C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd}
+open_bd_design {C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd}
+make_wrapper -files [get_files C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd] -top
+ERROR: [BD 41-1665] Unable to generate top-level wrapper HDL for the BD-design 'base_mb.bd' is locked. Locked reason(s):
+* Block design contains locked IPs. Please run report_ip_status for more details and recommendations on how to fix this issue. 
+List of locked IPs: 
+base_mb_pwmcore_0_0
+
+ERROR: [Common 17-39] 'make_wrapper' failed due to earlier errors.
+ipx::edit_ip_in_project -upgrade true -name adc_core_v1_0_project -directory C:/Users/mloui/Documents/ROIC/roic_test/roic_test.tmp/adc_core_v1_0_project c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/XilinxV/Vivado/2017.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/mloui/Documents/roic-ip'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1710.930 ; gain = 2.098
+update_compile_order -fileset sources_1
+set_property core_revision 4 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/mloui/Documents/roic-ip
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/mloui/Documents/roic-ip'
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {base_mb_adc_core_0_0 base_mb_adc_core_3_0 base_mb_adc_core_1_0 base_mb_adc_core_2_0}] -log ip_upgrade.log
+Upgrading 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd'
+INFO: [IP_Flow 19-3422] Upgraded base_mb_adc_core_0_0 (adc_core_v1.0 1.0) from revision 3 to revision 4
+INFO: [IP_Flow 19-3422] Upgraded base_mb_adc_core_1_0 (adc_core_v1.0 1.0) from revision 3 to revision 4
+INFO: [IP_Flow 19-3422] Upgraded base_mb_adc_core_2_0 (adc_core_v1.0 1.0) from revision 3 to revision 4
+INFO: [IP_Flow 19-3422] Upgraded base_mb_adc_core_3_0 (adc_core_v1.0 1.0) from revision 3 to revision 4
+Wrote  : <C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd> 
+Wrote  : <C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ui/bd_c2e9b563.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/mloui/Documents/ROIC/roic_test/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips {base_mb_adc_core_0_0 base_mb_adc_core_3_0 base_mb_adc_core_1_0 base_mb_adc_core_2_0}] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+reset_run base_mb_roic_interface_driver_0_0_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP base_mb_clk_wiz_1_0, cache-ID = 01d46ff684c267dc; cache size = 21.628 MB.
+WARNING: [Vivado 12-4801] The synthesis checkpoint for IP 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_clk_wiz_1_0/base_mb_clk_wiz_1_0.xci' is available but stale and the IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP base_mb_xbar_0, cache-ID = 1d2c5d7effa5dd5d; cache size = 21.628 MB.
+WARNING: [Vivado 12-4801] The synthesis checkpoint for IP 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_xbar_0/base_mb_xbar_0.xci' is available but stale and the IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_roic_interface_driver_0_0/base_mb_roic_interface_driver_0_0.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_0_0/base_mb_adc_core_0_0.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_1_0/base_mb_adc_core_1_0.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_2_0/base_mb_adc_core_2_0.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_3_0/base_mb_adc_core_3_0.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'base_mb_microblaze_0_axi_periph_0' found in library 'xil_defaultlib'
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd
+
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Implementation target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd
+
+[Wed Aug  8 15:04:38 2018] Launched base_mb_roic_interface_driver_0_0_synth_1, base_mb_adc_core_2_0_synth_1, base_mb_adc_core_0_0_synth_1, base_mb_adc_core_3_0_synth_1, base_mb_adc_core_1_0_synth_1...
+Run output will be captured here:
+base_mb_roic_interface_driver_0_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_roic_interface_driver_0_0_synth_1/runme.log
+base_mb_adc_core_2_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_2_0_synth_1/runme.log
+base_mb_adc_core_0_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_0_0_synth_1/runme.log
+base_mb_adc_core_3_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_3_0_synth_1/runme.log
+base_mb_adc_core_1_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_1_0_synth_1/runme.log
+[Wed Aug  8 15:04:39 2018] Launched synth_1...
+Run output will be captured here: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1721.289 ; gain = 4.102
+ipx::edit_ip_in_project -upgrade true -name pwmcore_v1_0_project -directory C:/Users/mloui/Documents/ROIC/roic_test/roic_test.tmp/pwmcore_v1_0_project c:/Users/mloui/Documents/roic-ip/ip_repo/pwmcore_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/XilinxV/Vivado/2017.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/mloui/Documents/roic-ip'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+update_compile_order -fileset sources_1
+set_property core_revision 4 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/mloui/Documents/roic-ip
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/mloui/Documents/roic-ip'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv nasa.gov:user:pwmcore:1.0 [get_ips  base_mb_pwmcore_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd'
+INFO: [IP_Flow 19-3422] Upgraded base_mb_pwmcore_0_0 (pwmcore_v1.0 1.0) from revision 3 to revision 4
+Wrote  : <C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd> 
+Wrote  : <C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ui/bd_c2e9b563.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/mloui/Documents/ROIC/roic_test/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips base_mb_pwmcore_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd]
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/adc_core_0/READY
+/adc_core_1/READY
+/adc_core_2/READY
+/adc_core_3/READY
+
 Wrote  : <C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd> 
 VHDL Output written to : C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd
 VHDL Output written to : C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/sim/base_mb.vhd
@@ -74,37 +361,59 @@ INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0
 INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/lmb_bram .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block pwmcore_0 .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block roic_interface_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_core_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_core_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_core_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_core_3 .
 Exporting to file C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/hw_handoff/base_mb.hwh
 Generated Block Design Tcl file C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/hw_handoff/base_mb_bd.tcl
 Generated Hardware Definition File C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.hwdef
-WARNING: [filemgmt 20-1318] Duplicate Design Unit 'base_mb_microblaze_0_axi_periph_0' found in library 'xil_defaultlib'
-[Tue Jul 31 14:16:10 2018] Launched base_mb_clk_wiz_1_0_synth_1, base_mb_xbar_0_synth_1, base_mb_roic_interface_driver_0_0_synth_1...
+generate_target: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1825.340 ; gain = 97.527
+catch { config_ip_cache -export [get_ips -all base_mb_clk_wiz_1_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP base_mb_clk_wiz_1_0, cache-ID = 01d46ff684c267dc; cache size = 21.628 MB.
+catch { [ delete_ip_run [get_ips -all base_mb_clk_wiz_1_0] ] }
+catch { config_ip_cache -export [get_ips -all base_mb_xbar_0] }
+catch { config_ip_cache -export [get_ips -all base_mb_pwmcore_0_0] }
+catch { config_ip_cache -export [get_ips -all base_mb_roic_interface_driver_0_0] }
+catch { config_ip_cache -export [get_ips -all base_mb_adc_core_0_0] }
+catch { config_ip_cache -export [get_ips -all base_mb_adc_core_1_0] }
+catch { config_ip_cache -export [get_ips -all base_mb_adc_core_2_0] }
+catch { config_ip_cache -export [get_ips -all base_mb_adc_core_3_0] }
+export_ip_user_files -of_objects [get_files C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd]
+launch_runs -jobs 4 {base_mb_xbar_0_synth_1 base_mb_roic_interface_driver_0_0_synth_1 base_mb_adc_core_2_0_synth_1 base_mb_adc_core_0_0_synth_1 base_mb_adc_core_3_0_synth_1 base_mb_adc_core_1_0_synth_1 base_mb_pwmcore_0_0_synth_1}
+[Wed Aug  8 15:07:07 2018] Launched base_mb_xbar_0_synth_1, base_mb_roic_interface_driver_0_0_synth_1, base_mb_adc_core_2_0_synth_1, base_mb_adc_core_0_0_synth_1, base_mb_adc_core_3_0_synth_1, base_mb_adc_core_1_0_synth_1, base_mb_pwmcore_0_0_synth_1...
 Run output will be captured here:
-base_mb_clk_wiz_1_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_clk_wiz_1_0_synth_1/runme.log
 base_mb_xbar_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_xbar_0_synth_1/runme.log
 base_mb_roic_interface_driver_0_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_roic_interface_driver_0_0_synth_1/runme.log
-[Tue Jul 31 14:16:10 2018] Launched synth_1...
+base_mb_adc_core_2_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_2_0_synth_1/runme.log
+base_mb_adc_core_0_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_0_0_synth_1/runme.log
+base_mb_adc_core_3_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_3_0_synth_1/runme.log
+base_mb_adc_core_1_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_1_0_synth_1/runme.log
+base_mb_pwmcore_0_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_pwmcore_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd] -directory C:/Users/mloui/Documents/ROIC/roic_test/roic_test.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/mloui/Documents/ROIC/roic_test/roic_test.ip_user_files -ipstatic_source_dir C:/Users/mloui/Documents/ROIC/roic_test/roic_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/mloui/Documents/ROIC/roic_test/roic_test.cache/compile_simlib/modelsim} {questa=C:/Users/mloui/Documents/ROIC/roic_test/roic_test.cache/compile_simlib/questa} {riviera=C:/Users/mloui/Documents/ROIC/roic_test/roic_test.cache/compile_simlib/riviera} {activehdl=C:/Users/mloui/Documents/ROIC/roic_test/roic_test.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Wed Aug  8 15:07:49 2018] Launched base_mb_xbar_0_synth_1, base_mb_roic_interface_driver_0_0_synth_1, base_mb_adc_core_2_0_synth_1, base_mb_adc_core_0_0_synth_1, base_mb_adc_core_3_0_synth_1, base_mb_adc_core_1_0_synth_1, base_mb_pwmcore_0_0_synth_1...
+Run output will be captured here:
+base_mb_xbar_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_xbar_0_synth_1/runme.log
+base_mb_roic_interface_driver_0_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_roic_interface_driver_0_0_synth_1/runme.log
+base_mb_adc_core_2_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_2_0_synth_1/runme.log
+base_mb_adc_core_0_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_0_0_synth_1/runme.log
+base_mb_adc_core_3_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_3_0_synth_1/runme.log
+base_mb_adc_core_1_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_1_0_synth_1/runme.log
+base_mb_pwmcore_0_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_pwmcore_0_0_synth_1/runme.log
+[Wed Aug  8 15:07:50 2018] Launched synth_1...
 Run output will be captured here: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/runme.log
-launch_runs: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1547.363 ; gain = 101.824
-create_project testing C:/Users/mloui/Documents/ROIC/testing -part xcku040-ffva1156-2-e
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/XilinxV/Vivado/2017.4/data/ip'.
-set_property board_part xilinx.com:kcu105:part0:1.3 [current_project]
-set_property target_language VHDL [current_project]
-create_bd_design "design_1"
-Wrote  : <C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd> 
-create_bd_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1618.453 ; gain = 54.613
-update_compile_order -fileset sources_1
-open_bd_design {C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd}
-open_bd_design {C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd}
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze:10.0 microblaze_0
-endgroup
-current_project roic_test
+launch_runs: Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1834.539 ; gain = 0.000
 open_run synth_1 -name synth_1
 Design is defaulting to impl run constrset: constrs_2
 Design is defaulting to synth run part: xcku040-ffva1156-2-e
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_0_0/base_mb_adc_core_0_0.dcp' for cell 'base_mb_i/adc_core_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_1_0/base_mb_adc_core_1_0.dcp' for cell 'base_mb_i/adc_core_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_2_0/base_mb_adc_core_2_0.dcp' for cell 'base_mb_i/adc_core_2'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_3_0/base_mb_adc_core_3_0.dcp' for cell 'base_mb_i/adc_core_3'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_axi_uartlite_0_0/base_mb_axi_uartlite_0_0.dcp' for cell 'base_mb_i/axi_uartlite_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_clk_wiz_1_0/base_mb_clk_wiz_1_0.dcp' for cell 'base_mb_i/clk_wiz_1'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_mdm_1_0/base_mb_mdm_1_0.dcp' for cell 'base_mb_i/mdm_1'
@@ -118,7 +427,7 @@ INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/r
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_ilmb_bram_if_cntlr_0/base_mb_ilmb_bram_if_cntlr_0.dcp' for cell 'base_mb_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_ilmb_v10_0/base_mb_ilmb_v10_0.dcp' for cell 'base_mb_i/microblaze_0_local_memory/ilmb_v10'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_lmb_bram_0/base_mb_lmb_bram_0.dcp' for cell 'base_mb_i/microblaze_0_local_memory/lmb_bram'
-INFO: [Netlist 29-17] Analyzing 314 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 355 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2017.4
 INFO: [Device 21-403] Loading part xcku040-ffva1156-2-e
@@ -127,7 +436,7 @@ Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources
 Finished Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_microblaze_0_0/base_mb_microblaze_0_0.xdc] for cell 'base_mb_i/microblaze_0/U0'
 Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_mdm_1_0/base_mb_mdm_1_0.xdc] for cell 'base_mb_i/mdm_1/U0'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_mdm_1_0/base_mb_mdm_1_0.xdc:50]
-get_clocks: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 2164.199 ; gain = 344.035
+get_clocks: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 2365.523 ; gain = 343.086
 Finished Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_mdm_1_0/base_mb_mdm_1_0.xdc] for cell 'base_mb_i/mdm_1/U0'
 Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_clk_wiz_1_0/base_mb_clk_wiz_1_0_board.xdc] for cell 'base_mb_i/clk_wiz_1/inst'
 Finished Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_clk_wiz_1_0/base_mb_clk_wiz_1_0_board.xdc] for cell 'base_mb_i/clk_wiz_1/inst'
@@ -148,6 +457,9 @@ Finished Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.src
 Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_ilmb_v10_0/base_mb_ilmb_v10_0.xdc] for cell 'base_mb_i/microblaze_0_local_memory/ilmb_v10/U0'
 Finished Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_ilmb_v10_0/base_mb_ilmb_v10_0.xdc] for cell 'base_mb_i/microblaze_0_local_memory/ilmb_v10/U0'
 Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/constrs_2/new/contrs_roic.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk_out3_0'. [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/constrs_2/new/contrs_roic.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/constrs_2/new/contrs_roic.xdc:4]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/constrs_2/new/contrs_roic.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell base_mb_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
@@ -160,590 +472,451 @@ INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell base_mb_i/microb
 INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell base_mb_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
 Generating merged BMM file for the design top 'base_mb_wrapper'...
 INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_microblaze_0_0/data/mb_bootloop_le.elf 
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'base_mb_adc_core_0_0_axis_data_fifo_0' instantiated as 'base_mb_i/adc_core_0/U0/adc_core_v1_0_S00_AXI_inst/dc/FIFO_i' [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ipshared/0f51/src/Data_Collector.vhd:108]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'base_mb_adc_core_1_0__axis_data_fifo_0' instantiated as 'base_mb_i/adc_core_1/U0/adc_core_v1_0_S00_AXI_inst/dc/FIFO_i' [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ipshared/0f51/src/Data_Collector.vhd:108]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'base_mb_adc_core_2_0_axis_data_fifo_0' instantiated as 'base_mb_i/adc_core_2/U0/adc_core_v1_0_S00_AXI_inst/dc/FIFO_i' [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ipshared/0f51/src/Data_Collector.vhd:108]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'base_mb_adc_core_3_0__axis_data_fifo_0' instantiated as 'base_mb_i/adc_core_3/U0/adc_core_v1_0_S00_AXI_inst/dc/FIFO_i' [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ipshared/0f51/src/Data_Collector.vhd:108]
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 99 instances were transformed.
-  IBUF => IBUF (IBUFCTRL, INBUF): 2 instances
+  A total of 159 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 62 instances
   IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instances
   LUT6_2 => LUT6_2 (LUT5, LUT6): 80 instances
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 16 instances
 
-open_run: Time (s): cpu = 00:00:45 ; elapsed = 00:00:33 . Memory (MB): peak = 2443.859 ; gain = 820.410
-place_ports clk_out3_0 G17
+open_run: Time (s): cpu = 00:00:38 ; elapsed = 00:00:29 . Memory (MB): peak = 2502.945 ; gain = 668.406
+place_ports adc_clk1 G17
+place_ports adc_clk2 G16
+place_ports adc_clk3 E16
+place_ports adc_clk D16
+place_ports roic_clk F8
+set_property package_pin "" [get_ports [list  {DIN_0[12]}]]
+set_property package_pin "" [get_ports [list  {DIN_0[12]}]]
+set_property package_pin "" [get_ports [list  {DIN_0[13]}]]
+set_property package_pin "" [get_ports [list  {DIN_0[13]}]]
+place_ports {DIN_2[13]} J9
+place_ports {DIN_2[12]} H9
+place_ports {DIN_2[11]} L8
+place_ports {DIN_2[10]} K8
+place_ports {DIN_2[9]} K11
+place_ports {DIN_2[8]} J11
+place_ports {DIN_2[7]} E10
+place_ports {DIN_2[6]} D10
+place_ports {DIN_2[5]} D9
+place_ports {DIN_2[4]} C9
+place_ports {DIN_2[3]} B10
+set_property package_pin "" [get_ports [list  {DIN_2[0]}]]
+place_ports {DIN_2[13]} C8
+place_ports {DIN_2[12]} D8
+place_ports {DIN_2[11]} A10
+startgroup
+set_property package_pin "" [get_ports [list  {DIN_2[3]}]]
+place_ports {DIN_2[10]} B10
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {DIN_2[4]}]]
+place_ports {DIN_2[9]} C9
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {DIN_2[5]}]]
+place_ports {DIN_2[8]} D9
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {DIN_2[6]}]]
+place_ports {DIN_2[7]} D10
+endgroup
+place_ports {DIN_2[6]} E10
+place_ports {DIN_2[5]} J11
+place_ports {DIN_2[4]} K11
+place_ports {DIN_2[3]} K8
+place_ports {DIN_2[2]} L8
+place_ports {DIN_2[1]} H9
+place_ports {DIN_2[0]} J9
+place_ports {DIN_3[13]} F25
+place_ports {DIN_3[12]} G24
+place_ports {DIN_3[11]} F24
+place_ports {DIN_3[10]} F23
+place_ports {DIN_3[9]} A24
+place_ports {DIN_3[8]} B24
+place_ports {DIN_3[7]} C22
+place_ports {DIN_3[6]} C21
+place_ports {DIN_3[5]} E23
+place_ports {DIN_3[4]} E22
+place_ports {DIN_3[3]} C24
+place_ports {DIN_3[2]} D24
+place_ports {DIN_3[1]} A9
+place_ports {DIN_3[0]} B9
+place_ports fsync_0 D13
+place_ports lsync_0 C13
+place_ports pwm_out_0 J8
+place_ports data_0 E8
+place_ports DRDY_0 H11
+place_ports DRDY_1 G9
+place_ports DRDY_2 K10
+place_ports DRDY_3 A13
+place_ports {DIN_0[13]} J15
+place_ports {DIN_0[12]} J14
+set_property package_pin "" [get_ports [list  {DIN_0[11]}]]
+place_ports {DIN_0[13]} H8
+set_property package_pin "" [get_ports [list  {DIN_0[12]}]]
+place_ports {DIN_0[11]} A12
+place_ports {DIN_0[9]} B19
+place_ports {DIN_0[8]} C19
+place_ports {DIN_0[7]} A18
+place_ports {DIN_0[6]} A19
+place_ports {DIN_0[5]} A14
+place_ports {DIN_0[4]} B14
+place_ports {DIN_0[3]} F17
+place_ports {DIN_0[2]} F18
+place_ports {DIN_0[1]} J14
+place_ports {DIN_0[0]} J15
+place_ports {DIN_0[13]} L19
+place_ports {DIN_0[12]} L18
+place_ports {DIN_0[11]} G14
+place_ports {DIN_0[10]} G15
+startgroup
+set_property package_pin "" [get_ports [list  {DIN_0[12]}]]
+place_ports {DIN_0[13]} L18
+endgroup
+place_ports {DIN_0[12]} L19
+place_ports {DIN_1[13]} K15
+place_ports {DIN_1[12]} L15
+place_ports {DIN_1[11]} H18
+place_ports {DIN_1[10]} H19
+place_ports {DIN_1[9]} D18
+place_ports {DIN_1[8]} D19
+place_ports {DIN_1[7]} C14
+place_ports {DIN_1[6]} D14
+place_ports {DIN_1[5]} J16
+place_ports {DIN_1[4]} K16
+place_ports {DIN_1[3]} K17
+place_ports {DIN_1[2]} K18
+place_ports {DIN_1[1]} F19
+place_ports {DIN_1[0]} G19
+set_property IOSTANDARD LVCMOS18 [get_ports [list adc_clk1]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list adc_clk2]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list adc_clk3]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list adc_clk]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list roic_clk]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list {DIN_0[13]} {DIN_0[12]} {DIN_0[11]} {DIN_0[10]} {DIN_0[9]} {DIN_0[8]} {DIN_0[7]} {DIN_0[6]} {DIN_0[5]} {DIN_0[4]} {DIN_0[3]} {DIN_0[2]} {DIN_0[1]} {DIN_0[0]}]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list {DIN_1[13]} {DIN_1[12]} {DIN_1[11]} {DIN_1[10]} {DIN_1[9]} {DIN_1[8]} {DIN_1[7]} {DIN_1[6]} {DIN_1[5]} {DIN_1[4]} {DIN_1[3]} {DIN_1[2]} {DIN_1[1]} {DIN_1[0]}]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list {DIN_2[13]} {DIN_2[12]} {DIN_2[11]} {DIN_2[10]} {DIN_2[9]} {DIN_2[8]} {DIN_2[7]} {DIN_2[6]} {DIN_2[5]} {DIN_2[4]} {DIN_2[3]} {DIN_2[2]} {DIN_2[1]} {DIN_2[0]}]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list {DIN_3[13]} {DIN_3[12]} {DIN_3[11]} {DIN_3[10]} {DIN_3[9]} {DIN_3[8]} {DIN_3[7]} {DIN_3[6]} {DIN_3[5]} {DIN_3[4]} {DIN_3[3]} {DIN_3[2]} {DIN_3[1]} {DIN_3[0]}]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list data_0]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list DRDY_0]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list DRDY_1]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list DRDY_2]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list DRDY_3]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list fsync_0]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list lsync_0]]
 save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'base_mb_microblaze_0_axi_periph_0' found in library 'xil_defaultlib'
+[Wed Aug  8 15:38:44 2018] Launched synth_1...
+Run output will be captured here: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_2
+Design is defaulting to synth run part: xcku040-ffva1156-2-e
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_0_0/base_mb_adc_core_0_0.dcp' for cell 'base_mb_i/adc_core_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_1_0/base_mb_adc_core_1_0.dcp' for cell 'base_mb_i/adc_core_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_2_0/base_mb_adc_core_2_0.dcp' for cell 'base_mb_i/adc_core_2'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_3_0/base_mb_adc_core_3_0.dcp' for cell 'base_mb_i/adc_core_3'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_axi_uartlite_0_0/base_mb_axi_uartlite_0_0.dcp' for cell 'base_mb_i/axi_uartlite_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_clk_wiz_1_0/base_mb_clk_wiz_1_0.dcp' for cell 'base_mb_i/clk_wiz_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_mdm_1_0/base_mb_mdm_1_0.dcp' for cell 'base_mb_i/mdm_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_microblaze_0_0/base_mb_microblaze_0_0.dcp' for cell 'base_mb_i/microblaze_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_pwmcore_0_0/base_mb_pwmcore_0_0.dcp' for cell 'base_mb_i/pwmcore_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_roic_interface_driver_0_0/base_mb_roic_interface_driver_0_0.dcp' for cell 'base_mb_i/roic_interface_driver_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_rst_clk_wiz_1_100M_0/base_mb_rst_clk_wiz_1_100M_0.dcp' for cell 'base_mb_i/rst_clk_wiz_1_100M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_xbar_0/base_mb_xbar_0.dcp' for cell 'base_mb_i/microblaze_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_dlmb_bram_if_cntlr_0/base_mb_dlmb_bram_if_cntlr_0.dcp' for cell 'base_mb_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_dlmb_v10_0/base_mb_dlmb_v10_0.dcp' for cell 'base_mb_i/microblaze_0_local_memory/dlmb_v10'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_ilmb_bram_if_cntlr_0/base_mb_ilmb_bram_if_cntlr_0.dcp' for cell 'base_mb_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_ilmb_v10_0/base_mb_ilmb_v10_0.dcp' for cell 'base_mb_i/microblaze_0_local_memory/ilmb_v10'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_lmb_bram_0/base_mb_lmb_bram_0.dcp' for cell 'base_mb_i/microblaze_0_local_memory/lmb_bram'
+INFO: [Netlist 29-17] Analyzing 355 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_microblaze_0_0/base_mb_microblaze_0_0.xdc] for cell 'base_mb_i/microblaze_0/U0'
+Finished Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_microblaze_0_0/base_mb_microblaze_0_0.xdc] for cell 'base_mb_i/microblaze_0/U0'
+Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_mdm_1_0/base_mb_mdm_1_0.xdc] for cell 'base_mb_i/mdm_1/U0'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_mdm_1_0/base_mb_mdm_1_0.xdc:50]
+Finished Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_mdm_1_0/base_mb_mdm_1_0.xdc] for cell 'base_mb_i/mdm_1/U0'
+Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_clk_wiz_1_0/base_mb_clk_wiz_1_0_board.xdc] for cell 'base_mb_i/clk_wiz_1/inst'
+Finished Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_clk_wiz_1_0/base_mb_clk_wiz_1_0_board.xdc] for cell 'base_mb_i/clk_wiz_1/inst'
+Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_clk_wiz_1_0/base_mb_clk_wiz_1_0.xdc] for cell 'base_mb_i/clk_wiz_1/inst'
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_clk_wiz_1_0/base_mb_clk_wiz_1_0.xdc:57]
+WARNING: [Vivado 12-2489] -input_jitter contains time 0.033330 which will be rounded to 0.033 to ensure it is an integer multiple of 1 picosecond [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_clk_wiz_1_0/base_mb_clk_wiz_1_0.xdc:57]
+Finished Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_clk_wiz_1_0/base_mb_clk_wiz_1_0.xdc] for cell 'base_mb_i/clk_wiz_1/inst'
+Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_rst_clk_wiz_1_100M_0/base_mb_rst_clk_wiz_1_100M_0_board.xdc] for cell 'base_mb_i/rst_clk_wiz_1_100M/U0'
+Finished Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_rst_clk_wiz_1_100M_0/base_mb_rst_clk_wiz_1_100M_0_board.xdc] for cell 'base_mb_i/rst_clk_wiz_1_100M/U0'
+Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_rst_clk_wiz_1_100M_0/base_mb_rst_clk_wiz_1_100M_0.xdc] for cell 'base_mb_i/rst_clk_wiz_1_100M/U0'
+Finished Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_rst_clk_wiz_1_100M_0/base_mb_rst_clk_wiz_1_100M_0.xdc] for cell 'base_mb_i/rst_clk_wiz_1_100M/U0'
+Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_axi_uartlite_0_0/base_mb_axi_uartlite_0_0_board.xdc] for cell 'base_mb_i/axi_uartlite_0/U0'
+Finished Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_axi_uartlite_0_0/base_mb_axi_uartlite_0_0_board.xdc] for cell 'base_mb_i/axi_uartlite_0/U0'
+Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_axi_uartlite_0_0/base_mb_axi_uartlite_0_0.xdc] for cell 'base_mb_i/axi_uartlite_0/U0'
+Finished Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_axi_uartlite_0_0/base_mb_axi_uartlite_0_0.xdc] for cell 'base_mb_i/axi_uartlite_0/U0'
+Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_dlmb_v10_0/base_mb_dlmb_v10_0.xdc] for cell 'base_mb_i/microblaze_0_local_memory/dlmb_v10/U0'
+Finished Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_dlmb_v10_0/base_mb_dlmb_v10_0.xdc] for cell 'base_mb_i/microblaze_0_local_memory/dlmb_v10/U0'
+Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_ilmb_v10_0/base_mb_ilmb_v10_0.xdc] for cell 'base_mb_i/microblaze_0_local_memory/ilmb_v10/U0'
+Finished Parsing XDC File [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_ilmb_v10_0/base_mb_ilmb_v10_0.xdc] for cell 'base_mb_i/microblaze_0_local_memory/ilmb_v10/U0'
+Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/constrs_2/new/contrs_roic.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk_out3_0'. [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/constrs_2/new/contrs_roic.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/constrs_2/new/contrs_roic.xdc:4]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/constrs_2/new/contrs_roic.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell base_mb_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell base_mb_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell base_mb_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell base_mb_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell base_mb_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell base_mb_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell base_mb_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell base_mb_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+Generating merged BMM file for the design top 'base_mb_wrapper'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_microblaze_0_0/data/mb_bootloop_le.elf 
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'base_mb_adc_core_0_0_axis_data_fifo_0' instantiated as 'base_mb_i/adc_core_0/U0/adc_core_v1_0_S00_AXI_inst/dc/FIFO_i' [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ipshared/0f51/src/Data_Collector.vhd:108]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'base_mb_adc_core_1_0__axis_data_fifo_0' instantiated as 'base_mb_i/adc_core_1/U0/adc_core_v1_0_S00_AXI_inst/dc/FIFO_i' [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ipshared/0f51/src/Data_Collector.vhd:108]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'base_mb_adc_core_2_0_axis_data_fifo_0' instantiated as 'base_mb_i/adc_core_2/U0/adc_core_v1_0_S00_AXI_inst/dc/FIFO_i' [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ipshared/0f51/src/Data_Collector.vhd:108]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'base_mb_adc_core_3_0__axis_data_fifo_0' instantiated as 'base_mb_i/adc_core_3/U0/adc_core_v1_0_S00_AXI_inst/dc/FIFO_i' [c:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ipshared/0f51/src/Data_Collector.vhd:108]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 159 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 62 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 80 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 16 instances
+
+open_run: Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 3672.699 ; gain = 0.000
 launch_runs impl_1 -jobs 4
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.137 . Memory (MB): peak = 3622.668 ; gain = 0.000
-[Tue Jul 31 14:22:16 2018] Launched impl_1...
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.109 . Memory (MB): peak = 3672.699 ; gain = 0.000
+zip_exception: Failed to open zip archive C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/impl_1/base_mb_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/impl_1/base_mb_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/impl_1/base_mb_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/impl_1/base_mb_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/impl_1/base_mb_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/impl_1/base_mb_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/impl_1/base_mb_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/impl_1/base_mb_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/impl_1/base_mb_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/impl_1/base_mb_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/impl_1/base_mb_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/impl_1/base_mb_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/impl_1/base_mb_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/impl_1/base_mb_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/impl_1/base_mb_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/impl_1/base_mb_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/impl_1/base_mb_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/impl_1/base_mb_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create files[Wed Aug  8 15:51:07 2018] Launched impl_1...
 Run output will be captured here: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/impl_1/runme.log
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Tue Jul 31 14:26:12 2018] Launched impl_1...
-Run output will be captured here: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/impl_1/runme.log
-current_project testing
-delete_bd_objs [get_bd_cells microblaze_0]
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.4 clk_wiz_0
-endgroup
-set_property -dict [list CONFIG.CLK_IN1_BOARD_INTERFACE {default_sysclk_300} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {5} CONFIG.PRIM_SOURCE {Differential_clock_capable_pin} CONFIG.CLKIN1_JITTER_PS {33.330000000000005} CONFIG.MMCM_DIVCLK_DIVIDE {15} CONFIG.MMCM_CLKFBOUT_MULT_F {32.000} CONFIG.MMCM_CLKIN1_PERIOD {3.333} CONFIG.MMCM_CLKIN2_PERIOD {10.0} CONFIG.MMCM_CLKOUT0_DIVIDE_F {128.000} CONFIG.CLKOUT1_JITTER {594.042} CONFIG.CLKOUT1_PHASE_ERROR {346.848}] [get_bd_cells clk_wiz_0]
-startgroup
-apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "default_sysclk_300 ( 300 MHz System differential clock ) " }  [get_bd_intf_pins clk_wiz_0/CLK_IN1_D]
-INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /clk_wiz_0]
-INFO: [board_rule 100-100] set_property CONFIG.CLK_IN1_BOARD_INTERFACE default_sysclk_300 [get_bd_cells /clk_wiz_0]
-INFO: [board_rule 100-100] create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_clock_rtl:1.0 default_sysclk_300
-INFO: [board_rule 100-100] set_property CONFIG.FREQ_HZ 100000000 /default_sysclk_300
-INFO: [board_rule 100-100] connect_bd_intf_net /default_sysclk_300 /clk_wiz_0/CLK_IN1_D
-INFO: [board_rule 100-100] set_property CONFIG.FREQ_HZ 300000000 /default_sysclk_300
-apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "reset ( FPGA Reset ) " }  [get_bd_pins clk_wiz_0/reset]
-INFO: [board_rule 100-100] set_property CONFIG.RESET_BOARD_INTERFACE reset [get_bd_cells /clk_wiz_0]
-INFO: [board_rule 100-100] create_bd_port -dir I reset -type rst
-INFO: [board_rule 100-100] set_property CONFIG.POLARITY  /reset
-INFO: [board_rule 100-100] connect_bd_net /reset /clk_wiz_0/reset
-INFO: [board_rule 100-100] set_property CONFIG.POLARITY ACTIVE_HIGH /reset
-endgroup
-startgroup
-make_bd_pins_external  [get_bd_pins clk_wiz_0/clk_out1]
-endgroup
-save_bd_design
-Wrote  : <C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd> 
-Wrote  : <C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
-generate_target all [get_files  C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd]
-Wrote  : <C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd> 
-VHDL Output written to : C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/synth/design_1.vhd
-VHDL Output written to : C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/sim/design_1.vhd
-VHDL Output written to : C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
-INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
-Exporting to file C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
-Generated Block Design Tcl file C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
-Generated Hardware Definition File C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/synth/design_1.hwdef
-catch { config_ip_cache -export [get_ips -all design_1_clk_wiz_0_0] }
-export_ip_user_files -of_objects [get_files C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd]
-launch_runs -jobs 4 design_1_clk_wiz_0_0_synth_1
-[Tue Jul 31 14:30:47 2018] Launched design_1_clk_wiz_0_0_synth_1...
-Run output will be captured here: C:/Users/mloui/Documents/ROIC/testing/testing.runs/design_1_clk_wiz_0_0_synth_1/runme.log
-export_simulation -of_objects [get_files C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/mloui/Documents/ROIC/testing/testing.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/mloui/Documents/ROIC/testing/testing.ip_user_files -ipstatic_source_dir C:/Users/mloui/Documents/ROIC/testing/testing.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/mloui/Documents/ROIC/testing/testing.cache/compile_simlib/modelsim} {questa=C:/Users/mloui/Documents/ROIC/testing/testing.cache/compile_simlib/questa} {riviera=C:/Users/mloui/Documents/ROIC/testing/testing.cache/compile_simlib/riviera} {activehdl=C:/Users/mloui/Documents/ROIC/testing/testing.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-make_wrapper -files [get_files C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd] -top
-add_files -norecurse C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
-launch_runs synth_1 -jobs 4
-[Tue Jul 31 14:37:40 2018] Launched synth_1...
-Run output will be captured here: C:/Users/mloui/Documents/ROIC/testing/testing.runs/synth_1/runme.log
-open_run synth_1 -name synth_1
-Design is defaulting to impl run constrset: constrs_1
-Design is defaulting to synth run part: xcku040-ffva1156-2-e
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.dcp' for cell 'design_1_i/clk_wiz_0'
-INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2017.4
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc] for cell 'design_1_i/clk_wiz_0/inst'
-Finished Parsing XDC File [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc] for cell 'design_1_i/clk_wiz_0/inst'
-Parsing XDC File [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc] for cell 'design_1_i/clk_wiz_0/inst'
-INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc:57]
-INFO: [Timing 38-2] Deriving generated clocks [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc:57]
-WARNING: [Vivado 12-2489] -input_jitter contains time 0.033330 which will be rounded to 0.033 to ensure it is an integer multiple of 1 picosecond [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc:57]
-Finished Parsing XDC File [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc] for cell 'design_1_i/clk_wiz_0/inst'
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  IBUF => IBUF (IBUFCTRL, INBUF): 1 instances
-  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instances
-
-place_ports clk_out1_0 G17
-set_property IOSTANDARD LVCMOS18 [get_ports [list clk_out1_0]]
-file mkdir C:/Users/mloui/Documents/ROIC/testing/testing.srcs/constrs_1/new
-close [ open C:/Users/mloui/Documents/ROIC/testing/testing.srcs/constrs_1/new/clk_design.xdc w ]
-add_files -fileset constrs_1 C:/Users/mloui/Documents/ROIC/testing/testing.srcs/constrs_1/new/clk_design.xdc
-set_property target_constrs_file C:/Users/mloui/Documents/ROIC/testing/testing.srcs/constrs_1/new/clk_design.xdc [current_fileset -constrset]
-save_constraints -force
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
-[Tue Jul 31 14:40:30 2018] Launched synth_1...
-Run output will be captured here: C:/Users/mloui/Documents/ROIC/testing/testing.runs/synth_1/runme.log
-[Tue Jul 31 14:40:30 2018] Launched impl_1...
-Run output will be captured here: C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/runme.log
-close_design
-open_run impl_1
-INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2017.4
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/.Xil/Vivado-21712-GSSLW17031962/dcp29/design_1_wrapper_board.xdc]
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/.Xil/Vivado-21712-GSSLW17031962/dcp29/design_1_wrapper_board.xdc]
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/.Xil/Vivado-21712-GSSLW17031962/dcp29/design_1_wrapper_early.xdc]
-INFO: [Timing 38-35] Done setting XDC timing constraints. [C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc:57]
-INFO: [Timing 38-2] Deriving generated clocks [C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc:57]
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/.Xil/Vivado-21712-GSSLW17031962/dcp29/design_1_wrapper_early.xdc]
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/.Xil/Vivado-21712-GSSLW17031962/dcp29/design_1_wrapper.xdc]
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/roic_test/.Xil/Vivado-21712-GSSLW17031962/dcp29/design_1_wrapper.xdc]
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.125 . Memory (MB): peak = 3622.668 ; gain = 0.000
-Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.139 . Memory (MB): peak = 3622.668 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  IBUF => IBUF (IBUFCTRL, INBUF): 1 instances
-  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instances
-
-open_hw
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
- Targets(s) ", jsn-JTAG-SMT2NC-210308A3B989" may be locked by another hw_server.
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210308A3B989
-CRITICAL WARNING: [Xicom 50-38] xicom: The current version of Vivado does not support this detected version of the MIG core. 2015.2 is the last version supporting it.
-INFO: [Labtools 27-2302] Device xcku040 (JTAG device index = 0) is programmed with a design that has 1 MIG core(s).
-WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
-set_property PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property PROGRAM.FILE {C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcku040_0]
-program_hw_devices [get_hw_devices xcku040_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-program_hw_devices: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 3841.977 ; gain = 0.965
-refresh_hw_device [lindex [get_hw_devices xcku040_0] 0]
-INFO: [Labtools 27-1434] Device xcku040 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-set_property PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property PROGRAM.FILE {C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcku040_0]
-program_hw_devices [get_hw_devices xcku040_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-program_hw_devices: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 3842.559 ; gain = 0.504
-refresh_hw_device [lindex [get_hw_devices xcku040_0] 0]
-INFO: [Labtools 27-1434] Device xcku040 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-refresh_hw_device [lindex [get_hw_devices xcku040_0] 0]
-INFO: [Labtools 27-1434] Device xcku040 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210308A3B989
-disconnect_hw_server localhost:3121
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210308A3B989
-set_property PROGRAM.FILE {C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcku040_0]
-current_hw_device [get_hw_devices xcku040_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xcku040_0] 0]
-CRITICAL WARNING: [Xicom 50-38] xicom: The current version of Vivado does not support this detected version of the MIG core. 2015.2 is the last version supporting it.
-INFO: [Labtools 27-2302] Device xcku040 (JTAG device index = 0) is programmed with a design that has 1 MIG core(s).
-set_property PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property PROGRAM.FILE {C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcku040_0]
-program_hw_devices [get_hw_devices xcku040_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-program_hw_devices: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 3846.719 ; gain = 0.000
-refresh_hw_device [lindex [get_hw_devices xcku040_0] 0]
-INFO: [Labtools 27-1434] Device xcku040 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210308A3B989
-disconnect_hw_server localhost:3121
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
- Targets(s) ", jsn-JTAG-SMT2NC-210308A3B989" may be locked by another hw_server.
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210308A3B989
-CRITICAL WARNING: [Xicom 50-38] xicom: The current version of Vivado does not support this detected version of the MIG core. 2015.2 is the last version supporting it.
-INFO: [Labtools 27-2302] Device xcku040 (JTAG device index = 0) is programmed with a design that has 1 MIG core(s).
-WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
-set_property PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property PROGRAM.FILE {C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcku040_0]
-program_hw_devices [get_hw_devices xcku040_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-program_hw_devices: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 3848.773 ; gain = 0.000
-refresh_hw_device [lindex [get_hw_devices xcku040_0] 0]
-INFO: [Labtools 27-1434] Device xcku040 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-close_hw
-close_design
-open_bd_design {C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd}
-open_run synth_1 -name synth_1
-Design is defaulting to impl run constrset: constrs_1
-Design is defaulting to synth run part: xcku040-ffva1156-2-e
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.dcp' for cell 'design_1_i/clk_wiz_0'
-INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2017.4
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc] for cell 'design_1_i/clk_wiz_0/inst'
-Finished Parsing XDC File [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc] for cell 'design_1_i/clk_wiz_0/inst'
-Parsing XDC File [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc] for cell 'design_1_i/clk_wiz_0/inst'
-INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc:57]
-INFO: [Timing 38-2] Deriving generated clocks [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc:57]
-WARNING: [Vivado 12-2489] -input_jitter contains time 0.033330 which will be rounded to 0.033 to ensure it is an integer multiple of 1 picosecond [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc:57]
-Finished Parsing XDC File [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc] for cell 'design_1_i/clk_wiz_0/inst'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/testing/testing.srcs/constrs_1/new/clk_design.xdc]
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/testing/testing.srcs/constrs_1/new/clk_design.xdc]
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  IBUF => IBUF (IBUFCTRL, INBUF): 1 instances
-  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instances
-
-close_design
-startgroup
-endgroup
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Tue Jul 31 15:18:35 2018] Launched synth_1...
-Run output will be captured here: C:/Users/mloui/Documents/ROIC/testing/testing.runs/synth_1/runme.log
-[Tue Jul 31 15:18:35 2018] Launched impl_1...
-Run output will be captured here: C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/runme.log
-reset_run synth_1
-startgroup
-make_bd_pins_external  [get_bd_pins clk_wiz_0/locked]
-endgroup
-save_bd_design
-Wrote  : <C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd> 
-Wrote  : <C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-Wrote  : <C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd> 
-VHDL Output written to : C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/synth/design_1.vhd
-VHDL Output written to : C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/sim/design_1.vhd
-VHDL Output written to : C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
-INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
-Exporting to file C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
-Generated Block Design Tcl file C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
-Generated Hardware Definition File C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/synth/design_1.hwdef
-[Tue Jul 31 15:20:06 2018] Launched synth_1...
-Run output will be captured here: C:/Users/mloui/Documents/ROIC/testing/testing.runs/synth_1/runme.log
-[Tue Jul 31 15:20:06 2018] Launched impl_1...
-Run output will be captured here: C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Tue Jul 31 15:24:41 2018] Launched synth_1...
-Run output will be captured here: C:/Users/mloui/Documents/ROIC/testing/testing.runs/synth_1/runme.log
-[Tue Jul 31 15:24:41 2018] Launched impl_1...
-Run output will be captured here: C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/runme.log
-open_hw
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210308A3B989
-set_property PROGRAM.FILE {C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcku040_0]
-current_hw_device [get_hw_devices xcku040_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xcku040_0] 0]
-INFO: [Labtools 27-1434] Device xcku040 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-set_property PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property PROGRAM.FILE {C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcku040_0]
-program_hw_devices [get_hw_devices xcku040_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-program_hw_devices: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 3906.430 ; gain = 0.000
-refresh_hw_device [lindex [get_hw_devices xcku040_0] 0]
-INFO: [Labtools 27-1434] Device xcku040 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-open_bd_design {C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd}
-startgroup
-set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {100} CONFIG.MMCM_DIVCLK_DIVIDE {3} CONFIG.MMCM_CLKFBOUT_MULT_F {10.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {10.000} CONFIG.CLKOUT1_JITTER {129.666} CONFIG.CLKOUT1_PHASE_ERROR {98.575}] [get_bd_cells clk_wiz_0]
-endgroup
-save_bd_design
-Wrote  : <C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd> 
-reset_run synth_1
-launch_runs synth_1 -jobs 4
-ERROR: [BD 41-238] Port/Pin property FREQ_HZ does not match between /clk_out1_0(5000000) and /clk_wiz_0/clk_out1(100000000)
-ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd 
-ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
-startgroup
-endgroup
-save_bd_design
-Wrote  : <C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd> 
-startgroup
-set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {5} CONFIG.MMCM_DIVCLK_DIVIDE {15} CONFIG.MMCM_CLKFBOUT_MULT_F {32.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {128.000} CONFIG.CLKOUT1_JITTER {594.042} CONFIG.CLKOUT1_PHASE_ERROR {346.848}] [get_bd_cells clk_wiz_0]
-endgroup
-startgroup
-set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {150} CONFIG.MMCM_DIVCLK_DIVIDE {2} CONFIG.MMCM_CLKFBOUT_MULT_F {6.625} CONFIG.MMCM_CLKOUT0_DIVIDE_F {6.625} CONFIG.CLKOUT1_JITTER {107.611} CONFIG.CLKOUT1_PHASE_ERROR {92.971}] [get_bd_cells clk_wiz_0]
-endgroup
-save_bd_design
-Wrote  : <C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd> 
-launch_runs synth_1 -jobs 4
-ERROR: [BD 41-238] Port/Pin property FREQ_HZ does not match between /clk_out1_0(5000000) and /clk_wiz_0/clk_out1(150000000)
-ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd 
-ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
-delete_bd_objs [get_bd_nets clk_wiz_0_locked] [get_bd_nets clk_wiz_0_clk_out1] [get_bd_nets reset_1] [get_bd_intf_nets default_sysclk_300_1] [get_bd_cells clk_wiz_0]
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.4 clk_wiz_0
-endgroup
-connect_bd_net [get_bd_ports reset] [get_bd_pins clk_wiz_0/reset]
-apply_bd_automation -rule xilinx.com:bd_rule:board -config {Clk "New External Port (100 MHz)" }  [get_bd_pins clk_wiz_0/clk_in1]
-delete_bd_objs [get_bd_nets clk_100MHz_1] [get_bd_ports clk_100MHz]
-startgroup
-set_property -dict [list CONFIG.CLK_IN1_BOARD_INTERFACE {default_sysclk_300} CONFIG.RESET_BOARD_INTERFACE {reset} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {150} CONFIG.PRIM_SOURCE {Differential_clock_capable_pin} CONFIG.CLKIN1_JITTER_PS {33.330000000000005} CONFIG.MMCM_DIVCLK_DIVIDE {2} CONFIG.MMCM_CLKFBOUT_MULT_F {6.625} CONFIG.MMCM_CLKIN1_PERIOD {3.333} CONFIG.MMCM_CLKIN2_PERIOD {10.0} CONFIG.MMCM_CLKOUT0_DIVIDE_F {6.625} CONFIG.CLKOUT1_JITTER {107.611} CONFIG.CLKOUT1_PHASE_ERROR {92.971}] [get_bd_cells clk_wiz_0]
-endgroup
-connect_bd_intf_net [get_bd_intf_ports default_sysclk_300] [get_bd_intf_pins clk_wiz_0/CLK_IN1_D]
-connect_bd_net [get_bd_ports clk_out1_0] [get_bd_pins clk_wiz_0/clk_out1]
-connect_bd_net [get_bd_ports locked_0] [get_bd_pins clk_wiz_0/locked]
-save_bd_design
-Wrote  : <C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd> 
-Wrote  : <C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
-launch_runs synth_1 -jobs 4
-ERROR: [BD 41-238] Port/Pin property FREQ_HZ does not match between /clk_out1_0(5000000) and /clk_wiz_0/clk_out1(150000000)
-ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd 
-ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
-delete_bd_objs [get_bd_nets clk_wiz_0_clk_out1] [get_bd_ports clk_out1_0]
-startgroup
-make_bd_pins_external  [get_bd_pins clk_wiz_0/clk_out1]
-endgroup
-save_bd_design
-Wrote  : <C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd> 
-Wrote  : <C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
-launch_runs synth_1 -jobs 4
-Wrote  : <C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd> 
-VHDL Output written to : C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/synth/design_1.vhd
-VHDL Output written to : C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/sim/design_1.vhd
-VHDL Output written to : C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
-INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
-Exporting to file C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
-Generated Block Design Tcl file C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
-Generated Hardware Definition File C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/synth/design_1.hwdef
-[Tue Jul 31 15:40:29 2018] Launched design_1_clk_wiz_0_1_synth_1...
-Run output will be captured here: C:/Users/mloui/Documents/ROIC/testing/testing.runs/design_1_clk_wiz_0_1_synth_1/runme.log
-[Tue Jul 31 15:40:29 2018] Launched synth_1...
-Run output will be captured here: C:/Users/mloui/Documents/ROIC/testing/testing.runs/synth_1/runme.log
-launch_runs impl_1 -jobs 4
-[Tue Jul 31 15:43:03 2018] Launched impl_1...
-Run output will be captured here: C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/runme.log
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Tue Jul 31 15:45:49 2018] Launched impl_1...
-Run output will be captured here: C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property PROGRAM.FILE {C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcku040_0]
-program_hw_devices [get_hw_devices xcku040_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-program_hw_devices: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 4107.770 ; gain = 0.000
-refresh_hw_device [lindex [get_hw_devices xcku040_0] 0]
-INFO: [Labtools 27-1434] Device xcku040 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210308A3B989
-current_project roic_test
 open_bd_design {C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd}
-current_project testing
-open_bd_design {C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd}
-delete_bd_objs [get_bd_nets clk_wiz_0_clk_out1] [get_bd_ports clk_out1_0]
-startgroup
-set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {15} CONFIG.MMCM_DIVCLK_DIVIDE {20} CONFIG.MMCM_CLKFBOUT_MULT_F {52.375} CONFIG.MMCM_CLKOUT0_DIVIDE_F {52.375} CONFIG.CLKOUT1_JITTER {478.277} CONFIG.CLKOUT1_PHASE_ERROR {446.811}] [get_bd_cells clk_wiz_0]
-endgroup
-startgroup
-make_bd_pins_external  [get_bd_pins clk_wiz_0/clk_out1]
-endgroup
-save_bd_design
-Wrote  : <C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd> 
-reset_run synth_1
-reset_run design_1_clk_wiz_0_1_synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-Wrote  : <C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd> 
-VHDL Output written to : C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/synth/design_1.vhd
-VHDL Output written to : C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/sim/design_1.vhd
-VHDL Output written to : C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
-INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
-Exporting to file C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
-Generated Block Design Tcl file C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
-Generated Hardware Definition File C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/synth/design_1.hwdef
-[Wed Aug  1 15:01:25 2018] Launched design_1_clk_wiz_0_1_synth_1, synth_1...
-Run output will be captured here:
-design_1_clk_wiz_0_1_synth_1: C:/Users/mloui/Documents/ROIC/testing/testing.runs/design_1_clk_wiz_0_1_synth_1/runme.log
-synth_1: C:/Users/mloui/Documents/ROIC/testing/testing.runs/synth_1/runme.log
-[Wed Aug  1 15:01:25 2018] Launched impl_1...
-Run output will be captured here: C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/runme.log
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210308A3B989
-CRITICAL WARNING: [Xicom 50-38] xicom: The current version of Vivado does not support this detected version of the MIG core. 2015.2 is the last version supporting it.
-INFO: [Labtools 27-2302] Device xcku040 (JTAG device index = 0) is programmed with a design that has 1 MIG core(s).
-WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
-set_property PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property PROGRAM.FILE {C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcku040_0]
-program_hw_devices [get_hw_devices xcku040_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-program_hw_devices: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 4146.449 ; gain = 0.000
-refresh_hw_device [lindex [get_hw_devices xcku040_0] 0]
-INFO: [Labtools 27-1434] Device xcku040 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210308A3B989
-disconnect_hw_server localhost:3121
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
- Targets(s) ", jsn-JTAG-SMT2NC-210308A3B989" may be locked by another hw_server.
-disconnect_hw_server localhost:3121
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
- Targets(s) ", jsn-JTAG-SMT2NC-210308A3B989" may be locked by another hw_server.
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210308A3B989
-CRITICAL WARNING: [Xicom 50-38] xicom: The current version of Vivado does not support this detected version of the MIG core. 2015.2 is the last version supporting it.
-INFO: [Labtools 27-2302] Device xcku040 (JTAG device index = 0) is programmed with a design that has 1 MIG core(s).
-WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
-set_property PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property PROGRAM.FILE {C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcku040_0]
-program_hw_devices [get_hw_devices xcku040_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-program_hw_devices: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 4146.449 ; gain = 0.000
-refresh_hw_device [lindex [get_hw_devices xcku040_0] 0]
-INFO: [Labtools 27-1434] Device xcku040 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210308A3B989
-disconnect_hw_server localhost:3121
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210308A3B989
-set_property PROGRAM.FILE {C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcku040_0]
-current_hw_device [get_hw_devices xcku040_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xcku040_0] 0]
-CRITICAL WARNING: [Xicom 50-38] xicom: The current version of Vivado does not support this detected version of the MIG core. 2015.2 is the last version supporting it.
-INFO: [Labtools 27-2302] Device xcku040 (JTAG device index = 0) is programmed with a design that has 1 MIG core(s).
-set_property PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xcku040_0]
-set_property PROGRAM.FILE {C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcku040_0]
-program_hw_devices [get_hw_devices xcku040_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-program_hw_devices: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 4146.449 ; gain = 0.000
-refresh_hw_device [lindex [get_hw_devices xcku040_0] 0]
-INFO: [Labtools 27-1434] Device xcku040 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-close_hw
-open_run synth_1 -name synth_1
-Design is defaulting to impl run constrset: constrs_1
-Design is defaulting to synth run part: xcku040-ffva1156-2-e
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1.dcp' for cell 'design_1_i/clk_wiz_0'
-INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2017.4
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1_board.xdc] for cell 'design_1_i/clk_wiz_0/inst'
-Finished Parsing XDC File [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1_board.xdc] for cell 'design_1_i/clk_wiz_0/inst'
-Parsing XDC File [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1.xdc] for cell 'design_1_i/clk_wiz_0/inst'
-INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1.xdc:57]
-INFO: [Timing 38-2] Deriving generated clocks [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1.xdc:57]
-WARNING: [Vivado 12-2489] -input_jitter contains time 0.033330 which will be rounded to 0.033 to ensure it is an integer multiple of 1 picosecond [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1.xdc:57]
-Finished Parsing XDC File [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1.xdc] for cell 'design_1_i/clk_wiz_0/inst'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/testing/testing.srcs/constrs_1/new/clk_design.xdc]
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/testing/testing.srcs/constrs_1/new/clk_design.xdc]
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  IBUF => IBUF (IBUFCTRL, INBUF): 1 instances
-  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instances
+ipx::edit_ip_in_project -upgrade true -name adc_core_v1_0_project -directory C:/Users/mloui/Documents/ROIC/roic_test/roic_test.tmp/adc_core_v1_0_project c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/XilinxV/Vivado/2017.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/mloui/Documents/roic-ip'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+update_compile_order -fileset sources_1
+create_ip -name axis_data_fifo -vendor xilinx.com -library ip -version 1.1 -module_name axis_data_fifo_0 -dir c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src
+generate_target {instantiation_template} [get_files c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src/axis_data_fifo_0_1/axis_data_fifo_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'axis_data_fifo_0'...
+generate_target all [get_files  c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src/axis_data_fifo_0_1/axis_data_fifo_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'axis_data_fifo_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'axis_data_fifo_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'axis_data_fifo_0'...
+catch { config_ip_cache -export [get_ips -all axis_data_fifo_0] }
+export_ip_user_files -of_objects [get_files c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src/axis_data_fifo_0_1/axis_data_fifo_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src/axis_data_fifo_0_1/axis_data_fifo_0.xci]
+launch_runs -jobs 4 axis_data_fifo_0_synth_1
+[Wed Aug  8 15:57:05 2018] Launched axis_data_fifo_0_synth_1...
+Run output will be captured here: c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.runs/axis_data_fifo_0_synth_1/runme.log
+export_simulation -of_objects [get_files c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src/axis_data_fifo_0_1/axis_data_fifo_0.xci] -directory c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.ip_user_files/sim_scripts -ip_user_files_dir c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.ip_user_files -ipstatic_source_dir c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.ip_user_files/ipstatic -lib_map_path [list {modelsim=c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.cache/compile_simlib/modelsim} {questa=c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.cache/compile_simlib/questa} {riviera=c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.cache/compile_simlib/riviera} {activehdl=c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-4963] axis_data_fifo_0 has board value specified. The packaged IP will be restricted to usage with board 'xilinx.com:kcu105:part0:1.3'
+set_property core_revision 5 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/mloui/Documents/roic-ip
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/mloui/Documents/roic-ip'
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {base_mb_adc_core_0_0 base_mb_adc_core_3_0 base_mb_adc_core_1_0 base_mb_adc_core_2_0}] -log ip_upgrade.log
+Upgrading 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd'
+INFO: [IP_Flow 19-3422] Upgraded base_mb_adc_core_0_0 (adc_core_v1.0 1.0) from revision 4 to revision 5
+INFO: [IP_Flow 19-3422] Upgraded base_mb_adc_core_1_0 (adc_core_v1.0 1.0) from revision 4 to revision 5
+INFO: [IP_Flow 19-3422] Upgraded base_mb_adc_core_2_0 (adc_core_v1.0 1.0) from revision 4 to revision 5
+INFO: [IP_Flow 19-3422] Upgraded base_mb_adc_core_3_0 (adc_core_v1.0 1.0) from revision 4 to revision 5
+Wrote  : <C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/mloui/Documents/ROIC/roic_test/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips {base_mb_adc_core_0_0 base_mb_adc_core_3_0 base_mb_adc_core_1_0 base_mb_adc_core_2_0}] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd]
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/adc_core_0/READY
+/adc_core_1/READY
+/adc_core_2/READY
+/adc_core_3/READY
 
-set_property IOSTANDARD LVCMOS33 [get_ports [list clk_out1_0]]
-set_property IOSTANDARD LVCMOS33 [get_ports [list clk_out1_0]]
-save_constraints
+Wrote  : <C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd> 
+VHDL Output written to : C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd
+VHDL Output written to : C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/sim/base_mb.vhd
+VHDL Output written to : C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/hdl/base_mb_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mdm_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_1_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uartlite_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/lmb_bram .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block pwmcore_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block roic_interface_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_core_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_core_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_core_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_core_3 .
+Exporting to file C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/hw_handoff/base_mb.hwh
+Generated Block Design Tcl file C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/hw_handoff/base_mb_bd.tcl
+Generated Hardware Definition File C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.hwdef
+catch { config_ip_cache -export [get_ips -all base_mb_adc_core_0_0] }
+catch { config_ip_cache -export [get_ips -all base_mb_adc_core_1_0] }
+catch { config_ip_cache -export [get_ips -all base_mb_adc_core_2_0] }
+catch { config_ip_cache -export [get_ips -all base_mb_adc_core_3_0] }
+export_ip_user_files -of_objects [get_files C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd]
+launch_runs -jobs 4 {base_mb_adc_core_0_0_synth_1 base_mb_adc_core_1_0_synth_1 base_mb_adc_core_2_0_synth_1 base_mb_adc_core_3_0_synth_1}
+[Wed Aug  8 16:01:10 2018] Launched base_mb_adc_core_0_0_synth_1, base_mb_adc_core_1_0_synth_1, base_mb_adc_core_2_0_synth_1, base_mb_adc_core_3_0_synth_1...
+Run output will be captured here:
+base_mb_adc_core_0_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_0_0_synth_1/runme.log
+base_mb_adc_core_1_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_1_0_synth_1/runme.log
+base_mb_adc_core_2_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_2_0_synth_1/runme.log
+base_mb_adc_core_3_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_3_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd] -directory C:/Users/mloui/Documents/ROIC/roic_test/roic_test.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/mloui/Documents/ROIC/roic_test/roic_test.ip_user_files -ipstatic_source_dir C:/Users/mloui/Documents/ROIC/roic_test/roic_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/mloui/Documents/ROIC/roic_test/roic_test.cache/compile_simlib/modelsim} {questa=C:/Users/mloui/Documents/ROIC/roic_test/roic_test.cache/compile_simlib/questa} {riviera=C:/Users/mloui/Documents/ROIC/roic_test/roic_test.cache/compile_simlib/riviera} {activehdl=C:/Users/mloui/Documents/ROIC/roic_test/roic_test.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
 reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1
+
 launch_runs synth_1 -jobs 4
-[Wed Aug  1 15:33:22 2018] Launched synth_1...
-Run output will be captured here: C:/Users/mloui/Documents/ROIC/testing/testing.runs/synth_1/runme.log
-close_design
+[Wed Aug  8 16:01:36 2018] Launched base_mb_adc_core_0_0_synth_1, base_mb_adc_core_1_0_synth_1, base_mb_adc_core_2_0_synth_1, base_mb_adc_core_3_0_synth_1...
+Run output will be captured here:
+base_mb_adc_core_0_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_0_0_synth_1/runme.log
+base_mb_adc_core_1_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_1_0_synth_1/runme.log
+base_mb_adc_core_2_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_2_0_synth_1/runme.log
+base_mb_adc_core_3_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_3_0_synth_1/runme.log
+[Wed Aug  8 16:01:37 2018] Launched synth_1...
+Run output will be captured here: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Wed Aug  8 16:09:40 2018] Launched impl_1...
+Run output will be captured here: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/impl_1/runme.log
+report_ip_status -name ip_status 
+ipx::edit_ip_in_project -upgrade true -name adc_core_v1_0_project -directory C:/Users/mloui/Documents/ROIC/roic_test/roic_test.tmp/adc_core_v1_0_project c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/XilinxV/Vivado/2017.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/mloui/Documents/roic-ip'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3672.699 ; gain = 0.000
+update_compile_order -fileset sources_1
+create_ip -name axis_data_fifo -vendor xilinx.com -library ip -version 1.1 -module_name axis_data_fifo_0 -dir c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src
+set_property -dict [list CONFIG.TDATA_NUM_BYTES {2} CONFIG.IS_ACLK_ASYNC {1}] [get_ips axis_data_fifo_0]
+generate_target {instantiation_template} [get_files c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src/axis_data_fifo_0_2/axis_data_fifo_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'axis_data_fifo_0'...
+generate_target all [get_files  c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src/axis_data_fifo_0_2/axis_data_fifo_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'axis_data_fifo_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'axis_data_fifo_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'axis_data_fifo_0'...
+catch { config_ip_cache -export [get_ips -all axis_data_fifo_0] }
+export_ip_user_files -of_objects [get_files c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src/axis_data_fifo_0_2/axis_data_fifo_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src/axis_data_fifo_0_2/axis_data_fifo_0.xci]
+launch_runs -jobs 4 axis_data_fifo_0_synth_1
+[Wed Aug  8 16:13:45 2018] Launched axis_data_fifo_0_synth_1...
+Run output will be captured here: c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.runs/axis_data_fifo_0_synth_1/runme.log
+export_simulation -of_objects [get_files c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src/axis_data_fifo_0_2/axis_data_fifo_0.xci] -directory c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.ip_user_files/sim_scripts -ip_user_files_dir c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.ip_user_files -ipstatic_source_dir c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.ip_user_files/ipstatic -lib_map_path [list {modelsim=c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.cache/compile_simlib/modelsim} {questa=c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.cache/compile_simlib/questa} {riviera=c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.cache/compile_simlib/riviera} {activehdl=c:/users/mloui/documents/roic/roic_test/roic_test.tmp/adc_core_v1_0_project/adc_core_v1_0_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+copy_ip -name axis_data_fifo_0_1 -dir c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src [get_ips  axis_data_fifo_0]
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'c:/Users/mloui/Documents/roic-ip/ip_repo/adc_core_1.0/src/axis_data_fifo_0_1_1/axis_data_fifo_0_1.xci'.
+WARNING: [IP_Flow 19-4963] axis_data_fifo_0 has board value specified. The packaged IP will be restricted to usage with board 'xilinx.com:kcu105:part0:1.3'
+ipx::merge_project_changes: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 3672.699 ; gain = 0.000
+set_property core_revision 6 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/mloui/Documents/roic-ip
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/mloui/Documents/roic-ip'
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {base_mb_adc_core_0_0 base_mb_adc_core_3_0 base_mb_adc_core_1_0 base_mb_adc_core_2_0}] -log ip_upgrade.log
+Upgrading 'C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd'
+INFO: [IP_Flow 19-3422] Upgraded base_mb_adc_core_0_0 (adc_core_v1.0 1.0) from revision 5 to revision 6
+INFO: [IP_Flow 19-3422] Upgraded base_mb_adc_core_1_0 (adc_core_v1.0 1.0) from revision 5 to revision 6
+INFO: [IP_Flow 19-3422] Upgraded base_mb_adc_core_2_0 (adc_core_v1.0 1.0) from revision 5 to revision 6
+INFO: [IP_Flow 19-3422] Upgraded base_mb_adc_core_3_0 (adc_core_v1.0 1.0) from revision 5 to revision 6
+Wrote  : <C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/mloui/Documents/ROIC/roic_test/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips {base_mb_adc_core_0_0 base_mb_adc_core_3_0 base_mb_adc_core_1_0 base_mb_adc_core_2_0}] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd]
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/adc_core_0/READY
+/adc_core_1/READY
+/adc_core_2/READY
+/adc_core_3/READY
+
+Wrote  : <C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd> 
+VHDL Output written to : C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.vhd
+VHDL Output written to : C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/sim/base_mb.vhd
+VHDL Output written to : C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/hdl/base_mb_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mdm_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_1_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uartlite_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/lmb_bram .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block pwmcore_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block roic_interface_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_core_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_core_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_core_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_core_3 .
+Exporting to file C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/hw_handoff/base_mb.hwh
+Generated Block Design Tcl file C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/hw_handoff/base_mb_bd.tcl
+Generated Hardware Definition File C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/synth/base_mb.hwdef
+generate_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 3672.699 ; gain = 0.000
+catch { config_ip_cache -export [get_ips -all base_mb_adc_core_0_0] }
+catch { config_ip_cache -export [get_ips -all base_mb_adc_core_1_0] }
+catch { config_ip_cache -export [get_ips -all base_mb_adc_core_2_0] }
+catch { config_ip_cache -export [get_ips -all base_mb_adc_core_3_0] }
+export_ip_user_files -of_objects [get_files C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd]
+launch_runs -jobs 4 {base_mb_adc_core_0_0_synth_1 base_mb_adc_core_1_0_synth_1 base_mb_adc_core_2_0_synth_1 base_mb_adc_core_3_0_synth_1}
+[Wed Aug  8 16:19:44 2018] Launched base_mb_adc_core_0_0_synth_1, base_mb_adc_core_1_0_synth_1, base_mb_adc_core_2_0_synth_1, base_mb_adc_core_3_0_synth_1...
+Run output will be captured here:
+base_mb_adc_core_0_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_0_0_synth_1/runme.log
+base_mb_adc_core_1_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_1_0_synth_1/runme.log
+base_mb_adc_core_2_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_2_0_synth_1/runme.log
+base_mb_adc_core_3_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_3_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/base_mb.bd] -directory C:/Users/mloui/Documents/ROIC/roic_test/roic_test.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/mloui/Documents/ROIC/roic_test/roic_test.ip_user_files -ipstatic_source_dir C:/Users/mloui/Documents/ROIC/roic_test/roic_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/mloui/Documents/ROIC/roic_test/roic_test.cache/compile_simlib/modelsim} {questa=C:/Users/mloui/Documents/ROIC/roic_test/roic_test.cache/compile_simlib/questa} {riviera=C:/Users/mloui/Documents/ROIC/roic_test/roic_test.cache/compile_simlib/riviera} {activehdl=C:/Users/mloui/Documents/ROIC/roic_test/roic_test.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
 reset_run synth_1
-launch_runs synth_1 -jobs 4
-[Wed Aug  1 15:34:57 2018] Launched synth_1...
-Run output will be captured here: C:/Users/mloui/Documents/ROIC/testing/testing.runs/synth_1/runme.log
-open_run synth_1 -name synth_1
-Design is defaulting to impl run constrset: constrs_1
-Design is defaulting to synth run part: xcku040-ffva1156-2-e
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1.dcp' for cell 'design_1_i/clk_wiz_0'
-INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2017.4
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1_board.xdc] for cell 'design_1_i/clk_wiz_0/inst'
-Finished Parsing XDC File [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1_board.xdc] for cell 'design_1_i/clk_wiz_0/inst'
-Parsing XDC File [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1.xdc] for cell 'design_1_i/clk_wiz_0/inst'
-INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1.xdc:57]
-INFO: [Timing 38-2] Deriving generated clocks [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1.xdc:57]
-WARNING: [Vivado 12-2489] -input_jitter contains time 0.033330 which will be rounded to 0.033 to ensure it is an integer multiple of 1 picosecond [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1.xdc:57]
-Finished Parsing XDC File [c:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_1/design_1_clk_wiz_0_1.xdc] for cell 'design_1_i/clk_wiz_0/inst'
-Parsing XDC File [C:/Users/mloui/Documents/ROIC/testing/testing.srcs/constrs_1/new/clk_design.xdc]
-Finished Parsing XDC File [C:/Users/mloui/Documents/ROIC/testing/testing.srcs/constrs_1/new/clk_design.xdc]
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  IBUF => IBUF (IBUFCTRL, INBUF): 1 instances
-  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instances
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1
 
 launch_runs impl_1 -jobs 4
-Writing placer database...
-Writing XDEF routing.
-Writing XDEF routing logical nets.
-Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.188 . Memory (MB): peak = 4311.105 ; gain = 0.730
-[Wed Aug  1 15:36:28 2018] Launched impl_1...
-Run output will be captured here: C:/Users/mloui/Documents/ROIC/testing/testing.runs/impl_1/runme.log
-set_property IOSTANDARD LVCMOS25 [get_ports [list clk_out1_0]]
-set_property IOSTANDARD LVCMOS18 [get_ports [list clk_out1_0]]
-set_property IOSTANDARD LVCMOS15 [get_ports [list clk_out1_0]]
-set_property IOSTANDARD LVCMOS12 [get_ports [list clk_out1_0]]
-set_property IOSTANDARD LVCMOS33 [get_ports [list clk_out1_0]]
-set_property IOSTANDARD LVCMOS33 [get_ports [list reset]]
-set_property IOSTANDARD LVCMOS18 [get_ports [list reset]]
-set_property IOSTANDARD HSLVDCI_15 [get_ports [list clk_out1_0]]
-set_property IOSTANDARD HSTL_II [get_ports [list clk_out1_0]]
-set_property IOSTANDARD HSTL_I_DCI [get_ports [list clk_out1_0]]
-set_property IOSTANDARD LVDCI_18 [get_ports [list clk_out1_0]]
-set_property IOSTANDARD LVCMOS33 [get_ports [list clk_out1_0]]
-set_property IOSTANDARD LVCMOS33 [get_ports [list locked_0]]
-set_property IOSTANDARD LVCMOS18 [get_ports [list locked_0]]
-set_property IOSTANDARD LVCMOS33 [get_ports [list clk_out1_0]]
-set_property IOSTANDARD LVDS [get_ports [list default_sysclk_300_clk_p]]
-set_property IOSTANDARD LVCMOS18 [get_ports [list clk_out1_0]]
-set_property IOSTANDARD LVDS [get_ports [list clk_out1_0]]
-set_property IOSTANDARD LVCMOS18 [get_ports [list clk_out1_0]]
-open_bd_design {C:/Users/mloui/Documents/ROIC/testing/testing.srcs/sources_1/bd/design_1/design_1.bd}
-place_ports clk_out1_0 H12
-set_property IOSTANDARD LVCMOS33 [get_ports [list clk_out1_0]]
-set_property IOSTANDARD LVCMOS33 [get_ports [list reset]]
-set_property IOSTANDARD LVCMOS33 [get_ports [list locked_0]]
-place_ports clk_out1_0 G19
-place_ports clk_out1_0 H19
-place_ports clk_out1_0 K13
-set_property IOSTANDARD LVCMOS33 [get_ports [list clk_out1_0]]
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Wed Aug  8 16:20:09 2018] Launched base_mb_adc_core_0_0_synth_1, base_mb_adc_core_1_0_synth_1, base_mb_adc_core_2_0_synth_1, base_mb_adc_core_3_0_synth_1, synth_1...
+Run output will be captured here:
+base_mb_adc_core_0_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_0_0_synth_1/runme.log
+base_mb_adc_core_1_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_1_0_synth_1/runme.log
+base_mb_adc_core_2_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_2_0_synth_1/runme.log
+base_mb_adc_core_3_0_synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_3_0_synth_1/runme.log
+synth_1: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/synth_1/runme.log
+[Wed Aug  8 16:20:10 2018] Launched impl_1...
+Run output will be captured here: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 3672.699 ; gain = 0.000
+report_ip_status -name ip_status 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Aug  8 16:28:28 2018] Launched impl_1...
+Run output will be captured here: C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Aug  8 16:52:59 2018...

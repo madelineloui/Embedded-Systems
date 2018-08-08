@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="base_mb_xbar_0_synth_1" LaunchDir="C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="base_mb_roic_interface_driver_0_0_synth_1" LaunchDir="C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_roic_interface_driver_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="base_mb_adc_core_2_0_synth_1" LaunchDir="C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="base_mb_adc_core_0_0_synth_1" LaunchDir="C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="base_mb_adc_core_2_0_synth_1"/>
+	</Run>
+	<Run Id="base_mb_adc_core_3_0_synth_1" LaunchDir="C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_3_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="base_mb_adc_core_2_0_synth_1"/>
+	</Run>
+	<Run Id="base_mb_adc_core_1_0_synth_1" LaunchDir="C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_adc_core_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="base_mb_adc_core_2_0_synth_1"/>
+	</Run>
+	<Run Id="base_mb_pwmcore_0_0_synth_1" LaunchDir="C:/Users/mloui/Documents/ROIC/roic_test/roic_test.runs/base_mb_pwmcore_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

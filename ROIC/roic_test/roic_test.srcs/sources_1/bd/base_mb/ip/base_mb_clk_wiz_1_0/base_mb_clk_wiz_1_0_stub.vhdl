@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Tue Jul 31 14:17:25 2018
+-- Date        : Wed Aug  8 14:59:12 2018
 -- Host        : GSSLW17031962 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_clk_wiz_1_0/base_mb_clk_wiz_1_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top base_mb_clk_wiz_1_0 -prefix
+--               base_mb_clk_wiz_1_0_ base_mb_clk_wiz_1_0_stub.vhdl
 -- Design      : base_mb_clk_wiz_1_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xcku040-ffva1156-2-e

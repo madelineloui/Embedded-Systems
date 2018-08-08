@@ -1,8 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../../../../../roic-ip/ip_repo/pwmcore_1.0/src/pwm_core.vhd" \
-"../../../../../../../../roic-ip/ip_repo/pwmcore_1.0/hdl/pwmcore_v1_0_S00_AXI.vhd" \
-"../../../../../../../../roic-ip/ip_repo/pwmcore_1.0/hdl/pwmcore_v1_0.vhd" \
-
-# Do not sort compile order
-nosort

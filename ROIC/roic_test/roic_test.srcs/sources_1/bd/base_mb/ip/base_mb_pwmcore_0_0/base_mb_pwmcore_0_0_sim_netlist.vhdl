@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Wed Jul 18 10:30:33 2018
+-- Date        : Wed Aug  8 15:09:45 2018
 -- Host        : GSSLW17031962 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top base_mb_pwmcore_0_0 -prefix
---               base_mb_pwmcore_0_0_ base_mb_pwmcore_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_pwmcore_0_0/base_mb_pwmcore_0_0_sim_netlist.vhdl
 -- Design      : base_mb_pwmcore_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -34,6 +34,8 @@ entity base_mb_pwmcore_0_0_pwmcore_v1_0_S00_AXI is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of base_mb_pwmcore_0_0_pwmcore_v1_0_S00_AXI : entity is "pwmcore_v1_0_S00_AXI";
 end base_mb_pwmcore_0_0_pwmcore_v1_0_S00_AXI;
 
 architecture STRUCTURE of base_mb_pwmcore_0_0_pwmcore_v1_0_S00_AXI is
@@ -2161,6 +2163,8 @@ entity base_mb_pwmcore_0_0_pwmcore_v1_0 is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of base_mb_pwmcore_0_0_pwmcore_v1_0 : entity is "pwmcore_v1_0";
 end base_mb_pwmcore_0_0_pwmcore_v1_0;
 
 architecture STRUCTURE of base_mb_pwmcore_0_0_pwmcore_v1_0 is

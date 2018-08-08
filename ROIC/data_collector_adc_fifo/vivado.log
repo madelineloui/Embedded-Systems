@@ -258,3 +258,6 @@ create_ip -name axis_data_fifo -vendor xilinx.com -library ip -version 1.1 -modu
 generate_target {instantiation_template} [get_files c:/Users/mloui/Documents/ROIC/data_collector_adc_fifo/data_collector/data_collector.srcs/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1.xci]
 INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'axis_data_fifo_1'...
 update_compile_order -fileset sources_1
+close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Aug  7 15:04:28 2018...

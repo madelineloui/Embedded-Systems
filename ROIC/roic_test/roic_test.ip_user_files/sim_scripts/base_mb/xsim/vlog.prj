@@ -1,0 +1,10 @@
+verilog xil_defaultlib --include "../../../../roic_test.srcs/sources_1/bd/base_mb/ipshared/4868" --include "../../../../roic_test.srcs/sources_1/bd/base_mb/ipshared/ec67/hdl" --include "../../../../roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_0_0/src/axis_data_fifo_0_2/hdl" --include "../../../../roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_1_0/src/axis_data_fifo_0_2/hdl" --include "../../../../roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_2_0/src/axis_data_fifo_0_2/hdl" --include "../../../../roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_adc_core_3_0/src/axis_data_fifo_0_2/hdl" \
+"../../../bd/base_mb/ip/base_mb_clk_wiz_1_0/base_mb_clk_wiz_1_0_clk_wiz.v" \
+"../../../bd/base_mb/ip/base_mb_clk_wiz_1_0/base_mb_clk_wiz_1_0.v" \
+"../../../bd/base_mb/ip/base_mb_xbar_0/sim/base_mb_xbar_0.v" \
+"../../../bd/base_mb/ip/base_mb_lmb_bram_0/sim/base_mb_lmb_bram_0.v" \
+"../../../bd/base_mb/ip/base_mb_adc_core_0_0/src/axis_data_fifo_0_2/sim/axis_data_fifo_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

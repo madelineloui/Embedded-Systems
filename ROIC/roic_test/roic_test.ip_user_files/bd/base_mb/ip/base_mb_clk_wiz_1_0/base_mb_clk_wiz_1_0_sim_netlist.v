@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Thu Jul 26 14:47:05 2018
+// Date        : Wed Aug  8 14:59:12 2018
 // Host        : GSSLW17031962 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/Users/mloui/Documents/ROIC/roic_test/roic_test.srcs/sources_1/bd/base_mb/ip/base_mb_clk_wiz_1_0/base_mb_clk_wiz_1_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top base_mb_clk_wiz_1_0 -prefix
+//               base_mb_clk_wiz_1_0_ base_mb_clk_wiz_1_0_sim_netlist.v
 // Design      : base_mb_clk_wiz_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,12 +16,14 @@
 module base_mb_clk_wiz_1_0
    (clk_out1,
     clk_out2,
+    clk_out3,
     reset,
     locked,
     clk_in1_p,
     clk_in1_n);
   output clk_out1;
   output clk_out2;
+  output clk_out3;
   input reset;
   output locked;
   input clk_in1_p;
@@ -31,6 +33,7 @@ module base_mb_clk_wiz_1_0
   (* IBUF_LOW_PWR *) wire clk_in1_p;
   wire clk_out1;
   wire clk_out2;
+  wire clk_out3;
   wire locked;
   wire reset;
 
@@ -39,20 +42,22 @@ module base_mb_clk_wiz_1_0
         .clk_in1_p(clk_in1_p),
         .clk_out1(clk_out1),
         .clk_out2(clk_out2),
+        .clk_out3(clk_out3),
         .locked(locked),
         .reset(reset));
 endmodule
 
-(* ORIG_REF_NAME = "base_mb_clk_wiz_1_0_clk_wiz" *) 
 module base_mb_clk_wiz_1_0_base_mb_clk_wiz_1_0_clk_wiz
    (clk_out1,
     clk_out2,
+    clk_out3,
     reset,
     locked,
     clk_in1_p,
     clk_in1_n);
   output clk_out1;
   output clk_out2;
+  output clk_out3;
   input reset;
   output locked;
   input clk_in1_p;
@@ -65,6 +70,8 @@ module base_mb_clk_wiz_1_0_base_mb_clk_wiz_1_0_clk_wiz
   wire clk_out1_base_mb_clk_wiz_1_0;
   wire clk_out2;
   wire clk_out2_base_mb_clk_wiz_1_0;
+  wire clk_out3;
+  wire clk_out3_base_mb_clk_wiz_1_0;
   wire clkfbout_base_mb_clk_wiz_1_0;
   wire clkfbout_buf_base_mb_clk_wiz_1_0;
   wire locked;
@@ -75,7 +82,6 @@ module base_mb_clk_wiz_1_0_base_mb_clk_wiz_1_0_clk_wiz
   wire NLW_mmcme3_adv_inst_CLKINSTOPPED_UNCONNECTED;
   wire NLW_mmcme3_adv_inst_CLKOUT0B_UNCONNECTED;
   wire NLW_mmcme3_adv_inst_CLKOUT1B_UNCONNECTED;
-  wire NLW_mmcme3_adv_inst_CLKOUT2_UNCONNECTED;
   wire NLW_mmcme3_adv_inst_CLKOUT2B_UNCONNECTED;
   wire NLW_mmcme3_adv_inst_CLKOUT3_UNCONNECTED;
   wire NLW_mmcme3_adv_inst_CLKOUT3B_UNCONNECTED;
@@ -122,6 +128,14 @@ module base_mb_clk_wiz_1_0_base_mb_clk_wiz_1_0_clk_wiz
         .I(clk_out2_base_mb_clk_wiz_1_0),
         .O(clk_out2));
   (* BOX_TYPE = "PRIMITIVE" *) 
+  (* XILINX_LEGACY_PRIM = "BUFG" *) 
+  BUFGCE #(
+    .CE_TYPE("ASYNC")) 
+    clkout3_buf
+       (.CE(1'b1),
+        .I(clk_out3_base_mb_clk_wiz_1_0),
+        .O(clk_out3));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME3_ADV #(
     .BANDWIDTH("OPTIMIZED"),
     .CLKFBOUT_MULT_F(8.000000),
@@ -137,7 +151,7 @@ module base_mb_clk_wiz_1_0_base_mb_clk_wiz_1_0_clk_wiz
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
     .CLKOUT1_USE_FINE_PS("FALSE"),
-    .CLKOUT2_DIVIDE(1),
+    .CLKOUT2_DIVIDE(128),
     .CLKOUT2_DUTY_CYCLE(0.500000),
     .CLKOUT2_PHASE(0.000000),
     .CLKOUT2_USE_FINE_PS("FALSE"),
@@ -189,7 +203,7 @@ module base_mb_clk_wiz_1_0_base_mb_clk_wiz_1_0_clk_wiz
         .CLKOUT0B(NLW_mmcme3_adv_inst_CLKOUT0B_UNCONNECTED),
         .CLKOUT1(clk_out2_base_mb_clk_wiz_1_0),
         .CLKOUT1B(NLW_mmcme3_adv_inst_CLKOUT1B_UNCONNECTED),
-        .CLKOUT2(NLW_mmcme3_adv_inst_CLKOUT2_UNCONNECTED),
+        .CLKOUT2(clk_out3_base_mb_clk_wiz_1_0),
         .CLKOUT2B(NLW_mmcme3_adv_inst_CLKOUT2B_UNCONNECTED),
         .CLKOUT3(NLW_mmcme3_adv_inst_CLKOUT3_UNCONNECTED),
         .CLKOUT3B(NLW_mmcme3_adv_inst_CLKOUT3B_UNCONNECTED),

@@ -48,4 +48,16 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_mb_pwmcore
 # IP: bd/base_mb/ip/base_mb_roic_interface_driver_0_0/base_mb_roic_interface_driver_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_mb_roic_interface_driver_0_0 || ORIG_REF_NAME==base_mb_roic_interface_driver_0_0} -quiet] -quiet
 
+# IP: bd/base_mb/ip/base_mb_adc_core_0_0/base_mb_adc_core_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_mb_adc_core_0_0 || ORIG_REF_NAME==base_mb_adc_core_0_0} -quiet] -quiet
+
+# IP: bd/base_mb/ip/base_mb_adc_core_1_0/base_mb_adc_core_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_mb_adc_core_1_0 || ORIG_REF_NAME==base_mb_adc_core_1_0} -quiet] -quiet
+
+# IP: bd/base_mb/ip/base_mb_adc_core_2_0/base_mb_adc_core_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_mb_adc_core_2_0 || ORIG_REF_NAME==base_mb_adc_core_2_0} -quiet] -quiet
+
+# IP: bd/base_mb/ip/base_mb_adc_core_3_0/base_mb_adc_core_3_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_mb_adc_core_3_0 || ORIG_REF_NAME==base_mb_adc_core_3_0} -quiet] -quiet
+
 # XDC: bd/base_mb/base_mb_ooc.xdc
